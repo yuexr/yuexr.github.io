@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@100&display=swap');   
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  background-image: url("/img/bg.png");
+  background-repeat: repeat center center fixed;
+    background-color: #ffffff;
+    color: #3e240e;
+    font-family: "Nunito";
+    font-size: 16px;
+}
+
+  #header {
+    height: 150px;
+    background-color: #ade4e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: "Nunito";
+    font-size: 48px;
+    color: #3e240e;
+  }
+
+  #navbar {
+    background-color: #ffe7a7;
+    
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navlink {
+    display: inline-block;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-weight: bold;
+    color: #3e240e;
+    text-decoration: none;
+  }
+
+  #content-container {
+    padding: 30px;
+    padding-bottom: 50px;
+  }
+
+  #contents-container {
+    background-color: #FFF;
+    border:1px solid #3e240e;
+    padding: 5px;
+    margin-top: 15px;
+margin-bottom: 15px;
+font-size:14px;
+width:450px;
+    
+  }
+  
+  p {
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #f384b8;
+    margin-bottom: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+  }
+
+  
+  #page-container {
+    width: 100%;
+    background-color: WHITE;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    box-shadow: 0px 0px 19px 3px rgba(166,138,138,0.67);
+    width: 990px;
+  }
+
+  #content-container {
+    padding: 30px;
+    padding-bottom: 50px;
+  }
+
+  #footer-container {
+    background-color: #efdcab;
+    padding: 30px;
+    padding-bottom: 50px;
+  }
+
+  #bc {
+    margin-bottom: 20px;
+    color: #456990;
+  }
