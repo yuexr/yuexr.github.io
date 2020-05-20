@@ -178,3 +178,14 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+  }
