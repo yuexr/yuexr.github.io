@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@100&display=swap');   
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 
 html,
 body,
@@ -66,126 +67,144 @@ caption {
 body {
   background-image: url("/img/bg.png");
   background-repeat: repeat center center fixed;
-    background-color: #ffffff;
-    color: #3e240e;
-    font-family: "Nunito";
-    font-size: 16px;
+  background-color: #ffffff;
+  color: #554a41;
+  font-family: "Nunito";
+  font-size: 16px;
 }
 
-  #header {
-    height: 150px;
-    background-color: #ade4e2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    box-sizing: border-box;
-    font-family: "Nunito";
-    font-size: 48px;
-    color: #3e240e;
-  }
+#header {
+  height: 157px;
+  background-image: url("/img/header.png");
+  background-size: cover;
+  background-color: #a3e7e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  font-family: "Nunito";
+  font-size: 48px;
+  color: #3e240e;
+}
 
-  #navbar {
-    background-color: #fae2a5;
-    
-    height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+#navbar {
+  background-color: #fae2a5;
 
-  .navlink {
-    display: inline-block;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-    font-weight: bold;
-    color: #3e240e;
-    text-decoration: none;
-  }
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
+.navlink {
+  display: inline-block;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  font-weight: bold;
+  color: #3e240e;
+  text-decoration: none;
+}
 
+p {
+  padding-bottom: 20px;
+}
 
+h1 {
+  font-size: 36px;
+  color: #ffa5b6;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+}
 
-  
-  p {
-    padding-bottom: 20px;
-  }
-  
-  h1 {
-    font-size: 36px;
-    color: #f384b8;
-    margin-bottom: 15px;
-    font-family: 'Nunito', sans-serif;
-    font-weight: normal;
-  }
+h2 {
+  font-size: 30px;
+  padding-bottom: 0;
+  color: #ff8199;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
 
-  h1 {
-    padding-bottom: 0;
-  }
+h3 {
+  color: #779a7e;
+  margin-bottom: 3px;
+}
 
+img {
+  max-width: 930px;
+}
 
-  
-  #page-container {
-    width: 100%;
-    background-color: WHITE;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100vh;
-    box-shadow: 0px 0px 19px 3px rgba(166,138,138,0.67);
-    width: 990px;
-  }
+#page-container {
+  width: 100%;
+  background-color: WHITE;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  box-shadow: 0px 0px 19px 3px rgba(166, 138, 138, 0.67);
+  width: 990px;
+}
 
-  #content-container {
-    padding: 30px;
-    padding-bottom: 50px;
-  }
+#content-container {
+  padding: 30px;
+  padding-bottom: 50px;
+}
 
-  #contents-container {
-    background-color: #FFF;
-    border:1px solid lightblue;
-    border-left: 8px solid lightblue;
-    padding: 5px 0 10px 20px;
-    margin: 5px 0 15px 24px;
-    font-size:14px;
-    width:450px;
-  }
+#contents-container {
+  background-color: #fff;
+  border: 1px solid #a3e7e4;
+  border-left: 8px solid #a3e7e4;
+  padding: 5px 0 10px 20px;
+  margin: 5px 0 15px 24px;
+  font-size: 14px;
+  width: 450px;
+}
 
-  #footer-container {
-    background-color: #fae2a5;
-    padding: 20px 20px 30px 20px;
-    text-align:center;
-  }
+#footer {
+  background-image: url("/img/footer.png");
+  height: 103px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+#footer-container {
+  background-color: #fae2a5;
+  padding: 20px 20px 30px 20px;
+  text-align: center;
+}
 
-  #bc {
-    margin-bottom: 20px;
-    color: #456990;
-  }
+#bc {
+  margin-bottom: 20px;
+  color: #456990;
+}
 
-  .block {
-    display: block;
-  }
+.block {
+  display: block;
+}
 
-  .in-block {
-    display: inline-block
-  }
+.in-block {
+  display: inline-block;
+}
 
-  .bullet-list {
-    padding-left: 30px;
-  }
+.bullet-list {
+  padding-left: 30px;
+}
 
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .footer-links {
-    display: flex;
-    justify-content: center;
-  }
+.footer-links {
+  display: flex;
+  justify-content: center;
+}
 
-  .footer-icon {
-    height: 40px;
-    width: 40px;
-    margin-right: 16px;
-  }
+.footer-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 16px;
+}
