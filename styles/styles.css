@@ -111,12 +111,11 @@ body {
   #contents-container {
     background-color: #FFF;
     border:1px solid #3e240e;
+    border-left: 8px solid lightblue;
     padding: 5px;
-    margin-top: 15px;
-margin-bottom: 15px;
-font-size:14px;
-width:450px;
-    
+    margin: 15px 0 15px 24px;
+    font-size:14px;
+    width:450px;
   }
   
   p {
@@ -157,4 +156,12 @@ width:450px;
   #bc {
     margin-bottom: 20px;
     color: #456990;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .bullet-list {
+    padding-left: 24px;
   }
