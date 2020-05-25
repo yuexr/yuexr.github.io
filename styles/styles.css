@@ -159,6 +159,15 @@ img {
   width: 450px;
 }
 
+#blockquote {
+  background-color: #fff;
+  border-left: 8px solid #ffa5b6;
+  padding: 5px 0 10px 20px;
+  margin: 5px 0 15px 24px;
+  font-size: 14px;
+}
+
+
 #footer {
   background-image: url("/img/footer.png");
   height: 103px;
