@@ -17,6 +17,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/styles.css" />
+
+
     <title>Garden Layouts</title>
 
 </head>
@@ -39,8 +41,9 @@
             <img src="/img/layouts/layouts2.png" alt="layout_flowchart" class="center" /><BR>
 
             <h2>Understanding the Flowchart</h2>
-            <div id="blockquote">
-                <h3>What is your goal?</h3>
+            <div id="toggle-container"><button onclick="toggle('flowchartInstructions')">Show/Hide</button>
+                <div id="flowchartInstructions" style="display:none;">
+                    <h3>What is your goal?</h3>
                 <ul class="bullet-list">
                     <li><b>All Flowers</b> layouts are for trying to breed all flower phenotypes (colors).</li>
                     <li>
@@ -49,7 +52,7 @@
                     </li>
                     <li>
                         <b>Cloning</b> layouts are for when you already have the desired flower, and want to make exact
-                        copies (including genetics).
+                        copies (same genes).
                     </li>
                     <li>
                         <b>Testing</b> layouts are for checking a flower's genotype. It is mainly
@@ -76,7 +79,7 @@
                     <li><b>Disadvantages:</b> cliff layouts are inconvenient, annoying to water, and not very
                         aesthetically pleasing.</li>
                 </ul>
-            </div>
+            </div></div>
 
 
             <h3>contents</h3>
@@ -129,6 +132,68 @@
                 </ul>
             </div>
             <hr />
+
+            <h2>Understanding Flower Production & Layouts</h2>
+
+            <h3>Breeding vs. Cloning</h3>
+            <ul class="bullet-list">
+                <li>AGAIN: it is very important that you understand the difference.</li>
+                <li>Breeding is 2 flowers mixing genes to make 1 offspring. Cloning is 1 flower making 1 exact copy of
+                    itself.</li>
+                <li>If you are struggling with understanding this concept, please read Gardening 101 and Reproduction
+                    Guide!</li>
+                <li>There is no situation where we want a layout that can do both.</li>
+            </ul><BR>
+
+            <h3>Reproduction Algorithm 101</h3>
+            <ul class="bullet-list">
+                <li>Flowers have a chance to reproduce once per day (when you first start your game, or at 5AM).</li>
+                <li>If a flower rolls "successful" at reproduction, it will then look a valid partner (same species) in
+                    the 3x3 space around itself to breed with, and then produce an offspring.
+                    If it does not find a valid partner, it will make a cloned offspring.</li>
+                <li>i.e. breeding takes precedence over cloning whenever possible.</li>
+                <li>When a flower is successful, it (and its partner) are marked as invalid or "locked". They cannot
+                    produce until the next day.</li>
+                <li>For advanced readings, see: Flower Production Algorithm, Flower Production Guide.</li>
+            </ul>
+            <br>
+
+            <h3>Why are Checkerboard and X breeding layouts bad?</h3>
+            <ul class="bullet-list">
+                <li>A big problem with many ACNH flower guides on the internet is that they recommend checkerboard and X
+                    layouts.</li>
+                <li>They are presented as breeding layouts (to make new colours). However, they are highly susceptible
+                    to cloning.</li>
+                <li>Let's first take a look at the X layout.</li>
+            </ul>
+            <div id="toggle-container">
+
+                <button onclick="toggle('toggleX')">Show/Hide</button>
+                <div id="toggleX" style="display:none;">To a beginner, this may look like a decent breeding layout. All the flowers are
+                    touching!<br>
+                    However, if you circle a potential production outcome, we can see that this layout can only breed a
+                    maximum of one time, and can result in many clones.
+                    This is a big waste of our time! We can do <a href="./garden_layouts.html#diamond">a Diamond layout</a> instead.
+                    <br>
+                    <img src="../img/layouts/x.PNG"></div>
+
+            </div>
+            <li>Now let's look at how the Checkerboard layout is impacted.</li>
+            <div id="toggle-container">
+
+                <button onclick="toggle('toggleCheckerboard')">Show/Hide</button>
+                <div id="toggleCheckerboard" style="display:none;">Applying the same logic as above, we can see that Checkerboard is a big YIKES. <br>
+                Look at all the clones that we might get with this layout! Leif would be disappointed with you.
+                <img src="../img/layouts/checkerboard.png"></div>
+
+            </div>
+            </ul>
+
+            <p>The layouts in this guide are tested and simulated to focus on a specific goal while maximizing
+                efficiency!</p>
+
+
+            <hr>
 
             <h2>"All Flowers" Layouts</h2>
 
@@ -304,11 +369,14 @@
                         class="footer-icon"></a>
                 <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
                 <script
-                    type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi!', '#6bd3ff', 'W7W21Q1LX'); kofiwidget2.draw();</script>
-            </div>
+                type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi!', '#6bd3ff', 'W7W21Q1LX'); kofiwidget2.draw();</script>
+            </div><p style="font-size: 12px;">If you remove credits from my guides or modify my guides without my permission, I will hunt you down and feed your flesh to my villagers. Thanks for understanding.</p>
         </div>
     </div>
 
 </body>
+
+
+<script src="../scripts/index.js"></script>
 
 </html>

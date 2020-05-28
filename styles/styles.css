@@ -159,6 +159,16 @@ img {
   width: 450px;
 }
 
+#toggle-container {
+  background-color: #fff;
+  border: 1px solid #ff8199;
+  border-left: 8px solid #ff8199;
+  padding: 5px 0 10px 20px;
+  margin: 5px 0 15px 24px;
+  max-width: 845px;
+  font-size: 16px;
+}
+
 #blockquote {
   background-color: #fff;
   border-left: 8px solid #ffa5b6;
