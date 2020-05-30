@@ -43,7 +43,7 @@
             <img src="/img/layouts/layouts2.png" alt="layout_flowchart" class="center" /><BR>
 
             <h2>Understanding the Flowchart</h2>
-            <div id="toggle-container"><button onclick="toggle('flowchartInstructions')">Show/Hide</button>
+            <div class="toggle-container"><button onclick="toggle('flowchartInstructions')">Show/Hide</button>
                 <div id="flowchartInstructions" style="display:none;">
                     <h3>What is your goal?</h3>
                     <ul class="bullet-list">
@@ -91,7 +91,7 @@
 
 
             <h3>contents</h3>
-            <div id="contents-container">
+            <div class="toc">
 
                 <b>Understanding Flower Production & Layouts</b>
                 <ul class="bullet-list">
@@ -194,7 +194,7 @@
                 <a name="x"></a>
                 <li>Let's first take a look at the X layout.</li>
             </ul>
-            <div id="toggle-container">
+            <div class="toggle-container">
 
                 <button onclick="toggle('toggleX')">Show/Hide</button>
                 <div id="toggleX" style="display:none;">To a beginner, this may look like a decent breeding layout. All
@@ -208,7 +208,7 @@
 
             </div><a name="checkerboard"></a>
             <li>Now let's look at how the Checkerboard layout is impacted.</li>
-            <div id="toggle-container">
+            <div class="toggle-container">
 
                 <button onclick="toggle('toggleCheckerboard')">Show/Hide</button>
                 <div id="toggleCheckerboard" style="display:none;">Applying the same logic as above, we can see that
@@ -252,8 +252,8 @@
             <a name="2x2"></a>
             <h3>2x2</h3>
             <p><img src="../img/layouts/2x2.PNG" /><br>
-                <button onclick="toggle('_2x2')">Show/Hide</button>
-            <div id="_2x2" style="display: none;"> Uses: same species breeding where parents are both the same color.<br>
+                <button class="button" onclick="toggle('_2x2')">Show/Hide</button>
+            <div id="_2x2" style="display: none;" class="layouts-container" > Uses: same species breeding where parents are both the same color.<br>
                 Strengths: 100% clone-resistant. ideal single-species same-parent breeding layout. better than turtle at
                 3 visitors.<br>
                 Weaknesses: not the most space efficient.<br>
@@ -508,7 +508,7 @@
 
             <a name="testing_cliff"></a>
             <h3>2+1 cliff testing</h3>
-            <p><img src="../img/layouts/cliff_testing.PNG" width="400px"></p>
+            <p><img src="../img/layouts/cliff_testing.PNG"></p>
 
             <hr />
             <br>
