@@ -125,7 +125,7 @@
                 <b>Breeding Layouts [multi-species]</b>
                 <ul class="bullet-list">
                     <li><a href="#dense_isolated_pairs">dense isolated pairs</a></li>
-                    <li><a href="offset_dense_pairs">offset dense isolated pairs</a></li>
+                    <li><a href="#offset_dense_pairs">offset dense isolated pairs</a></li>
                     <li><a href="#dense_diamonds">dense diamonds</a></li>
                 </ul>
 
@@ -245,17 +245,15 @@
                 <a href="https://tinyurl.com/ybpul6xx">In-depth guide with all explanation of steps</a>
             </p>
 
-            <h3></h3>
-
             <hr />
 
-            <h2><a name="breeding">Breeding Layouts [same parents]</a></h2>
+            <h2>Breeding Layouts [same parents]</h2>
 
             <a name="2x2"></a>
             <h3>2x2</h3>
             <p><img src="../img/layouts/2x2.PNG" /><br>
-                <button onclick="toggle('2x2')">Show/Hide</button>
-            <div id="2x2" style="display: none;"> Uses: same species breeding where parents are both the same color.<br>
+                <button onclick="toggle('_2x2')">Show/Hide</button>
+            <div id="_2x2" style="display: none;"> Uses: same species breeding where parents are both the same color.<br>
                 Strengths: 100% clone-resistant. ideal single-species same-parent breeding layout. better than turtle at
                 3 visitors.<br>
                 Weaknesses: not the most space efficient.<br>
@@ -268,8 +266,8 @@
             <a name="turtle"></a>
             <h3>Turtle (tiled: "Super-Turtle")</h3>
             <p><img src="../img/layouts/turtle.PNG" /><br>
-                <button onclick="toggle('turtle')">Show/Hide</button>
-            <div id="turtle" style="display: none;">
+                <button onclick="toggle('_turtle')">Show/Hide</button>
+            <div id="_turtle" style="display: none;">
                 Uses: same species breeding where parents are both the same color.<br>
                 Strengths: dense and space efficient, more offsprings than hexahole at 2-5 visitors.<br>
                 Weaknesses: not 100% clone resistant (up to 2.5% clones at 5 visitors).<br>
@@ -282,8 +280,8 @@
             <a name="hexahole"></a>
             <h3>Hexahole ("Hexhole")</h3>
             <p><img src="../img/layouts/hexahole.PNG" /><br>
-                <button onclick="toggle('hexahole')">Show/Hide</button>
-            <div id="hexahole" style="display: none;">
+                <button onclick="toggle('_hexahole')">Show/Hide</button>
+            <div id="_hexahole" style="display: none;">
                 Uses: same species breeding where parents are both the same color.<br>
                 Strengths: dense and space efficient, more offsprings than turtle at 0 visitors, more clone-resistant
                 than turtle.<br>
@@ -301,8 +299,8 @@
             <a name="isolated_pairs"></a>
             <h3>Isolated Pairs ("Independent Pairs", "IPs")</h3>
             <p><img src="../img/layouts/isolated_pairs.PNG" /><br>
-                <button onclick="toggle('isolated_pairs')">Show/Hide</button>
-            <div id="isolated_pairs" style="display: none;">
+                <button onclick="toggle('_isolated_pairs')">Show/Hide</button>
+            <div id="_isolated_pairs" style="display: none;">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: Everything-- 100% clone resistant, focus on individual gene combinations.
                 <br>Weaknesses: Hardly anything, but you can adjust it to be more space efficient with cliff-assisted
@@ -316,8 +314,8 @@
             <h3>Diamond</h3>
             <p>do not tile diamond into checkerboard. this will increase likelihood of cloning.<br>
                 <img src="../img/layouts/diamond.PNG" /><br>
-                <button onclick="toggle('diamond')">Show/Hide</button>
-            <div id="diamond" style="display: none;">
+                <button onclick="toggle('_diamond')">Show/Hide</button>
+            <div id="_diamond" style="display: none;">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: 100% clone resistant.
                 <br>Weaknesses: Less space-efficient compared to isolated pairs. IP is better.
@@ -330,8 +328,8 @@
             <a name="isolated_pairs_cliff"></a>
             <h3>Isolated Pairs (cliff-assisted)</h3>
             <p><img src="../img/layouts/isolated_pairs_cliff.PNG" /><br>
-                <button onclick="toggle('isolated_pairs_cliff')">Show/Hide</button>
-            <div id="isolated_pairs_cliff" style="display: none;">
+                <button onclick="toggle('_isolated_pairs_cliff')">Show/Hide</button>
+            <div id="_isolated_pairs_cliff" style="display: none;">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: All the strengths of how good IP with bonus space-efficiency.
                 <br>Weaknesses: You have to deal with cliffs bro.
@@ -347,8 +345,8 @@
             <a name="dense_isolated_pairs"></a>
             <h3>Dense Isolated Pairs</h3>
             <p><img src="../img/layouts/dense_isolated_pairs.PNG" /><br>
-                <button onclick="toggle('dense_isolated_pairs')">Show/Hide</button>
-            <div id="dense_isolated_pairs" style="display: none;">
+                <button onclick="toggle('_dense_isolated_pairs')">Show/Hide</button>
+            <div id="_dense_isolated_pairs" style="display: none;">
                 Uses: Multi-species breeding (parents can be same or different colors).
                 <br>Strengths: All the strengths of how good IP but more space efficient! Easy to maintain and water.
                 <br>Weaknesses: Very prone to failure (20-30%), which means when a flower fails to breed simply because
@@ -362,8 +360,8 @@
             <a name="offset_dense_pairs"></a>
             <h3>Offset Dense Isolated Pairs</h3>
             <p><img src="../img/layouts/offset_dense_pairs.PNG" /><br>
-                <button onclick="toggle('offset_dense_pairs')">Show/Hide</button>
-            <div id="offset_dense_pairs" style="display: none;">
+                <button onclick="toggle('_offset_dense_pairs')">Show/Hide</button>
+            <div id="_offset_dense_pairs" style="display: none;">
                 Uses: Multi-species breeding (parents can be same or different colors).
                 <br>Strengths: SO GOOD. Ideal breeding layout. All the strengths of IP + space efficiency of dense IP +
                 signficantly lower failure rate (1-15%).
@@ -376,8 +374,8 @@
             <a name="dense_diamonds"></a>
             <h3>Dense Diamonds</h3>
             <p><img src="../img/layouts/dense_diamonds.PNG" /><br>
-                <button onclick="toggle('dense_diamonds')">Show/Hide</button>
-            <div id="dense_diamonds" style="display: none;">
+                <button onclick="toggle('_dense_diamonds')">Show/Hide</button>
+            <div id="_dense_diamonds" style="display: none;">
                 Uses: Multi-species breeding (parents can be same or different colors).
                 <br>Strengths: Two overlapping diamonds for more space efficiency.
                 <br>Weaknesses: Visually much more disorganized than offset dense pairs. Less space efficient because
@@ -395,8 +393,8 @@
             <a name="isolated_clones"></a>
             <h3>Isolated Clones</h3>
             <p> <img src="../img/layouts/isolated_clones.PNG" /><br>
-                <button onclick="toggle('isolated_clones')">Show/Hide</button>
-            <div id="isolated_clones" style="display: none;">
+                <button onclick="toggle('_isolated_clones')">Show/Hide</button>
+            <div id="_isolated_clones" style="display: none;">
                 Uses: Standard cloning layout for just one species of flower.
                 <br>Strengths: Easy & simple! Make sure it is not touching another flower of the same species.
                 <br>Weaknesses: Not the greatest space efficiency.
@@ -409,8 +407,8 @@
             <h3>Cliff Cloning (single-species)</h3>
             <p>
                 <img src="../img/layouts/cliff_clone_single.PNG" /><br>
-                <button onclick="toggle('cliff_clone_single')">Show/Hide</button>
-            <div id="cliff_clone_single" style="display: none;">
+                <button onclick="toggle('_cliff_clone_single')">Show/Hide</button>
+            <div id="_cliff_clone_single" style="display: none;">
                 Uses: Cloning a single species of flower.
                 <br>Strengths: Good space efficiency, exactly 1:1 empty space for each flower to clone onto.
                 <br>Weaknesses: You have to deal with cliffs bro.
@@ -431,8 +429,8 @@
             <h3>Clone Rows</h3>
             <p>
                 <img src="../img/layouts/clone_rows.PNG" /><br>
-                <button onclick="toggle('clone_rows')">Show/Hide</button>
-            <div id="clone_rows" style="display: none;">
+                <button onclick="toggle('_clone_rows')">Show/Hide</button>
+            <div id="_clone_rows" style="display: none;">
                 Uses: Cloning 4+ species of flowers.
                 <br>Strengths: Super space efficient, easy to maintain, easy to water.
                 <br>Weaknesses: None, really. It does require 4 species though.
@@ -446,8 +444,8 @@
             <h3>Clone Rows (double-spaced)</h3>
             <p>Same as clone rows above, but with 2 empty spaces between each row.
                 <br>
-                <button onclick="toggle('clone_rows_double')">Show/Hide</button>
-            <div id="clone_rows_double" style="display: none;">
+                <button onclick="toggle('_clone_rows_double')">Show/Hide</button>
+            <div id="_clone_rows_double" style="display: none;">
                 Strengths: Provides allowance for higher production rates (from visitor bonus) to reduce failures.
                 <br>How to tile: self-explanatory. 2 empty spaces in between.
                 <br><img src="../img/layouts/clone_rows_t_d.PNG">
@@ -458,8 +456,8 @@
             <h3>Offset Clone Rows</h3>
             <p>
                 <img src="../img/layouts/offset_clone_rows.PNG" /><br>
-                <button onclick="toggle('offset_clone_rows')">Show/Hide</button>
-            <div id="offset_clone_rows" style="display: none;">
+                <button onclick="toggle('_offset_clone_rows')">Show/Hide</button>
+            <div id="_offset_clone_rows" style="display: none;">
                 Uses: Cloning 3+ species of flowers.
                 <br>Strengths: Same as regular clone rows, except the minimum # of species is 3.
                 <br>Weaknesses: Requires a little more planning, less efficient than regular clone rows.
@@ -475,8 +473,8 @@
             <h3>Offset Clone Rows (double-spaced)</h3>
             <p>Same as clone rows above, but with 2 empty spaces between each row.
                 <br>
-                <button onclick="toggle('offset_clone_rows_double')">Show/Hide</button>
-            <div id="offset_clone_rows_double" style="display: none;">
+                <button onclick="toggle('_offset_clone_rows_double')">Show/Hide</button>
+            <div id="_offset_clone_rows_double" style="display: none;">
                 Strengths: Provides allowance for higher production rates (from visitor bonus) to reduce failures.
                 <br>How to tile: Planning, planning, planning. Same thing as offset clone rows with more spacing
                 inbetween each "pair" of clones.
@@ -487,8 +485,8 @@
             <a name="cliff_clone_multi"></a>
             <h3>cliff cloning (multi-species)</h3>
             <p><img src="../img/layouts/cliff_clone_multi.PNG" /><br>
-                <button onclick="toggle('cliff_clone_multi')">Show/Hide</button>
-            <div id="cliff_clone_multi" style="display: none;">
+                <button onclick="toggle('_cliff_clone_multi')">Show/Hide</button>
+            <div id="_cliff_clone_multi" style="display: none;">
                 Uses: Cloning 2 or more species of flowers.
                 <br>Strengths: 0% failure rate.
                 <br>Weaknesses: You have to deal with cliffs bro.
