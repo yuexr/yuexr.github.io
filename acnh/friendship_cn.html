@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="../styles/styles.css" />
     <title>友情提升手册</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+
+
 </head>
 
 <body>
@@ -28,7 +34,7 @@
         </div>
 
         <div id="navbar">
-            <a href="./" class="navlink">home</a>
+            <div id="nav-root"></div>
         </div>
 
         <div id="content-container">
@@ -37,14 +43,14 @@
             <h1>[CN]　友情提升手册</h1>
             <p><a href="friendship.html">[ENG] original guide</a></p>
 
-            <img src="/img/cn/0.png" alt="friendship0"><br>
-            <img src="/img/cn/1.png" alt="friendship1"><br>
-            <img src="/img/cn/2.png" alt="friendship2"><br>
-            <img src="/img/cn/3.png" alt="friendship3"><br>
-            <img src="/img/cn/4.png" alt="friendship4"><br>
-            <img src="/img/cn/5.png" alt="friendship5"><br>
-            <img src="/img/cn/6.png" alt="friendship6"><br>
-            <img src="/img/cn/7.png" alt="friendship7"><br>
+            <img src="../img/cn/0.png" alt="friendship0"><br>
+            <img src="../img/cn/1.png" alt="friendship1"><br>
+            <img src="../img/cn/2.png" alt="friendship2"><br>
+            <img src="../img/cn/3.png" alt="friendship3"><br>
+            <img src="../img/cn/4.png" alt="friendship4"><br>
+            <img src="../img/cn/5.png" alt="friendship5"><br>
+            <img src="../img/cn/6.png" alt="friendship6"><br>
+            <img src="../img/cn/7.png" alt="friendship7"><br>
 
             <hr>
 
@@ -52,26 +58,21 @@
 
             <h3>credits</h3>
             <ul class="bullet-list">
-                <li>作者：yue, ooraloo#0360</li>
+                <li>作者：<a href="https://twitter.com/yuecrossing" target="_blank">@yuecrossing</a>, ooraloo#0360</li>
                 <li>调查：<a href="https://twitter.com/_Ninji" target="_blank">@_Ninji</a>, Alexis#8717,
-                    Stoney#9215, astronomyfortwo#4112, Burandii#7476, FCFCQQQ#0033</li>
-                <li>中文翻译：<a href="https://twitter.com/Usagixkoharu" target="_blank">@Usagixkoharu</a>, <a href="https://twitter.com/cestislife" target="_blank">@cestislife</a>, Vityuri#8738</li>
+                    Stoney#9215, <a href="https://twitter.com/astronomyfortwo" target="_blank">@astronomyfortwo</a>,
+                    Burandii#7476, FCFCQQQ#0033</li>
+                <li>中文翻译：<a href="https://twitter.com/Usagixkoharu" target="_blank">@Usagixkoharu</a>, <a
+                        href="https://twitter.com/cestislife" target="_blank">@cestislife</a>, Vityuri#8738</li>
             </ul>
         </div>
 
-        <div id="footer"></div>
-        <div id="footer-container">
-            <div class="footer-links">
-                <a href="https://twitter.com/yuecrossing" target="_blank"><img src="../img/tw.png"
-                        class="footer-icon"></a>
-                <a href="https://www.instagram.com/yuecrossing" target="_blank"><img src="../img/ig.png"
-                        class="footer-icon"></a>
-                <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
-                <script
-                    type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi!', '#6bd3ff', 'W7W21Q1LX'); kofiwidget2.draw();</script>
-            </div>
-        </div>
+        <div id="footer-root"></div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="../scripts/index.js"></script>
 
 </body>
 

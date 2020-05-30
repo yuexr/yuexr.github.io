@@ -20,6 +20,11 @@
 
     <title>Garden Layouts</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+
 </head>
 
 <body>
@@ -29,7 +34,7 @@
         </div>
 
         <div id="navbar">
-            <a href="./" class="navlink">home</a>
+            <div id="nav-root"></div>
         </div>
 
         <div id="content-container">
@@ -43,7 +48,9 @@
             <img src="/img/layouts/layouts2.png" alt="layout_flowchart" class="center" /><BR>
 
             <h2>Understanding the Flowchart</h2>
-            <div class="toggle-container"><button class="button" onclick="toggle('flowchartInstructions')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div class="toggle-container"><button class="button"
+                    onclick="toggle('flowchartInstructions')">show/hide</button><img src="../img/layouts/leifpeek.png"
+                    width=30px style="margin-bottom:-10px">
                 <div id="flowchartInstructions" style="display:none;">
                     <h3>What is your goal?</h3>
                     <ul class="bullet-list">
@@ -196,7 +203,8 @@
             </ul>
             <div class="toggle-container">
 
-                Why is X a bad layout? <button class="button" onclick="toggle('toggleX')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+                Why is X a bad layout? <button class="button" onclick="toggle('toggleX')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
                 <div id="toggleX" style="display:none;">To a beginner, this may look like a decent breeding layout. All
                     the flowers are
                     touching!<br>
@@ -210,7 +218,9 @@
             <li>Now let's look at how the Checkerboard layout is impacted.</li>
             <div class="toggle-container">
 
-                Why is Checkerboard a bad layout? <button class="button" onclick="toggle('toggleCheckerboard')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+                Why is Checkerboard a bad layout? <button class="button"
+                    onclick="toggle('toggleCheckerboard')">show/hide</button><img src="../img/layouts/leifpeek.png"
+                    width=30px style="margin-bottom:-10px">
                 <div id="toggleCheckerboard" style="display:none;">Applying the same logic as above, we can see that
                     Checkerboard is a big YIKES. <br>
                     Look at all the clones that we might get with this layout! Leif would be disappointed with you. <br>
@@ -252,22 +262,26 @@
             <a name="2x2"></a>
             <h3>2x2</h3>
             <p><img src="../img/layouts/2x2.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_2x2')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_2x2" style="display: none;" class="layouts-container" > Uses: same species breeding where parents are both the same color.<br>
+                Leif's explanation: <button class="button" onclick="toggle('_2x2')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_2x2" style="display: none;" class="layouts-container"> Uses: same species breeding where parents
+                are both the same color.<br>
                 Strengths: 100% clone-resistant. ideal single-species same-parent breeding layout. better than turtle at
                 3 visitors.<br>
                 Weaknesses: not the most space efficient.<br>
                 How to tile: make sure there is space inbetween each set of 2x2. <br>
                 Tips: leave 2 empty spaces on opposite sides of the 2x2 square as shown.<br>
                 <img src="../img/layouts/2x2_t.PNG">
-            </div></p>
-            
+            </div>
+            </p>
+
 
             <a name="turtle"></a>
             <h3>Turtle (tiled: "Super-Turtle")</h3>
             <p><img src="../img/layouts/turtle.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_turtle')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_turtle" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_turtle')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_turtle" style="display: none;" class="layouts-container">
                 Uses: same species breeding where parents are both the same color.<br>
                 Strengths: dense and space efficient, more offsprings than hexahole at 2-5 visitors.<br>
                 Weaknesses: not 100% clone resistant (up to 2.5% clones at 5 visitors).<br>
@@ -280,8 +294,9 @@
             <a name="hexahole"></a>
             <h3>Hexahole ("Hexhole")</h3>
             <p><img src="../img/layouts/hexahole.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_hexahole')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_hexahole" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_hexahole')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_hexahole" style="display: none;" class="layouts-container">
                 Uses: same species breeding where parents are both the same color.<br>
                 Strengths: dense and space efficient, more offsprings than turtle at 0 visitors, more clone-resistant
                 than turtle.<br>
@@ -299,8 +314,9 @@
             <a name="isolated_pairs"></a>
             <h3>Isolated Pairs ("Independent Pairs", "IPs")</h3>
             <p><img src="../img/layouts/isolated_pairs.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_isolated_pairs')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_isolated_pairs" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_isolated_pairs')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_isolated_pairs" style="display: none;" class="layouts-container">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: Everything-- 100% clone resistant, focus on individual gene combinations.
                 <br>Weaknesses: Hardly anything, but you can adjust it to be more space efficient with cliff-assisted
@@ -314,8 +330,9 @@
             <h3>Diamond</h3>
             <p>do not tile diamond into checkerboard. this will increase likelihood of cloning.<br>
                 <img src="../img/layouts/diamond.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_diamond')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_diamond" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_diamond')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_diamond" style="display: none;" class="layouts-container">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: 100% clone resistant.
                 <br>Weaknesses: Less space-efficient compared to isolated pairs. IP is better.
@@ -328,8 +345,10 @@
             <a name="isolated_pairs_cliff"></a>
             <h3>Isolated Pairs (cliff-assisted)</h3>
             <p><img src="../img/layouts/isolated_pairs_cliff.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_isolated_pairs_cliff')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_isolated_pairs_cliff" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button"
+                    onclick="toggle('_isolated_pairs_cliff')">show/hide</button><img src="../img/layouts/leifpeek.png"
+                    width=30px style="margin-bottom:-10px">
+            <div id="_isolated_pairs_cliff" style="display: none;" class="layouts-container">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: All the strengths of how good IP with bonus space-efficiency.
                 <br>Weaknesses: You have to deal with cliffs bro.
@@ -345,8 +364,10 @@
             <a name="dense_isolated_pairs"></a>
             <h3>Dense Isolated Pairs</h3>
             <p><img src="../img/layouts/dense_isolated_pairs.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_dense_isolated_pairs')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_dense_isolated_pairs" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button"
+                    onclick="toggle('_dense_isolated_pairs')">show/hide</button><img src="../img/layouts/leifpeek.png"
+                    width=30px style="margin-bottom:-10px">
+            <div id="_dense_isolated_pairs" style="display: none;" class="layouts-container">
                 Uses: Multi-species breeding (parents can be same or different colors).
                 <br>Strengths: All the strengths of how good IP but more space efficient! Easy to maintain and water.
                 <br>Weaknesses: Very prone to failure (20-30%), which means when a flower fails to breed simply because
@@ -360,8 +381,10 @@
             <a name="offset_dense_pairs"></a>
             <h3>Offset Dense Isolated Pairs</h3>
             <p><img src="../img/layouts/offset_dense_pairs.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_offset_dense_pairs')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_offset_dense_pairs" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button"
+                    onclick="toggle('_offset_dense_pairs')">show/hide</button><img src="../img/layouts/leifpeek.png"
+                    width=30px style="margin-bottom:-10px">
+            <div id="_offset_dense_pairs" style="display: none;" class="layouts-container">
                 Uses: Multi-species breeding (parents can be same or different colors).
                 <br>Strengths: SO GOOD. Ideal breeding layout. All the strengths of IP + space efficiency of dense IP +
                 signficantly lower failure rate (1-15%).
@@ -374,8 +397,9 @@
             <a name="dense_diamonds"></a>
             <h3>Dense Diamonds</h3>
             <p><img src="../img/layouts/dense_diamonds.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_dense_diamonds')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_dense_diamonds" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_dense_diamonds')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_dense_diamonds" style="display: none;" class="layouts-container">
                 Uses: Multi-species breeding (parents can be same or different colors).
                 <br>Strengths: Two overlapping diamonds for more space efficiency.
                 <br>Weaknesses: Visually much more disorganized than offset dense pairs. Less space efficient because
@@ -393,8 +417,9 @@
             <a name="isolated_clones"></a>
             <h3>Isolated Clones</h3>
             <p> <img src="../img/layouts/isolated_clones.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_isolated_clones')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_isolated_clones" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_isolated_clones')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_isolated_clones" style="display: none;" class="layouts-container">
                 Uses: Standard cloning layout for just one species of flower.
                 <br>Strengths: Easy & simple! Make sure it is not touching another flower of the same species.
                 <br>Weaknesses: Not the greatest space efficiency.
@@ -407,8 +432,10 @@
             <h3>Cliff Cloning (single-species)</h3>
             <p>
                 <img src="../img/layouts/cliff_clone_single.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_cliff_clone_single')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_cliff_clone_single" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button"
+                    onclick="toggle('_cliff_clone_single')">show/hide</button><img src="../img/layouts/leifpeek.png"
+                    width=30px style="margin-bottom:-10px">
+            <div id="_cliff_clone_single" style="display: none;" class="layouts-container">
                 Uses: Cloning a single species of flower.
                 <br>Strengths: Good space efficiency, exactly 1:1 empty space for each flower to clone onto.
                 <br>Weaknesses: You have to deal with cliffs bro.
@@ -429,8 +456,9 @@
             <h3>Clone Rows</h3>
             <p>
                 <img src="../img/layouts/clone_rows.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_clone_rows')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_clone_rows" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_clone_rows')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_clone_rows" style="display: none;" class="layouts-container">
                 Uses: Cloning 4+ species of flowers.
                 <br>Strengths: Super space efficient, easy to maintain, easy to water.
                 <br>Weaknesses: None, really. It does require 4 species though.
@@ -444,8 +472,9 @@
             <h3>Clone Rows (double-spaced)</h3>
             <p>Same as clone rows above, but with 2 empty spaces between each row.
                 <br>
-                Leif's explanation: <button class="button" onclick="toggle('_clone_rows_double')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_clone_rows_double" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_clone_rows_double')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_clone_rows_double" style="display: none;" class="layouts-container">
                 Strengths: Provides allowance for higher production rates (from visitor bonus) to reduce failures.
                 <br>How to tile: self-explanatory. 2 empty spaces in between.
                 <br><img src="../img/layouts/clone_rows_t_d.PNG">
@@ -456,8 +485,9 @@
             <h3>Offset Clone Rows</h3>
             <p>
                 <img src="../img/layouts/offset_clone_rows.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_offset_clone_rows')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_offset_clone_rows" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_offset_clone_rows')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_offset_clone_rows" style="display: none;" class="layouts-container">
                 Uses: Cloning 3+ species of flowers.
                 <br>Strengths: Same as regular clone rows, except the minimum # of species is 3.
                 <br>Weaknesses: Requires a little more planning, less efficient than regular clone rows.
@@ -473,8 +503,10 @@
             <h3>Offset Clone Rows (double-spaced)</h3>
             <p>Same as clone rows above, but with 2 empty spaces between each row.
                 <br>
-                Leif's explanation: <button class="button" onclick="toggle('_offset_clone_rows_double')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_offset_clone_rows_double" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button"
+                    onclick="toggle('_offset_clone_rows_double')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_offset_clone_rows_double" style="display: none;" class="layouts-container">
                 Strengths: Provides allowance for higher production rates (from visitor bonus) to reduce failures.
                 <br>How to tile: Planning, planning, planning. Same thing as offset clone rows with more spacing
                 inbetween each "pair" of clones.
@@ -485,8 +517,9 @@
             <a name="cliff_clone_multi"></a>
             <h3>cliff cloning (multi-species)</h3>
             <p><img src="../img/layouts/cliff_clone_multi.PNG" /><br>
-                Leif's explanation: <button class="button" onclick="toggle('_cliff_clone_multi')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_cliff_clone_multi" style="display: none;" class="layouts-container" >
+                Leif's explanation: <button class="button" onclick="toggle('_cliff_clone_multi')">show/hide</button><img
+                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+            <div id="_cliff_clone_multi" style="display: none;" class="layouts-container">
                 Uses: Cloning 2 or more species of flowers.
                 <br>Strengths: 0% failure rate.
                 <br>Weaknesses: You have to deal with cliffs bro.
@@ -552,10 +585,11 @@
         </div>
 
         <div id="footer-root"></div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="../scripts/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="../scripts/index.js"></script>
 
 </body>
 

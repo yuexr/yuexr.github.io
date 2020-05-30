@@ -38,8 +38,12 @@ var kofiwidget = function () {
 }();
 
 $(document).ready(function(){
-  $("#footer-root").load("../acnh/footer.html", function(){
+  $("#footer-root").load("../acnh/0footer.html", function(){
     kofiwidget.init('Support Me on Ko-fi', '#29abe0', 'W7W21Q1LX');
     kofiwidget.draw('kofi');
   }); 
 })
+
+$(function(){
+  $("#nav-root").load("../acnh/0nav.html"); 
+});
