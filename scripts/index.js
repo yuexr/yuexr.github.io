@@ -37,9 +37,9 @@ var kofiwidget = function () {
   };
 }();
 
-$(function(){
-  $("#footer").load("../acnh/footer.html", function(){
+$(document).ready(function(){
+  $("#footer-root").load("../acnh/footer.html", function(){
     kofiwidget.init('Support Me on Ko-fi', '#29abe0', 'W7W21Q1LX');
     kofiwidget.draw('kofi');
   }); 
-});
+})
