@@ -1,15 +1,13 @@
 function toggle(toggleId) {
-    var x = document.getElementById(toggleId);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
+  var x = document.getElementById(toggleId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
+}
 
-
-
-var kofiwidget2 = function () {
+var kofiwidget = function () {
   var style = "";
   var html = "";
   var color = "";
@@ -39,11 +37,9 @@ var kofiwidget2 = function () {
   };
 }();
 
-
-
 $(function(){
-  $("#_footer").load("../acnh/_footer.html", function(){
-    kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'W7W21Q1LX');
-    kofiwidget2.draw('kofi');
+  $("#footer").load("../acnh/footer.html", function(){
+    kofiwidget.init('Support Me on Ko-fi', '#29abe0', 'W7W21Q1LX');
+    kofiwidget.draw('kofi');
   }); 
 });
