@@ -226,19 +226,18 @@ img {
 
 .layouts-container{
   background-color: #fff;
-  border: 1px solid #779a7e;
-  border-left: 8px solid #779a7e;
-  padding: 5px 0 10px 20px;
-  margin: -10px 0 15px 24px;
-  max-width: 850px;
+  border: 1px solid #b2dbd9;
+  border-left: 8px solid #b2dbd9;
+  padding: 5px 10px 10px 20px;
+  margin: -15px 0 15px 24px;
+  max-width: 840px;
 }
 
 .button {
-  background-color: #4CAF50;
+  background-color: #75c360;
   border: none;
-  border-radius: 8px;
   color: white;
-  padding: 5px 15px;
+  padding:6px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -247,6 +246,5 @@ img {
   transition-duration: 0.4s;
 }
 .button:hover {
-  background-color: white;
-  color: #4CAF50;
+  background-color: #eeaa3a;
 }
