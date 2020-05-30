@@ -35,7 +35,10 @@
         <div id="content-container">
 
             <a name="top"></a>
-            <h1>garden layouts</h1>
+            <h1>Garden Layouts</h1>
+
+            <p>page is work in process, i'm constantly updating it.<br>
+                last update: 05/29/2020 10:53pm EST.</p>
 
             <img src="/img/layouts/layouts2.png" alt="layout_flowchart" class="center" /><BR>
 
@@ -89,6 +92,16 @@
 
             <h3>contents</h3>
             <div id="contents-container">
+
+                <b>Understanding Flower Production & Layouts</b>
+                <ul class="bullet-list">
+                    <li><a href="#breeding_vs_cloning">Breeding vs. Cloning</a></li>
+                    <li><a href="#algorithm">Reproduction Algorithm</a></li>
+                    <li><a href="#badlayouts">What makes a bad layout?</a></li>
+                    <li><a href="#x">Bad Layout: X</a></li>
+                    <li><a href="#checkerboard">Bad Layout: Checkerboard</a></li>
+                </ul>
+
                 <b>All Flowers Layouts</b>
                 <ul class="bullet-list">
                     <li><a href="#12x12">12x12</a></li>
@@ -98,8 +111,7 @@
                 <b>Breeding Layouts [single-species, same parents]</b>
                 <ul class="bullet-list">
                     <li><a href="#2x2">2x2</a></li>
-                    <li><a href="#turtle">turtle</a></li>
-                    <li><a href="#super_turtle">super-turtle</a></li>
+                    <li><a href="#turtle">turtle (super-turtle)</a></li>
                     <li><a href="#hexahole"> hexahole</a></li>
                 </ul>
 
@@ -107,26 +119,29 @@
                 <ul class="bullet-list">
                     <li><a href="#isolated_pairs">isolated pairs</a></li>
                     <li><a href="#diamond">diamond</a></li>
-                    <li><a href="#isolated_pairs_cliff"> isolated pairs (cliff-assisted)</a></li>
+                    <li><a href="#isolated_pairs_cliff">cliff isolated pairs</a></li>
                 </ul>
 
                 <b>Breeding Layouts [multi-species]</b>
                 <ul class="bullet-list">
                     <li><a href="#dense_isolated_pairs">dense isolated pairs</a></li>
+                    <li><a href="offset_dense_pairs">offset dense isolated pairs</a></li>
                     <li><a href="#dense_diamonds">dense diamonds</a></li>
                 </ul>
 
                 <b>Cloning Layouts [single-species]</b>
                 <ul class="bullet-list">
                     <li><a href="#isolated_clones">isolated clones</a></li>
-                    <li><a href="#cliff_clone_single">cliff cloning (single-species)</a></li>
+                    <li><a href="#cliff_clone_single">cliff cloning</a></li>
                 </ul>
 
 
                 <b>Cloning Layouts [multi-species]</b>
                 <ul class="bullet-list">
-                    <li><a href="#dense_clone_rows">dense clone rows</a></li>
-                    <li><a href="#dense_clone_rows_double">dense clone rows (double spaced)</a></li>
+                    <li><a href="#clone_rows">clone rows</a></li>
+                    <li><a href="#clone_rows_double">clone rows (double-spaced)</a></li>
+                    <li><a href="#offset_clone_rows">offset clone rows</a></li>
+                    <li><a href="#offset_clone_rows_double">offset clone rows (double-spaced)</a></li>
                     <li><a href="#cliff_clone_multi">cliff cloning (multi-species)</a></li>
                 </ul>
 
@@ -140,6 +155,7 @@
 
             <h2>Understanding Flower Production & Layouts</h2>
 
+            <a name="breeding_vs_cloning"></a>
             <h3>Breeding vs. Cloning</h3>
             <ul class="bullet-list">
                 <li>AGAIN: it is very important that you understand the difference.</li>
@@ -150,6 +166,7 @@
                 <li>There is no situation where we want a layout that can do both.</li>
             </ul><BR>
 
+            <a name="algorithm"></a>
             <h3>Reproduction Algorithm 101</h3>
             <ul class="bullet-list">
                 <li>Flowers have a chance to reproduce once per day (when you first start your game, or at 5AM).</li>
@@ -167,12 +184,14 @@
             </ul>
             <br>
 
+            <a name="badlayouts"></a>
             <h3>Why are Checkerboard and X breeding layouts bad?</h3>
             <ul class="bullet-list">
                 <li>A big problem with many ACNH flower guides on the internet is that they recommend checkerboard and X
                     layouts.</li>
                 <li>They are presented as breeding layouts (to make new colours). However, they are highly susceptible
                     to cloning.</li>
+                <a name="x"></a>
                 <li>Let's first take a look at the X layout.</li>
             </ul>
             <div id="toggle-container">
@@ -187,7 +206,7 @@
                     <br>
                     <img src="../img/layouts/x.PNG"></div>
 
-            </div>
+            </div><a name="checkerboard"></a>
             <li>Now let's look at how the Checkerboard layout is impacted.</li>
             <div id="toggle-container">
 
@@ -237,7 +256,8 @@
             <p><img src="../img/layouts/2x2.PNG" /><br>
                 <button onclick="toggle('2x2')">Show/Hide</button>
             <div id="2x2" style="display: none;"> Uses: same species breeding where parents are both the same color.<br>
-                Strengths: 100% clone-resistant. ideal single-species same-parent breeding layout. better than turtle at 3 visitors.<br>
+                Strengths: 100% clone-resistant. ideal single-species same-parent breeding layout. better than turtle at
+                3 visitors.<br>
                 Weaknesses: not the most space efficient.<br>
                 How to tile: make sure there is space inbetween each set of 2x2. <br>
                 Tips: leave 2 empty spaces on opposite sides of the 2x2 square as shown.<br>
@@ -246,7 +266,7 @@
             </p>
 
             <a name="turtle"></a>
-            <h3>turtle (tiled: "super-turtle")</h3>
+            <h3>Turtle (tiled: "Super-Turtle")</h3>
             <p><img src="../img/layouts/turtle.PNG" /><br>
                 <button onclick="toggle('turtle')">Show/Hide</button>
             <div id="turtle" style="display: none;">
@@ -260,7 +280,7 @@
             </p>
 
             <a name="hexahole"></a>
-            <h3>hexahole (or "hexhole")</h3>
+            <h3>Hexahole ("Hexhole")</h3>
             <p><img src="../img/layouts/hexahole.PNG" /><br>
                 <button onclick="toggle('hexahole')">Show/Hide</button>
             <div id="hexahole" style="display: none;">
@@ -279,44 +299,45 @@
             <h2>Breeding Layouts [different parents]</h2>
 
             <a name="isolated_pairs"></a>
-            <h3>isolated pairs (or "independent pairs", "IP")</h3>
+            <h3>Isolated Pairs ("Independent Pairs", "IPs")</h3>
             <p><img src="../img/layouts/isolated_pairs.PNG" /><br>
                 <button onclick="toggle('isolated_pairs')">Show/Hide</button>
             <div id="isolated_pairs" style="display: none;">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: Everything-- 100% clone resistant, focus on individual gene combinations.
-                <br>Weaknesses: Hardly anything, but you can adjust it to be more space efficient with cliff-assisted IPs or multi-species dense IPs.
-                <br>How to tile: Just make sure there is space inbetween each set of IP. 
+                <br>Weaknesses: Hardly anything, but you can adjust it to be more space efficient with cliff-assisted
+                IPs or multi-species dense IPs.
+                <br>How to tile: Just make sure there is space inbetween each set of IP.
                 <br><img src="../img/layouts/isolated_pairs_t.PNG">
             </div>
             </p>
 
             <a name="diamond"></a>
-            <h3>diamond</h3>
+            <h3>Diamond</h3>
             <p>do not tile diamond into checkerboard. this will increase likelihood of cloning.<br>
                 <img src="../img/layouts/diamond.PNG" /><br>
                 <button onclick="toggle('diamond')">Show/Hide</button>
-                <div id="diamond" style="display: none;">
+            <div id="diamond" style="display: none;">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: 100% clone resistant.
                 <br>Weaknesses: Less space-efficient compared to isolated pairs. IP is better.
                 <br>How to tile: Ensure that each set of diamond is not touching.
-                <br>Tips: Slightly more space-efficient if you stagger each diamond.
+                <br>Tips: For tiling, it is slightly more space-efficient if you stagger each diamond.
                 <br><img src="../img/layouts/diamond_t.PNG">
-                </div>
+            </div>
             </p>
 
             <a name="isolated_pairs_cliff"></a>
-            <h3>isolated pairs (cliff-assisted)</h3>
+            <h3>Isolated Pairs (cliff-assisted)</h3>
             <p><img src="../img/layouts/isolated_pairs_cliff.PNG" /><br>
                 <button onclick="toggle('isolated_pairs_cliff')">Show/Hide</button>
-                <div id="isolated_pairs_cliff" style="display: none;">
+            <div id="isolated_pairs_cliff" style="display: none;">
                 Uses: Same-species breeding (parents can be same or different colors).
                 <br>Strengths: All the strengths of how good IP with bonus space-efficiency.
                 <br>Weaknesses: You have to deal with cliffs bro.
                 <br>How to tile: Like always, ensure each IP is not touching another.
                 <br><img src="../img/layouts/isolated_pairs_cliff_t.PNG">
-                </div>
+            </div>
             </p>
 
             <hr />
@@ -324,55 +345,157 @@
             <h2>Breeding Layouts [multi-species]</h2>
 
             <a name="dense_isolated_pairs"></a>
-            <h3>dense isolated pairs</h3>
-            <p>you can offset the pairs as shown in the second pic.<br>
-                <img src="../img/layouts/dense_isolated_pairs.PNG" /><br>
-                <img src="../img/layouts/dense_isolated_pairs2.PNG" />
+            <h3>Dense Isolated Pairs</h3>
+            <p><img src="../img/layouts/dense_isolated_pairs.PNG" /><br>
+                <button onclick="toggle('dense_isolated_pairs')">Show/Hide</button>
+            <div id="dense_isolated_pairs" style="display: none;">
+                Uses: Multi-species breeding (parents can be same or different colors).
+                <br>Strengths: All the strengths of how good IP but more space efficient! Easy to maintain and water.
+                <br>Weaknesses: Very prone to failure (20-30%), which means when a flower fails to breed simply because
+                there is no more empty space for it to make an offspring. Use offset dense IPs to solve this problem!
+                <br>How to tile: Make sure there is empty space between each column. You can double empty if you have
+                lots of visitors.
+                <br><img src="../img/layouts/dense_isolated_pairs_t.PNG">
+            </div>
+            </p>
+
+            <a name="offset_dense_pairs"></a>
+            <h3>Offset Dense Isolated Pairs</h3>
+            <p><img src="../img/layouts/offset_dense_pairs.PNG" /><br>
+                <button onclick="toggle('offset_dense_pairs')">Show/Hide</button>
+            <div id="offset_dense_pairs" style="display: none;">
+                Uses: Multi-species breeding (parents can be same or different colors).
+                <br>Strengths: SO GOOD. Ideal breeding layout. All the strengths of IP + space efficiency of dense IP +
+                signficantly lower failure rate (1-15%).
+                <br>Weaknesses: nothing. (Can look messy, some people chose standard dense IP for aesthetics).
+                <br>How to tile: Like below.
+                <br><img src="../img/layouts/offset_dense_pairs_t.PNG">
+            </div>
             </p>
 
             <a name="dense_diamonds"></a>
-            <h3>dense diamonds</h3>
-            <p><img src="../img/layouts/dense_diamonds.PNG" /></p>
+            <h3>Dense Diamonds</h3>
+            <p><img src="../img/layouts/dense_diamonds.PNG" /><br>
+                <button onclick="toggle('dense_diamonds')">Show/Hide</button>
+            <div id="dense_diamonds" style="display: none;">
+                Uses: Multi-species breeding (parents can be same or different colors).
+                <br>Strengths: Two overlapping diamonds for more space efficiency.
+                <br>Weaknesses: Visually much more disorganized than offset dense pairs. Less space efficient because
+                tiling dense diamonds is super awkward.
+                <br>How to tile: ... You do your best. Just like regular diamonds, staggering them a little bit is nice
+                (at that point just do offset dense pairs man lol...)
+                <br><img src="../img/layouts/dense_diamonds_t.PNG">
+            </div>
+            </p>
 
             <hr />
 
             <h2>Cloning Layouts [single-species]</h2>
 
             <a name="isolated_clones"></a>
-            <h3>isolated clones</h3>
-            <p>standard cloning layout, but very space inefficient.<br>
-                <img src="../img/layouts/isolated_clones.PNG" /></p>
+            <h3>Isolated Clones</h3>
+            <p> <img src="../img/layouts/isolated_clones.PNG" /><br>
+                <button onclick="toggle('isolated_clones')">Show/Hide</button>
+            <div id="isolated_clones" style="display: none;">
+                Uses: Standard cloning layout for just one species of flower.
+                <br>Strengths: Easy & simple! Make sure it is not touching another flower of the same species.
+                <br>Weaknesses: Not the greatest space efficiency.
+                <br>How to tile: Again, just ensure they are not touching
+                <br><img src="../img/layouts/isolated_clones_t.PNG">
+            </div>
+            </p>
 
             <a name="cliff_clone_single"></a>
-            <h3>cliff cloning (single-species)</h3>
+            <h3>Cliff Cloning (single-species)</h3>
             <p>
-                you cannot tile the following layout vertically.<br />
-                <img src="../img/layouts/cliff_clone_single.PNG" /><br />
-                use the layout below if you want to tile vertically.<br />
-                <img src="../img/layouts/cliff_clone_single_tile.PNG" />
+                <img src="../img/layouts/cliff_clone_single.PNG" /><br>
+                <button onclick="toggle('cliff_clone_single')">Show/Hide</button>
+            <div id="cliff_clone_single" style="display: none;">
+                Uses: Cloning a single species of flower.
+                <br>Strengths: Good space efficiency, exactly 1:1 empty space for each flower to clone onto.
+                <br>Weaknesses: You have to deal with cliffs bro.
+                <br>How to tile: You can tile it horizontally like picture A. To tile horizontally, put one extra space
+                inbetween.
+                <br>Tips: The reason why we try to put 2 spaces instead of 1 between flowers is to minimize failure
+                rates!
+                <br><img src="../img/layouts/cliff_clone_single_ta.PNG">
+                <br><img src="../img/layouts/cliff_clone_single_tb.PNG">
+            </div>
             </p>
 
             <hr />
 
             <h2>Cloning Layouts [multi-species]</h2>
 
-            <a name="dense_clone_rows"></a>
-            <h3>dense clone rows</h3>
-            <p>ensure that no flower of the same species are touching. you can offset the rows if you like.<br>
-                <img src="../img/layouts/dense_clone_rows.PNG" /><br>
-                <img src="../img/layouts/dense_clone_rows2.PNG" />
+            <a name="clone_rows"></a>
+            <h3>Clone Rows</h3>
+            <p>
+                <img src="../img/layouts/clone_rows.PNG" /><br>
+                <button onclick="toggle('clone_rows')">Show/Hide</button>
+            <div id="clone_rows" style="display: none;">
+                Uses: Cloning 4+ species of flowers.
+                <br>Strengths: Super space efficient, easy to maintain, easy to water.
+                <br>Weaknesses: None, really. It does require 4 species though.
+                <br>How to tile: Just make sure there is space between two each row.
+                <br>Note: Higher chance of failure with visitor waring, use double-spaced clone rows if 2+ waterers.
+                <br><img src="../img/layouts/clone_rows_t.PNG">
+            </div>
             </p>
 
-            <a name="dense_clone_rows_double"></a>
-            <h3>dense clone rows (double spaced)</h3>
-            <p>double space ensures that new flowers have space to grow when you have a spawn chance of 50%+ (from
-                visitor bonus, etc.)
-                <img src="../img/layouts/dense_clone_rows_double.PNG" /></p>
+            <a name="clone_rows_double"></a>
+            <h3>Clone Rows (double-spaced)</h3>
+            <p>Same as clone rows above, but with 2 empty spaces between each row.
+                <br>
+                <button onclick="toggle('clone_rows_double')">Show/Hide</button>
+            <div id="clone_rows_double" style="display: none;">
+                Strengths: Provides allowance for higher production rates (from visitor bonus) to reduce failures.
+                <br>How to tile: self-explanatory. 2 empty spaces in between.
+                <br><img src="../img/layouts/clone_rows_t_d.PNG">
+            </div>
+            </p>
+
+            <a name="offset_clone_rows"></a>
+            <h3>Offset Clone Rows</h3>
+            <p>
+                <img src="../img/layouts/offset_clone_rows.PNG" /><br>
+                <button onclick="toggle('offset_clone_rows')">Show/Hide</button>
+            <div id="offset_clone_rows" style="display: none;">
+                Uses: Cloning 3+ species of flowers.
+                <br>Strengths: Same as regular clone rows, except the minimum # of species is 3.
+                <br>Weaknesses: Requires a little more planning, less efficient than regular clone rows.
+                <br>How to tile: Carefully plan where each of the 3 flowers are going to go such that it won't touch
+                another flower of the same species.
+                <br>Note: Higher chance of failure with visitor waring, use double-spaced offset clone rows if 2+
+                waterers.
+                <br><img src="../img/layouts/offset_clone_rows_t.PNG">
+            </div>
+            </p>
+
+            <a name="offset_clone_rows_double"></a>
+            <h3>Offset Clone Rows (double-spaced)</h3>
+            <p>Same as clone rows above, but with 2 empty spaces between each row.
+                <br>
+                <button onclick="toggle('offset_clone_rows_double')">Show/Hide</button>
+            <div id="offset_clone_rows_double" style="display: none;">
+                Strengths: Provides allowance for higher production rates (from visitor bonus) to reduce failures.
+                <br>How to tile: Planning, planning, planning. Same thing as offset clone rows with more spacing
+                inbetween each "pair" of clones.
+                <br><img src="../img/layouts/offset_clone_rows_d.PNG">
+            </div>
+            </p>
 
             <a name="cliff_clone_multi"></a>
             <h3>cliff cloning (multi-species)</h3>
-            <p><img src="../img/layouts/cliff_clone_multi.PNG" /></p>
-
+            <p><img src="../img/layouts/cliff_clone_multi.PNG" /><br>
+                <button onclick="toggle('cliff_clone_multi')">Show/Hide</button>
+            <div id="cliff_clone_multi" style="display: none;">
+                Uses: Cloning 2 or more species of flowers.
+                <br>Strengths: 0% failure rate.
+                <br>Weaknesses: You have to deal with cliffs bro.
+                <br>How to tile: Ensure there's 2 empty spaces between each "pair" of clones.
+                <br><img src="../img/layouts/cliff_clone_multi_t.PNG">
+            </div>
+            </p>
             <hr />
 
             <h2>Testing Layouts</h2>
@@ -393,15 +516,19 @@
             <br>
             <h3>Credits:</h3>
             <ul class="bullet-list">
+                <li>Guide: <a href="https://twitter.com/yuecrossing" target="_blank">@yuecrossing</a></li>
                 <li>
-                    Dataminers: Aeter (<a href="https://twitter.com/aiterusawato" target="_blank">@aiterusawato</a>),
-                    Paleh, Ninji (<a href="https://twitter.com/_Ninji" target="_blank">@_Ninji</a>)
+                    Dataminers: <a href="https://twitter.com/aiterusawato" target="_blank">@aiterusawato</a>,
+                    Paleh, <a href="https://twitter.com/_Ninji" target="_blank">@_Ninji</a>
                 </li>
-                <li>Layouts: Chomp#2418, Catobat#4610, PCVXD#1272, J_MASTER (<a href="https://twitter.com/GigaRoboid"
-                        target="_blank">@GigaRoboid</a>),
+                <li>Layouts research & analysis: Chomp#2418, Catobat#4610, PCVXD#1272, J_MASTER (<a
+                        href="https://twitter.com/GigaRoboid" target="_blank">@GigaRoboid</a>),
                     BackwardsN#7201, <a href="https://twitter.com/AeonSake" target="_blank">@AeonSake</a>, <a
-                        href="https://twitter.com/nubleh" target="_blank">@nubleh</a>, Rataime#2586</li>
-                <li>Flowchart: Ragzilla (ragzilla#0001)</li>
+                        href="https://twitter.com/nubleh" target="_blank">@nubleh</a>, Rataime#2586, HannahK#6377, <a
+                        href="https://twitter.com/yuecrossing" target="_blank">@yuecrossing</a>.
+                </li>
+                <li>Flowchart: Ragzilla (ragzilla#0001), <a href="https://twitter.com/yuecrossing"
+                        target="_blank">@yuecrossing</a></li>
             </ul>
             <h3>References:</h3>
             <ul class="bullet-list">
@@ -430,7 +557,7 @@
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-            <script src="../scripts/index.js"></script>
+        <script src="../scripts/index.js"></script>
 
 </body>
 
