@@ -42,7 +42,7 @@ var kofiwidget2 = function () {
 
 
 $(function(){
-  $("#_footer").load("_footer.html", function(){
+  $("#_footer").load("../acnh/_footer.html", function(){
     kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'W7W21Q1LX');
     kofiwidget2.draw('kofi');
   }); 
