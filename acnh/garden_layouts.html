@@ -56,7 +56,8 @@
             <h1>Garden Layouts</h1>
 
             <p>page is work in process, i'm constantly updating it.<br>
-                last update: 05/30/2020 4:25am est.</p>
+                last update: 05/31/2020 3am est.<br>
+            contact me if you see any mistakes or if you have suggestions.</p>
 
             <img src="../img/layouts/layouts2.png" alt="layout_flowchart" class="center" /><BR>
 
@@ -67,16 +68,14 @@
                 <div id="flowchartInstructions" style="display:none;">
                     <h3>What is your goal?</h3>
                     <ul class="bullet-list">
-                        <li><b>All Flowers</b> layouts are for trying to breed all flower phenotypes (colors).</li>
+                        <li><b>All Flowers</b> layouts are for trying to breed all flower phenotypes (colours).</li>
                         <li>
                             <b>Breeding</b> layouts are for crossing genes of two flowers (usually in an attempt to make
-                            a
-                            new flower).
+                            a new flower).
                         </li>
                         <li>
                             <b>Cloning</b> layouts are for when you already have the desired flower, and want to make
-                            exact
-                            copies (same genes).
+                            exact copies (same genes).
                         </li>
                         <li>
                             <b>Testing</b> layouts are for checking a flower's genotype. It is mainly
@@ -87,8 +86,7 @@
                     <h3>What is your situation?</h3>
                     <ul class="bullet-list">
                         <li><b># Species:</b> how many different species of flowers (e.g. tulips, roses, pansies) are
-                            you
-                            working with?</li>
+                            you working with?</li>
                         <li><b>Parents:</b> are the two flowers you are breeding identical (same color) or different
                             colors?
                         </li>
@@ -103,8 +101,8 @@
                         <li>Flowers cannot breed across cliff levels or produce offspring onto a different cliff level.
                         </li>
                         <li>This means cliffs can be used as a "divider" or blocker that does not take up space.</li>
-                        <li><b>Disadvantages:</b> cliff layouts are inconvenient, annoying to water, and not very
-                            aesthetically pleasing.</li>
+                        <li><b>Disadvantages:</b> cliff layouts are inconvenient, annoying to water, and looks funky.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -183,7 +181,7 @@
                     itself.</li>
                 <li>If you are struggling with understanding this concept, please read <a
                         href="./garden.html#gardening101" target="_blank">Gardening 101</a>.</li>
-                <li>There is no situation where we want a layout that can do both.</li>
+                <li>We usually don't want a layout that can do both!</li>
             </ul><BR>
 
             <a name="algorithm"></a>
@@ -222,8 +220,10 @@
                     the flowers are
                     touching!<br>
                     However, if you circle a potential production outcome, we can see that this layout can only breed a
-                    maximum of one time, and can result in many clones.
-                    This is a big waste of our time! We can do <a href="#diamond">a Diamond layout</a> instead.
+                    maximum of one time (each flower can only act as a partner once a day), resulting in lots of
+                    possible cloning.<BR>
+                    This is a big waste of our time! We can do <a href="#diamond">a Diamond layout</a> instead to
+                    improve breeding.
                     <br>
                     <img src="../img/layouts/x.PNG"></div>
 
@@ -277,12 +277,12 @@
             <p><img src="../img/layouts/2x2.PNG" /><br>
                 Leif's explanation: <button class="button" onclick="toggle('_2x2')">show/hide</button><img
                     src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-            <div id="_2x2" style="display: none;" class="layouts-container"> Uses: same species breeding where parents
+            <div id="_2x2" style="display: none;" class="layouts-container">Uses: same species breeding where parents
                 are both the same color.<br>
                 Strengths: 100% clone-resistant. ideal single-species same-parent breeding layout. better than turtle at
                 3 visitors.<br>
                 Weaknesses: not the most space efficient.<br>
-                How to tile: make sure there is space inbetween each set of 2x2. <br>
+                How to tile: make sure there is space inbetween each set of 2x2.<br>
                 Tips: leave 2 empty spaces on opposite sides of the 2x2 square as shown.<br>
                 <img src="../img/layouts/2x2_t.PNG">
             </div>
@@ -363,7 +363,7 @@
                     width=30px style="margin-bottom:-10px">
             <div id="_isolated_pairs_cliff" style="display: none;" class="layouts-container">
                 Uses: Same-species breeding (parents can be same or different colors).
-                <br>Strengths: All the strengths of how good IP with bonus space-efficiency.
+                <br>Strengths: All the strengths of how good IP is with bonus space-efficiency.
                 <br>Weaknesses: You have to deal with cliffs bro.
                 <br>How to tile: Like always, ensure each IP is not touching another.
                 <br><img src="../img/layouts/isolated_pairs_cliff_t.PNG">
@@ -383,9 +383,11 @@
             <div id="_dense_isolated_pairs" style="display: none;" class="layouts-container">
                 Uses: Multi-species breeding (parents can be same or different colors).
                 <br>Strengths: All the strengths of how good IP but more space efficient! Easy to maintain and water.
-                <br>Weaknesses: Very prone to failure (20-30%), which means when a flower fails to breed simply because
-                there is no more empty space for it to make an offspring. Use offset dense IPs to solve this problem!
-                <br>How to tile: Make sure there is empty space between each column. You can double empty if you have
+                <br>Weaknesses: Prone to failure (20-30%), which means when a flower fails to breed simply because
+                there is no more empty space for it to make an offspring. You need to solve this problem by using offset
+                dense IPs or by ensuring there is an extra free column at at each end of the fulll layout.
+                <br>How to tile: Make sure there is empty space between each column. Leave a column of space at each
+                end.
                 lots of visitors.
                 <br><img src="../img/layouts/dense_isolated_pairs_t.PNG">
             </div>
@@ -452,7 +454,8 @@
                 Uses: Cloning a single species of flower.
                 <br>Strengths: Good space efficiency, exactly 1:1 empty space for each flower to clone onto.
                 <br>Weaknesses: You have to deal with cliffs bro.
-                <br>How to tile: You can tile it horizontally like picture A. To tile horizontally, put one extra space
+                <br>How to tile: You can tile it horizontally like picture A. To tile the layout vertically, put one
+                extra space
                 inbetween.
                 <br>Tips: The reason why we try to put 2 spaces instead of 1 between flowers is to minimize failure
                 rates!
@@ -534,7 +537,7 @@
                     src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
             <div id="_cliff_clone_multi" style="display: none;" class="layouts-container">
                 Uses: Cloning 2 or more species of flowers.
-                <br>Strengths: 0% failure rate.
+                <br>Strengths: 0% failure rate. Good with 5v bonus!
                 <br>Weaknesses: You have to deal with cliffs bro.
                 <br>How to tile: Ensure there's 2 empty spaces between each "pair" of clones.
                 <br><img src="../img/layouts/cliff_clone_multi_t.PNG">
