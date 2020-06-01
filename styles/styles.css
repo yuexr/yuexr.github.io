@@ -88,9 +88,19 @@ body {
   color: #3e240e;
 }
 
+a {
+  color:#13928c;
+}
+
+a:hover {
+  background-color: #8eccc9;
+  color:white;
+  text-decoration: none;
+}
+
+
 #navbar {
   background-color: #fae2a5;
-
   height: 30px;
   padding-left: 10px;
   padding-right: 10px;
@@ -100,8 +110,14 @@ body {
   display: inline-block;
   height: 100%;
   box-sizing: border-box;
-  padding: 5px;
+  margin: 5px;
   font-weight: bold;
+  color: #3e240e;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  background-color: #fae2a5;
   color: #3e240e;
   text-decoration: none;
 }
@@ -126,8 +142,16 @@ h2 {
 }
 
 h3 {
+  font-size:20px;
   color: #779a7e;
-  margin-bottom: 3px;
+  margin: 5px 0 3px 0;
+
+}
+
+h4 {
+  font-size:20px;
+  color: #ff8199;
+  margin: 5px 0 3px 0;
 }
 
 img {
@@ -175,6 +199,7 @@ img {
 
 .bullet-list {
   padding-left: 30px;
+  padding-bottom: 10px;;
 }
 
 .center {
@@ -210,7 +235,7 @@ img {
   background-color: #fff;
   border: 1px solid #a3e7e4;
   border-left: 8px solid #a3e7e4;
-  padding: 5px 0 10px 20px;
+  padding: 15px 0 15px 20px;
   margin: 5px 0 15px 24px;
   font-size: 14px;
   width: 450px;
@@ -238,8 +263,8 @@ img {
   border: 1px solid #b2dbd9;
   border-left: 8px solid #b2dbd9;
   padding: 5px 10px 10px 20px;
-  margin: -15px 0 15px 24px;
-  max-width: 840px;
+  margin: 5px 0 0 24px;
+  max-width: auto;
 }
 
 .button {
@@ -256,4 +281,70 @@ img {
 }
 .button:hover {
   background-color: #eeaa3a;
+}
+
+td, th {
+  height: 1rem;
+}
+th {
+  text-align: right;
+  padding: 0 7px 0 0;
+  width: 120px;
+  background: #ffaaba;
+  color:white;
+  font-weight: normal;
+}
+td {
+  padding: 0 0 0 7px;
+  vertical-align: top;
+}
+
+.accordion {
+  background-color: #daeeed;
+  color: #554a41;
+  font-family: "Nunito";
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+
+}
+
+.active, .accordion:hover {
+  background-color: #b2dbd9;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.leif{
+  display:in-line;
+  position:absolute;
+  height:31px;
+  margin-top: -6px;
+}
+
+.leif-indent{
+  display:in-line;
+  margin: 0 0 0 36px;
 }
