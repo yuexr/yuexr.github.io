@@ -209,21 +209,29 @@ img {
 }
 
 .footer-links {
+  height: 40px;
   display: flex;
   justify-content: center;
+  margin-bottom: 16px;
+}
+
+.footer-links > *:not(:last-child){
+  margin-right: 16px;
+}
+
+.footer-links a:hover {
+  background-color: transparent;
 }
 
 .footer-icon-pp {
   height: 40px;
   width: 183px;
-  margin-left: 16px;
   filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
 }
 
 .footer-icon {
   height: 40px;
   width: 40px;
-  margin-right: 16px;
   filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
 }
 
