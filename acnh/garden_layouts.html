@@ -52,16 +52,28 @@
 
         <div id="content-container">
 
-            <a name="top"></a>
             <h1>Garden Layouts</h1>
 
-            <p>page is work in process, i'm constantly updating it.<br>
-                last update: 06/01/2020 7am est.<br>
-                contact me if you see any mistakes or if you have suggestions.</p>
+            <p style="color:grey;font-size: 12px;">Last update: 06/03/2020 5am EST.<br>
+                Contact me if you see any mistakes or if you have suggestions.</p>
 
-            <img src="../img/layouts/layouts2.png" alt="layout_flowchart" class="center" /><BR>
+            <p>Wondering what's the best way to plant your flowers to optimize production? Welcome to my <s>super
+                    long</s> layouts guide!<br>
+                Follow the flowchart below to figure out what is the best garden set-up for your needs!<br>
+                (Remember that these are our recommendations, and the layouts are totally flexible to your own
+                preferences).</p>
 
-            <h2>Understanding the Flowchart</h2>
+            <p style="margin-top:-10px;font-weight:bold;">You can start by reading <a
+                    href="#understanding_flowchart">"Understanding the Flowchart"</a> and <a
+                    href="#understanding_layouts">"Understanding Layouts"</a> if you are new to gardening.</p>
+
+            <p><button class="fc-button" onclick="fcShowSimple()">Beginner Flowchart</button> <button class="fc-button"
+                    onclick="fcShowAdvanced()">Advanced Flowchart</button></p>
+            <img src="../img/layouts/layouts3b.png" id="fcSimple" class="center" style='display:block;' />
+            <img src="../img/layouts/layouts3a.png" id="fcAdvanced" class="center" style='display:none;' /><BR>
+
+            <a name="understanding_fc"></a>
+            <h2>★ Understanding the Flowchart</h2>
 
             <button class="accordion">
                 <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
@@ -81,7 +93,7 @@
                         </li>
                         <li>
                             <b>Testing</b> layouts are for checking a flower's genotype. It is mainly
-                            used for Folklore/Paleh <a href="bluerose.html">blue rose methods</a>.
+                            used for Folklore/Paleh <a href="bluerose.html" target="_blank">blue rose methods</a>.
                         </li>
                     </ul>
 
@@ -94,7 +106,7 @@
                         </li>
                         <li><b>Space:</b> how much available space do you have for your garden?</li>
                         <li><b>Visitors:</b> how many visitors are you planning to have water your flowers every day?
-                            (<a href="./garden.html#watering">Visitor Watering Guide</a>)</li>
+                            (<a href="./garden.html#watering" target="_blank">Visitor Watering Guide</a>)</li>
                     </ul>
 
                     <h3>Are you willing to use cliffs? (advanced gardening)</h3>
@@ -107,7 +119,7 @@
                         </li>
                     </ul>
                 </div>
-            </div><br>
+            </div>
 
             <h3>contents</h3>
             <div class="toc">
@@ -131,7 +143,9 @@
                 <ul class="bullet-list">
                     <li><a href="#2x2">2x2</a></li>
                     <li><a href="#turtle">turtle (super-turtle)</a></li>
-                    <li><a href="#hexahole"> hexahole</a></li>
+                    <li><a href="#hexahole">hexahole</a></li>
+                    <li><a href="#tetrist">tetris-t</a></li>
+                    <li><a href="#ladder">ladder</a></li>
                 </ul>
 
                 <b>Breeding Layouts [single-species, different parents]</b>
@@ -166,19 +180,23 @@
 
                 <b>Testing Layouts</b>
                 <ul class="bullet-list">
-                    <li><a href="#testing">2+1 testing</a></li>
-                    <li><a href="#testing_cliff">2+1 cliff testing</a></li>
+                    <li><a href="#21testing">2+1 testing</a></li>
+                    <li><a href="#21testing_cliff">2+1 cliff testing</a></li>
                 </ul>
+
+                <b>Super Advanced Testing Layouts</b>
             </div>
             <hr />
 
+            <a name="understanding_layouts"></a>
             <h2>Understanding Flower Production & Layouts</h2>
 
             <a name="breeding_vs_cloning"></a>
             <h3>Breeding vs. Cloning</h3>
             <ul class="bullet-list">
                 <li>AGAIN: it is very important that you understand the difference.</li>
-                <li>Breeding is 2 flowers mixing genes to make 1 offspring. Cloning is 1 flower making 1 exact copy of
+                <li><b>Breeding</b> is 2 flowers mixing genes to make 1 offspring. <b>Cloning</b> is 1 flower making 1
+                    exact copy of
                     itself.</li>
                 <li>If you are struggling with understanding this concept, please read <a
                         href="./garden.html#gardening101" target="_blank">Gardening 101</a>.</li>
@@ -188,7 +206,8 @@
             <a name="algorithm"></a>
             <h3>Reproduction Algorithm 101</h3>
             <ul class="bullet-list">
-                <li>Flowers have a chance to reproduce once per day (when you first start your game, or at 5AM).</li>
+                <li>Flowers have a chance to reproduce <b>once per day</b> (when you first start your game, or at 5AM).
+                </li>
                 <li>If a flower rolls "successful" at reproduction, it will then look a valid partner (same species) in
                     the 3x3 space around itself to breed with, and then produce an offspring.
                     If it does not find a valid partner, it will make a cloned offspring.</li>
@@ -212,41 +231,43 @@
                     to cloning.</li>
                 <a name="x"></a>
                 <li>Let's first take a look at the X layout.</li>
+
+                <div class="toggle-container">
+
+                    <b>Why is X a bad layout?</b> <button class="button"
+                        onclick="toggle('toggleX')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px
+                        style="margin-bottom:-10px">
+                    <div id="toggleX" style="display:none;">To a beginner, this may look like a decent breeding layout.
+                        All
+                        the flowers are touching!<br>
+                        However, if you circle a potential production outcome, we can see that this layout can only
+                        breed a maximum of one time (each flower can only act as a partner once a day), resulting in
+                        lots of possible cloning.<BR>
+                        This is a big waste of our time! We can do <a href="#diamond">a Diamond layout</a> instead to
+                        improve breeding.
+                        <br>
+                        <img src="../img/layouts/x.PNG"></div>
+
+                </div><a name="checkerboard"></a>
+                <li>Now let's look at how the Checkerboard layout is impacted.</li>
+                <div class="toggle-container">
+
+                    <b>Why is Checkerboard a bad layout?</b> <button class="button"
+                        onclick="toggle('toggleCheckerboard')">show/hide</button><img src="../img/layouts/leifpeek.png"
+                        width=30px style="margin-bottom:-10px">
+                    <div id="toggleCheckerboard" style="display:none;">
+                        Applying the same logic as above, we can see that Checkerboard is a big YIKES. <br>
+                        Look at all the clones that we might get with this layout! Leif would be disappointed with you.
+                        <br>
+                        (This problem is not very significant at 0V <a href="./garden.html#watering">waterers</a>, but
+                        is a big issue at 5V).
+                        <img src="../img/layouts/checkerboard.png"></div>
+
+                </div>
             </ul>
-            <div class="toggle-container">
 
-                Why is X a bad layout? <button class="button" onclick="toggle('toggleX')">show/hide</button><img
-                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
-                <div id="toggleX" style="display:none;">To a beginner, this may look like a decent breeding layout. All
-                    the flowers are
-                    touching!<br>
-                    However, if you circle a potential production outcome, we can see that this layout can only breed a
-                    maximum of one time (each flower can only act as a partner once a day), resulting in lots of
-                    possible cloning.<BR>
-                    This is a big waste of our time! We can do <a href="#diamond">a Diamond layout</a> instead to
-                    improve breeding.
-                    <br>
-                    <img src="../img/layouts/x.PNG"></div>
-
-            </div><a name="checkerboard"></a>
-            <li>Now let's look at how the Checkerboard layout is impacted.</li>
-            <div class="toggle-container">
-
-                Why is Checkerboard a bad layout? <button class="button"
-                    onclick="toggle('toggleCheckerboard')">show/hide</button><img src="../img/layouts/leifpeek.png"
-                    width=30px style="margin-bottom:-10px">
-                <div id="toggleCheckerboard" style="display:none;">Applying the same logic as above, we can see that
-                    Checkerboard is a big YIKES. <br>
-                    Look at all the clones that we might get with this layout! Leif would be disappointed with you. <br>
-                    (This problem is not very significant at 0V <a href="./garden.html#watering">waterers</a>, but is a
-                    big issue at 5V).
-                    <img src="../img/layouts/checkerboard.png"></div>
-
-            </div>
-            </ul>
-
-            <p>The layouts in this guide are tested and simulated to focus on a specific goal while maximizing
-                efficiency!</p>
+            <p>The layouts in this guide are systematically tested and simulated to focus on a specific goal while
+                maximizing efficiency!</p>
 
 
             <hr>
@@ -255,19 +276,34 @@
 
             <a name="12x12"></a>
             <h3>J_MASTER's 12x12 Breed Everything Layout</h3>
-            <p>
-                <a
-                    href="https://cdn.discordapp.com/attachments/694317725190717440/712583018732322826/12x12_breed_all_flowers_final6.png">Get
-                    all colors in condensed 12x12 area!</a>
-            </p>
+            <div class="blockquote">This all flowers layout uses a 12x12 space to get at least one of each flower. It
+                utilizes the fastest <i>direct</i> paths for every color (see <a
+                    href="https://cestislife.github.io/#simplest-path-to-non-base-flower-colours"
+                    target="_blank">paths</a> and <a href="./bluerose.html" target="_blank">folklore blue rose
+                    method</a>). It takes approximately 63
+                days to get all flowers using this method with 0 visitors, or 13 days at 5 visitors. You can further
+                speed the process up by doubling the layout. <br>
+                <ul class="bullet-list" style="padding-bottom: 0;">
+                    <li><a href="https://cdn.discordapp.com/attachments/694317725190717440/712583018732322826/12x12_breed_all_flowers_final6.png"
+                            target="_blank"><b>Get all colors in condensed 12x12 area!</b></a></li>
+                </ul>
+            </div>
 
             <a name="39x21"></a>
             <h3>BackwardsN's 39x21 Layout</h3>
-            <p>
-                <a href="https://i.imgur.com/FP0p4va.png">Full 39x21</a><br />
-                <a href="https://i.imgur.com/VQHoob8.png">Visual guide with the steps</a><br />
-                <a href="https://tinyurl.com/ybpul6xx">In-depth guide with all explanation of steps</a>
-            </p>
+            <div class="blockquote">BackN's optimized 39x21 layout uses a different method. Instead of relying on the
+                fastest <i>direct</i> paths to any single flower, BackN's method relies on combinations of flower
+                parents that can create as many different other colors as possible (example: <a
+                    href="https://cdn.discordapp.com/attachments/711397545645047870/717506612784398376/unknown.png"
+                    target="_blank">hyacinths</a>). The layout works well at 0 or 1 visitors watering.<br>
+
+                <ul class="bullet-list" style="padding-bottom: 0; font-weight:bold;">
+                    <li><a href="https://i.imgur.com/FP0p4va.png" target="_blank">Full 39x21</a></li>
+                    <li><a href="https://i.imgur.com/VQHoob8.png" target="_blank">Visual guide with the steps</a></li>
+                    <li><a href="https://tinyurl.com/ybpul6xx" target="_blank">In-depth guide with all explanation of
+                            steps</a></li>
+                </ul>
+            </div>
 
             <hr />
 
@@ -288,13 +324,12 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>100% clone-resistant. ideal single-species same-parent breeding layout. Better than
-                                turtle at
-                                3 visitors.</td>
+                            <td>Simple and easy. 100% clone-resistant. Ideal single-species same-parent breeding layout.
+                            </td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Not the most space efficient.</td>
+                            <td>Not space efficient.</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
@@ -325,11 +360,12 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>Dense and space efficient, more offsprings than hexahole at 2-5 visitors.</td>
+                            <td>Dense and space efficient. Also the name is cute.</td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Not 100% clone resistant (up to 2.5% clones at 5 visitors).</td>
+                            <td>Not 100% clone resistant. <a href="#tetrist">tetris-T</a> and <a
+                                    href="#ladder">ladder</a> are better with more visitors.</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
@@ -359,13 +395,13 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>Dense and space efficient, more offsprings than turtle at 0 visitors, more
-                                clone-resistant
-                                than turtle.</td>
+                            <td>Dense and space efficient, more offsprings than <a href="#turtle">turtle</a> at 0
+                                visitors, more clone-resistant than turtle.</td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Not 100% clone resistant (up to 1.3% at 5 visitors).</td>
+                            <td>Not 100% clone resistant. <a href="#tetrist">tetris-T</a> and <a
+                                    href="#ladder">ladder</a> are better with more visitors.</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
@@ -381,12 +417,83 @@
                 </div>
             </div><br>
 
+            <a name="tetrist"></a>
+            <h3>Tetris-T ("5x5 Tetris-T", tiled: "10x10 Tetris-T")</h3>
+            <img src="../img/layouts/tetrist.PNG" /><br>
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Uses:</th>
+                            <td>Breeding 1 species where parents are the same color.</td>
+                        </tr>
+                        <tr>
+                            <th>Strengths:</th>
+                            <td>Dense and space efficient. Better than <a href="#turtle">turtle</a> and <a
+                                    href="#hexahole">hexahole</a> with more visitors. Approximately 7% more flower
+                                efficient and 2% more space efficient. </td>
+                        </tr>
+                        <tr>
+                            <th>Weaknesses:</th>
+                            <td>Not 100% clone resistant.</td>
+                        </tr>
+                        <tr>
+                            <th>How to tile:</th>
+                            <td>You can put them right next to each other. Put 4 copies of the layout together for
+                                "10x10 Tetris-T". </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="../img/layouts/tetrist_t.PNG"> </td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
+
+            <a name="ladder"></a>
+            <h3>Ladder <span style="font-size:10px; font-weight:normal;">("dense diamonds but without the multi-species
+                    part", "formerly 'intertwined diamond-like' but not called that anymore because Yue didn't like
+                    it")</span></h3>
+            <img src="../img/layouts/ladder.PNG" /><br>
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Uses:</th>
+                            <td>Breeding 1 species where parents are the same color.</td>
+                        </tr>
+                        <tr>
+                            <th>Strengths:</th>
+                            <td>Dense and space efficient. Better than <a href="#turtle">turtle</a> and <a
+                                    href="#hexahole">hexahole</a> with more visitors. Approximately 6% more flower
+                                efficient and 2% more space efficient. </td>
+                        </tr>
+                        <tr>
+                            <th>Weaknesses:</th>
+                            <td>Not 100% clone resistant.</td>
+                        </tr>
+                        <tr>
+                            <th>How to tile:</th>
+                            <td>You can put them right next to each other~</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
+
+
+
             <hr />
 
             <h2>Breeding Layouts [different parents]</h2>
 
             <a name="isolated_pairs"></a>
-            <h3>Isolated Pairs ("Independent Pairs", "IPs")</h3>
+            <h3>Isolated Pairs ("Independent Pairs", "IP")</h3>
             <img src="../img/layouts/isolated_pairs.PNG" /><br>
             <button class="accordion">
                 <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
@@ -404,8 +511,9 @@
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Hardly anything, but you can adjust it to be more space efficient with cliff-assisted
-                                IPs or multi-species dense IPs.</td>
+                            <td>Space inefficient. You can adjust it to be more space efficient with <a
+                                    href="#isolated_pairs_cliff">cliff-assisted
+                                    IPs</a> or multi-species <a href="#dense_isolated_pairs">dense IPs.</a></td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
@@ -438,12 +546,14 @@
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Less space-efficient compared to isolated pairs. IP is better.</td>
+                            <td>Less space-efficient compared to <a href="#isolated_pairs">isolated pairs</a>. IP is
+                                better.</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
                             <td>Ensure that each set of diamond is not touching. It is slightly more space-efficient if
-                                you stagger each diamond. DO NOT tile diamond into checkerboard.</td>
+                                you stagger each diamond. DO NOT tile diamond into <a
+                                    href="#checkerboard">checkerboard</a>.</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -468,7 +578,8 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>All the strengths of how good IP is with bonus space-efficiency.</td>
+                            <td>All the strengths of how good <a href="#isolated_pairs">IP</a> is with bonus
+                                space-efficiency.</td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
@@ -501,20 +612,21 @@
                     <table>
                         <tr>
                             <th>Uses:</th>
-                            <td>+ species breeding (parents can be same or different colors).</td>
+                            <td>2+ species breeding (parents can be same or different colors).</td>
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>All the strengths of how good IP but more space efficient! Easy to maintain and water.
+                            <td>All the strengths of how good <a href="#isolated_pairs">IP</a> but more space efficient!
+                                Easy to maintain and water.
                             </td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
                             <td>Prone to failure (20-30%), which means when a flower fails to breed simply because
                                 there is no more empty space for it to make an offspring. You need to solve this problem
-                                by using offset
-                                dense IPs or by ensuring there is an extra free column at at each end of the fulll
-                                layout.</td>
+                                by using <a href="#offset_dense_pairs">offset dense IPs</a> or by ensuring there is an
+                                extra free column at at each end of
+                                the full layout.</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
@@ -544,12 +656,12 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>SO GOOD. Ideal breeding layout. All the strengths of IP + space efficiency of dense IP +
-                                signficantly lower failure rate (1-15%).</td>
+                            <td>SO GOOD. Ideal breeding layout. All the strengths and space efficiency of <a
+                                    href="#dense_isolated_pairs">dense IP</a> + slightly lower failure rate.</td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>nothing. (Can look messy, some people chose standard dense IP for aesthetics).</td>
+                            <td>Not much. (Can look messy, some people chose standard dense IP for "organized" aesthetics).</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
@@ -574,16 +686,16 @@
                     <table>
                         <tr>
                             <th>Uses:</th>
-                            <td></td>
+                            <td>2+ species breeding (parents can be same or different colors).</td>
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>Two overlapping diamonds for more space efficiency.</td>
+                            <td>Two overlapping <a href="#diamond">diamonds</a> for more space efficiency.</td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Visually much more disorganized than offset dense pairs. Less space efficient because
-                                tiling dense diamonds is super awkward.</td>
+                            <td>Visually much more disorganized than <a href="#offset_dense_pairs">offset dense IPs</a>.
+                                Less space efficient because tiling dense diamonds is super awkward.</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
@@ -708,7 +820,8 @@
                         </tr>
                         <tr>
                             <th>Notes:</th>
-                            <td>Higher chance of failure with visitor waring, use double-spaced clone rows if 2+
+                            <td>Higher chance of failure with visitor waring, use <a
+                                    href="#clone_rows_double">double-spaced clone rows</a> if 2+
                                 waterers.</td>
                         </tr>
                         <tr>
@@ -721,7 +834,7 @@
 
             <a name="clone_rows_double"></a>
             <h3>Clone Rows (double-spaced)</h3>
-            Same as clone rows above, but with 2 empty spaces between each row.
+            Same as <a href="#clone_rows">clone rows</a> above, but with 2 empty spaces between each row.
             <button class="accordion">
                 <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation: </span>
             </button>
@@ -773,7 +886,8 @@
                         </tr>
                         <tr>
                             <th>Notes:</th>
-                            <td>Higher chance of failure with visitor waring, use double-spaced offset clone rows if 2+
+                            <td>Higher chance of failure with visitor waring, use <a
+                                    href="#offset_clone_rows_double">double-spaced offset clone rows</a> if 2+
                                 waterers.</td>
                         </tr>
                         <tr>
@@ -786,7 +900,7 @@
 
             <a name="offset_clone_rows_double"></a>
             <h3>Offset Clone Rows (double-spaced)</h3>
-            Same as clone rows above, but with 2 empty spaces between each row.
+            Same as <a href="#offset_clone_rows">offset clone rows</a>, but with 2 empty spaces between each row.
 
             <button class="accordion">
                 <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation: </span>
@@ -850,20 +964,206 @@
 
             <h2>Testing Layouts</h2>
 
-            <p>in testing layouts, our goal is to maximize breeding opportunities, but only allow one pair to breed.<br>
-                2+1 testing layouts allows 1 pair to breed, and forces the 3rd flower to fail if it tries to clone.
-            </p>
+            <div class="blockquote">
+                <p>Testing layouts are used for Folklore/Paleh <a href="bluerose.html" target="_blank">blue rose
+                        methods</a>.<br>
+                    In the aforementioned blue rose methods, we will need to tell whether an unknown purple rose 𝑥
+                    [0?20]
+                    is a purple rose α [0020] or purple rose β [0120]. We do this by breeding purple rose 𝑥 with a seed
+                    yellow rose [0200]. If purple rose 𝑥 successfully produces a yellow rose [0210] with seed yellow
+                    rose
+                    [0200], we can deduce that it is purple rose β [0120].
+                </p>
+                <p style="font-size:12px; padding-bottom:0;">
+                    I can't actually think of another scenario where testing layouts are necessary, as typically it is
+                    faster to use more direct flower paths (testing can be a big bottleneck). If there is a genotype you
+                    want to test, you can play around with <a href="https://gardenscience.ac/" target="_blank">flower
+                        simulator</a> to see if there's an appropriate pairing.
+                </p>
+            </div>
 
 
+            <a name="11testing"></a>
+            <h3>1+1 Testing</h3>
+            <img src="../img/layouts/11testing.PNG" />
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>How to use:</th>
+                            <td>A simple <a href="#isolated_pairS">isolated pairs</a> testing layout. Read explanation
+                                on testing layouts first.</td>
+                        </tr>
+                        <tr>
+                            <th>How to tile: (IMPORTANT!)</th>
+                            <td>With regular isolated pairs, we can put the pairs next to each other with 1 empty space
+                                in between. However, if we do this with testing pairs, you will be unable to tell which
+                                purple rose 𝑥 pair the offspring is from. Make sure you double space each 1+1 testing
+                                pair so you will be able to know the parents of the offspring!</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="../img/layouts/11testing_t.PNG"> </td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
 
-
-            <a name="testing"></a>
+            <a name="21testing"></a>
             <h3>2+1 testing</h3>
-            <p><img src="../img/layouts/testing.PNG"></p>
+            <img src="../img/layouts/21testing.PNG">
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>How to use:</th>
+                            <td>2 seed yellows surrounding 1 purple rose 𝑥. There is only one available spot for an
+                                offspring to spawn. All other surrounding tiles are blocked (e.g. with hard paths,
+                                fencing, etc.).</td>
+                        </tr>
+                        <tr>
+                            <th>Explanation:</th>
+                            <td>2+1 layouts are great testing layouts because there is only 1 tile for an offspring to
+                                spawn on. All other tiles are blocked off. Following the reproduction algorithm, ideally
+                                one purple/yellow pair will breed. The third would clone, but have no space to clone
+                                onto and therefore fail.<br>
+                                But why do we need a third flower (2 yellow) roses anyways? Following the reproduction
+                                algorithm, each flower has one opportunity to "roll" for breeding every day. Adding a
+                                3rd flower improves likelihood to make an offspring if the first 2 flowers fail!<br>
+                                Thus, this is our most recommended testing layout. We want to speed up the testing
+                                process as much as possible so we can get a blue rose faster!</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
 
-            <a name="testing_cliff"></a>
+            <a name="21testing_cliff"></a>
             <h3>2+1 cliff testing</h3>
-            <p><img src="../img/layouts/cliff_testing.PNG"></p>
+            <img src="../img/layouts/21testing_cliff.PNG">
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>How to use:</th>
+                            <td>Read 2+1 testing above, but involves cliffs for more space efficiency.<br>
+                                Leave the middle tile lowered but blocked so you can walk between the upper and lower
+                                section easier (for watering). You can hop across the top section~</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
+
+            <hr />
+
+            <a name="advanced_testing"></a>
+            <h2>Super Advanced Testing Layouts</h2>
+
+            <p>Extra testing layouts for super nerdy garden scientists!</p><button class="button"
+                onclick="toggle('advancedTest')">show/hide</button><img src="../img/layouts/leifpeek.png" width=30px
+                style="margin-bottom:-10px">
+            <div id="advancedTest" style="display:none;">
+
+                <h3>Pre-watering your yellow roses!</h3>
+                <img src="../img/layouts/testing_prewatering.PNG">
+                <button class="accordion">
+                    <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+                </button>
+                <div class="panel">
+                    <div class="layouts-container">
+                        <table>
+                            <tr>
+                                <th>Usage:</th>
+                                <td>Start the bad-luck bonus (water counter) before the testing/breeding process
+                                    begins.<BR>
+                                    Totally unnecessary if you have visitors watering though. Good for if you have 0
+                                    visitors.</td>
+                            </tr>
+                            <tr>
+                                <th>How to use:</th>
+                                <td>While waiting to make a purple rose 𝑥, you can pre-water yellow roses. You will
+                                    need to block off the yellow roses completely such that there is no available space
+                                    for it to spawn an offspring. Once your purple rose 𝑥 is ready, you can remove the
+                                    blockers and plant the purrple rose. Do NOT dig up or move the yellow rose once you
+                                    start pre-watering.</td>
+                            </tr>
+                            <tr>
+                                <th>Explanation:</th>
+                                <td>From <a href="./garden.html#gardening101" target="_blank">Gardening 101</a>: "A
+                                    flower
+                                    gains 5% additional production chance for every time it fails after the third try. A
+                                    hidden water counter tracks this". We are essentially forcefully increasing the
+                                    water counter and improve production bonus beforehand. (Additional reading: <a
+                                        href="https://aiterusawato.github.io/satogu/acnh/flowers/advanced.html#water-counter"
+                                        target="_blank">Water Counter</a>).<br>
+                                    Again, totally unnecessary if you have visitors. (2+1 has 99.2% daily success at 5v
+                                    already!)</td>
+                            </tr>
+                            <tr>
+                                <th>Bonus:</th>
+                                <td>Pre-watering is also great if you are bottlenecked at a certain step! (e.g. you have
+                                    one parent for a recipe, but are waiting for the other parent).</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div><br>
+
+                <h3>4+1 testing ("remember the forbidden X layout?")</h3>
+                <img src="../img/layouts/41testing.PNG">
+                <button class="accordion">
+                    <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+                </button>
+                <div class="panel">
+                    <div class="layouts-container">
+                        <table>
+                            <tr>
+                                <th>Usage:</th>
+                                <td>Only use if you know wtf you're doing. Please.<br>
+                                    If you ask me questions about this I will tell you to just use <a
+                                        href="#21testing">2+1</a>. And smack you.<br>
+                                    Good for if you have 0 visitors. Unnecessary and total overkill otherwise.</td>
+                            </tr>
+                            <tr>
+                                <th>Explanation:</th>
+                                <td>OK so. /deep breath<br>
+                                    Following the reproduction algorithm, we know that at this layout can create 3
+                                    scenarios.
+                                    <ul class="bullet-list" style="padding-bottom:0;">
+                                        <li>No offsprings are produced: ok cool. Nothing happened.</li>
+                                        <li>One offspring: purple rose 𝑥 bred with one of the 4 yellow roses. Cool,
+                                            easy
+                                            situation.</li>
+                                        <li>Multiple offsprings: purple rose 𝑥 bred with one of the 4 yellow roses. One
+                                            of them are a child as a result of the breeding. The other are clones. Now
+                                            what? Keep reading.</li>
+                                    </ul>
+                                    So, we got multiple offsprings.<br>
+                                    Keep in mind: <b>One of them is a child. The other are clones.</b><br>
+                                    If you got all yellow offsprings, this means that purple rose 𝑥 made a yellow child
+                                    (remainder are yellow clones). You can conclude that it is purple rose β. If you got
+                                    one white, it means that purple rose 𝑥 made a white child and the remainder are
+                                    clones.<br>
+                                    If you don't understand, please just do <a href="#21testing">2+1</a>MY REW.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Bonus:</th>
+                                <td>X layout is also decent for color-safe breeding (resulting offspring can be
+                                    differentiated from a clone) for players with no visitor watering. Again unnecessary
+                                    for players who get visitor water.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div><br><br>
 
             <hr />
             <br>
@@ -902,7 +1202,7 @@
             <h3>Tools:</h3>
             <ul class="bullet-list">
                 <li><a href="https://gardenscience.ac/" target="_blank">Aeon's Flower Simulator</a> (<a
-                    href="https://twitter.com/AeonSake" target="_blank">@AeonSake</a>)</li>
+                        href="https://twitter.com/AeonSake" target="_blank">@AeonSake</a>)</li>
                 <li><a href="https://nubleh.github.io/flowerplanner/" target="_blank">Nubleh's Flower Planner</a> (<a
                         href="https://twitter.com/nubleh" target="_blank">@nubleh</a>)</li>
             </ul>
