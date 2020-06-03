@@ -7,22 +7,11 @@ function toggle(toggleId) {
   }
 }
 
-function fcShowSimple(){
-  var x = document.getElementById("fcSimple");
-  var y = document.getElementById("fcAdvanced");
-  if (x.style.display=== "none"){
-    x.style.display = "block";
-    y.style.display = "none";
-  }
-}
-
-function fcShowAdvanced(){
-  var x = document.getElementById('fcSimple');
-  var y = document.getElementById('fcAdvanced');
-  if (y.style.display=== "none"){
-    y.style.display = "block";
-    x.style.display = "none";
-  }
+function toggleFCView() {
+  document.getElementById("fc-simple-button").classList.toggle("fc-button-active");
+  document.getElementById("fc-advanced-button").classList.toggle("fc-button-active");
+  toggle("fcSimple");
+  toggle("fcAdvanced");
 }
 
 var kofiwidget = function () {

@@ -368,6 +368,11 @@ td {
   width: 462px;
   outline:none;
   transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.fc-button-active {
+  background-color: #f2798f;
 }
 
 .fc-button:hover {

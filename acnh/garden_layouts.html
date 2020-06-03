@@ -67,8 +67,10 @@
                     href="#understanding_flowchart">"Understanding the Flowchart"</a> and <a
                     href="#understanding_layouts">"Understanding Layouts"</a> if you are new to gardening.</p>
 
-            <p><button class="fc-button" onclick="fcShowSimple()">Beginner Flowchart</button> <button class="fc-button"
-                    onclick="fcShowAdvanced()">Advanced Flowchart</button></p>
+            <p>
+                <button class="fc-button fc-button-active" id="fc-simple-button" onclick="toggleFCView()">Beginner Flowchart</button>
+                <button class="fc-button" id="fc-advanced-button" onclick="toggleFCView()">Advanced Flowchart</button>
+            </p>
             <img src="../img/layouts/layouts3b.png" id="fcSimple" class="center" style='display:block;' />
             <img src="../img/layouts/layouts3a.png" id="fcAdvanced" class="center" style='display:none;' /><BR>
 
