@@ -7,9 +7,13 @@ function toggle(toggleId) {
   }
 }
 
-function toggleFCView() {
+function toggleFCView(showAdvanced) {
+  var fcAdvancedButton = document.getElementById("fc-advanced-button")
+  var isAdvancedShown = fcAdvancedButton.classList.contains("fc-button-active")
+  if (showAdvanced === isAdvancedShown) return
+
   document.getElementById("fc-simple-button").classList.toggle("fc-button-active");
-  document.getElementById("fc-advanced-button").classList.toggle("fc-button-active");
+  fcAdvancedButton.classList.toggle("fc-button-active");
   toggle("fcSimple");
   toggle("fcAdvanced");
 }
@@ -48,24 +52,23 @@ $(document).ready(function(){
   $("#footer-root").load("../acnh/0footer.html", function(){
     kofiwidget.init('Support Me on Ko-fi', '#29abe0', 'W7W21Q1LX');
     kofiwidget.draw('kofi');
-  }); 
+  });
+
+  $("#nav-root").load("../acnh/0nav.html");
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = Math.max(panel.scrollHeight, panel.offsetHeight, panel.clientHeight) + "px";
+      } 
+    });
+  }
 })
 
-$(function(){
-  $("#nav-root").load("../acnh/0nav.html"); 
-});
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = Math.max(panel.scrollHeight, panel.offsetHeight, panel.clientHeight) + "px";
-    } 
-  });
-}
