@@ -1,11 +1,4 @@
-function toggle(toggleId) {
-  var x = document.getElementById(toggleId);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+var activeModal;
 
 function toggleFCView(showAdvanced) {
   var fcAdvancedButton = document.getElementById("fc-advanced-button")
@@ -48,6 +41,41 @@ var kofiwidget = function () {
   };
 }();
 
+function toggle(toggleId) {
+  var x = document.getElementById(toggleId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function openModal(modalId) {
+  var modal = document.getElementById(modalId);
+  if (modal.style.display !== "block") {
+    modal.style.display = "block";
+    activeModal = modalId;
+    window.addEventListener("click", modalOverlayCloseHandler);
+  }
+}
+
+function closeModal() {
+  var modal = document.getElementById(activeModal);
+  if (modal.style.display !== "none") {
+    modal.style.display = "none";
+    activeModal = null;
+    window.removeEventListener("click", modalOverlayCloseHandler);
+  }
+}
+
+// check if modal overlay was clicked
+function modalOverlayCloseHandler(event) {
+  var modal = document.getElementById(activeModal);
+  if(event.target === modal) {
+    closeModal();
+  }
+}
+
 $(document).ready(function(){
   $("#footer-root").load("../acnh/0footer.html", function(){
     kofiwidget.init('Support Me on Ko-fi', '#29abe0', 'W7W21Q1LX');
@@ -71,21 +99,3 @@ $(document).ready(function(){
     });
   }
 })
-
-
-
-//MODAL STUFF
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
