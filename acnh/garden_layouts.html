@@ -54,7 +54,7 @@
 
             <h1>Garden Layouts</h1>
 
-            <p style="color:grey;font-size: 12px;">Last update: 06/03/2020 5am EST.<br>
+            <p style="color:grey;font-size: 12px;">Last update: 06/05/2020 6am EST.<br>
                 Contact me if you see any mistakes or if you have suggestions.</p>
 
             <p>Wondering what's the best way to plant your flowers to optimize production? Welcome to my <s>super
@@ -64,7 +64,7 @@
                 preferences).</p>
 
             <p style="margin-top:-10px;font-weight:bold;">You can start by reading <a
-                    href="#understanding_flowchart">"Understanding the Flowchart"</a> and <a
+                    href="#understanding_fc">"Understanding the Flowchart"</a> and <a
                     href="#understanding_layouts">"Understanding Layouts"</a> if you are new to gardening.</p>
 
             <p>
@@ -122,6 +122,7 @@
                     </ul>
                 </div>
             </div>
+            <br>
 
             <h3>contents</h3>
             <div class="toc">
@@ -262,7 +263,7 @@
                         Look at all the clones that we might get with this layout! Leif would be disappointed with you.
                         <br>
                         (This problem is not very significant at 0V <a href="./garden.html#watering">waterers</a>, but
-                        is a big issue at 5V).
+                        is a big issue at 5V). Checkerboard is also super space inefficient when breeding flowers using parents of the same color (due to low density), make sure you check out our more space efficient methods for breeding same-parent flowers!
                         <img src="../img/layouts/checkerboard.png"></div>
 
                 </div>
@@ -274,6 +275,7 @@
 
             <hr>
 
+            <a name="all_flowers"></a>
             <h2>"All Flowers" Layouts</h2>
 
             <a name="12x12"></a>
@@ -309,6 +311,7 @@
 
             <hr />
 
+            <a name="breeding_same"></a>
             <h2>Breeding Layouts [same parents]</h2>
 
             <a name="2x2"></a>
@@ -335,12 +338,12 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Make sure there is space inbetween each set of 2x2. Leave empty spaces on opposite sides
+                            <td class="nb">Make sure there is space inbetween each set of 2x2. Leave empty spaces on opposite sides
                                 of the 2x2 square as shown.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/2x2_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/2x2_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -362,7 +365,7 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>Dense and space efficient. Also the name is cute.</td>
+                            <td>Dense and space efficient. Also the name is cute. </td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
@@ -371,12 +374,12 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Tile right next to each other, leave empty space around entire layout if possible. (also
+                            <td class="nb">Tile right next to each other, leave empty space around entire layout if possible. (also
                                 known as super-turtle)</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/turtle_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/turtle_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -407,13 +410,13 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Tile the "hexahole component" below as needed depending on the size of your field.
+                            <td class="nb">Tile the "hexahole component" below as needed depending on the size of your field.
                                 <br>(no need to copy exact size, just understand the "piece" and follow the pattern).
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/hexahole_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/hexahole_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -443,12 +446,12 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>You can put them right next to each other. Put 4 copies of the layout together for
+                            <td class="nb">You can put them right next to each other. Put 4 copies of the layout together for
                                 "10x10 Tetris-T". </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/tetrist_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/tetrist_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -480,7 +483,7 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>You can put them right next to each other~</td>
+                            <td class="nb">You can put them right next to each other~</td>
                         </tr>
                     </table>
                 </div>
@@ -489,7 +492,7 @@
 
 
             <hr />
-
+            <a name="breeding_diff"></a>
             <h2>Breeding Layouts [different parents]</h2>
 
             <a name="isolated_pairs"></a>
@@ -511,17 +514,19 @@
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Space inefficient. You can adjust it to be more space efficient with <a
+                            <td>Space inefficient.<BR>
+                                You can adjust it to be more space efficient with <a
                                     href="#isolated_pairs_cliff">cliff-assisted
-                                    IPs</a> or multi-species <a href="#dense_isolated_pairs">dense IPs.</a></td>
+                                    IPs</a> or multi-species <a href="#dense_isolated_pairs">dense IPs.</a><br>
+                                    If you have 0 visitors, <a href="#diamond">diamond</a> is 4.5% more space efficient (otherwise use IP at 1 or more visitors).</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Just make sure there is space inbetween each set of IP.</td>
+                            <td class="nb">Just make sure there is space inbetween each set of IP.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/isolated_pairs_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/isolated_pairs_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -542,22 +547,21 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>100% clone resistant.</td>
+                            <td>100% clone resistant. 4.5% more efficient than IP at 0 visitors.</td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
-                            <td>Less space-efficient compared to <a href="#isolated_pairs">isolated pairs</a>. IP is
-                                better.</td>
+                            <td>Less space-efficient compared to <a href="#isolated_pairs">isolated pairs</a>. If you have visitors, IP is better.</td>
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Ensure that each set of diamond is not touching. It is slightly more space-efficient if
+                            <td class="nb">Ensure that each set of diamond is not touching. It is slightly more space-efficient if
                                 you stagger each diamond. DO NOT tile diamond into <a
                                     href="#checkerboard">checkerboard</a>.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/diamond_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/diamond_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -587,18 +591,18 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Like always, ensure each IP is not touching another.</td>
+                            <td class="nb">Like always, ensure each IP is not touching another.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/isolated_pairs_cliff_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/isolated_pairs_cliff_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
             </div><br>
 
             <hr />
-
+            <a name="breeding_multi"></a>
             <h2>Breeding Layouts [multi-species]</h2>
 
             <a name="dense_isolated_pairs"></a>
@@ -630,12 +634,12 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Make sure there is empty space between each column. Leave a column of space at each end,
+                            <td class="nb">Make sure there is empty space between each column. Leave a column of space at each end,
                                 especially if lots of visitors.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/dense_isolated_pairs_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/dense_isolated_pairs_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -665,18 +669,18 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Like below. Leave a column of space at each end, especially if lots of visitors.</td>
+                            <td class="nb">Like below. Leave a column of space at each end, especially if lots of visitors.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/offset_dense_pairs_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/offset_dense_pairs_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
             </div><br>
 
             <a name="dense_diamonds"></a>
-            <h3>Dense Diamonds</h3>
+            <h3>Dense Diamonds ("Double Diamonds")</h3>
             <img src="../img/layouts/dense_diamonds.PNG" /><br>
             <button class="accordion">
                 <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
@@ -690,7 +694,7 @@
                         </tr>
                         <tr>
                             <th>Strengths:</th>
-                            <td>Two overlapping <a href="#diamond">diamonds</a> for more space efficiency.</td>
+                            <td>Two overlapping <a href="#diamond">diamonds</a> for more space efficiency. 4.5% more efficient than IP at 0 visitors.</td>
                         </tr>
                         <tr>
                             <th>Weaknesses:</th>
@@ -699,12 +703,11 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>... You do your best. Just like regular diamonds, staggering them a little bit is nice
-                                (at that point just do offset dense pairs man lol...)</td>
+                            <td class="nb">... You do your best. Stagger each "set" of double diamonds. </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/dense_diamonds_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/dense_diamonds_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -712,6 +715,7 @@
 
             <hr />
 
+            <a name="cloning_single"></a>
             <h2>Cloning Layouts [single-species]</h2>
 
             <a name="isolated_clones"></a>
@@ -738,11 +742,11 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Again, just ensure they are not touching</td>
+                            <td class="nb">Again, just ensure they are not touching</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/isolated_clones_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/isolated_clones_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -772,17 +776,17 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>You can tile it horizontally like picture A. To tile the layout vertically, put one
+                            <td class="nb">You can tile it horizontally like picture A. To tile the layout vertically, put one
                                 extra space inbetween like picture B (to minimize failure rate), or put down a row of
                                 stone path between the vertically tiled sections.</td>
                         </tr>
                         <tr>
-                            <td style="text-align:right; font-weight: bold;">A</td>
+                            <td class="nb" style="text-align:right; font-weight: bold;" >A</td>
                             <td><img src="../img/layouts/cliff_clone_single_ta.PNG"> </td>
                         </tr>
                         <tr>
-                            <td style="text-align:right; font-weight: bold;">B</td>
-                            <td><img src="../img/layouts/cliff_clone_single_tb.PNG"></td>
+                            <td class="nb" style="text-align:right; font-weight: bold;">B</td>
+                            <td class="nb"><img src="../img/layouts/cliff_clone_single_tb.PNG"></td>
                         </tr>
                     </table>
                 </div>
@@ -791,7 +795,7 @@
 
 
             <hr />
-
+            <a name="cloning_multi"></a>
             <h2>Cloning Layouts [multi-species]</h2>
 
             <a name="clone_rows"></a>
@@ -821,13 +825,13 @@
                         </tr>
                         <tr>
                             <th>Notes:</th>
-                            <td>Higher chance of failure with visitor waring, use <a
+                            <td class="nb">Higher chance of failure with visitor waring, use <a
                                     href="#clone_rows_double">double-spaced clone rows</a> if 2+
                                 waterers.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/clone_rows_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/clone_rows_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -849,11 +853,11 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Self-explanatory. 2 empty spaces in between.</td>
+                            <td class="nb">Self-explanatory. 2 empty spaces in between.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/clone_rows_t_d.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/clone_rows_t_d.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -887,13 +891,13 @@
                         </tr>
                         <tr>
                             <th>Notes:</th>
-                            <td>Higher chance of failure with visitor waring, use <a
+                            <td class="nb">Higher chance of failure with visitor waring, use <a
                                     href="#offset_clone_rows_double">double-spaced offset clone rows</a> if 2+
                                 waterers.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/offset_clone_rows_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/offset_clone_rows_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -916,12 +920,12 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Planning, planning, planning. Same thing as offset clone rows with more spacing
+                            <td class="nb">Planning, planning, planning. Same thing as offset clone rows with more spacing
                                 inbetween each "pair" of clones.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/offset_clone_rows_d.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/offset_clone_rows_d.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -951,11 +955,11 @@
                         </tr>
                         <tr>
                             <th>How to tile:</th>
-                            <td>Ensure there's 2 empty spaces between each "pair" of clones.</td>
+                            <td class="nb">Ensure there's 2 empty spaces between each "pair" of clones.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/cliff_clone_multi_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/cliff_clone_multi_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -1001,14 +1005,14 @@
                         </tr>
                         <tr>
                             <th>How to tile: (IMPORTANT!)</th>
-                            <td>With regular isolated pairs, we can put the pairs next to each other with 1 empty space
+                            <td class="nb">With regular isolated pairs, we can put the pairs next to each other with 1 empty space
                                 in between. However, if we do this with testing pairs, you will be unable to tell which
                                 purple rose 𝑥 pair the offspring is from. Make sure you double space each 1+1 testing
                                 pair so you will be able to know the parents of the offspring!</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><img src="../img/layouts/11testing_t.PNG"> </td>
+                            <td class="nb"></td>
+                            <td class="nb"><img src="../img/layouts/11testing_t.PNG"> </td>
                         </tr>
                     </table>
                 </div>
@@ -1031,7 +1035,7 @@
                         </tr>
                         <tr>
                             <th>Explanation:</th>
-                            <td>2+1 layouts are great testing layouts because there is only 1 tile for an offspring to
+                            <td class="nb">2+1 layouts are great testing layouts because there is only 1 tile for an offspring to
                                 spawn on. All other tiles are blocked off. Following the reproduction algorithm, ideally
                                 one purple/yellow pair will breed. The third would clone, but have no space to clone
                                 onto and therefore fail.<br>
@@ -1056,7 +1060,7 @@
                     <table>
                         <tr>
                             <th>How to use:</th>
-                            <td>Read 2+1 testing above, but involves cliffs for more space efficiency.<br>
+                            <td class="nb">Read 2+1 testing above, but involves cliffs for more space efficiency.<br>
                                 Leave the middle tile lowered but blocked so you can walk between the upper and lower
                                 section easier (for watering). You can hop across the top section~</td>
                         </tr>
@@ -1111,7 +1115,7 @@
                             </tr>
                             <tr>
                                 <th>Bonus:</th>
-                                <td>Pre-watering is also great if you are bottlenecked at a certain step! (e.g. you have
+                                <td class="nb">Pre-watering is also great if you are bottlenecked at a certain step! (e.g. you have
                                     one parent for a recipe, but are waiting for the other parent).</td>
                             </tr>
                         </table>
@@ -1153,14 +1157,15 @@
                                     (remainder are yellow clones). You can conclude that it is purple rose β. If you got
                                     one white, it means that purple rose 𝑥 made a white child and the remainder are
                                     clones.<br>
-                                    If you don't understand, please just do <a href="#21testing">2+1</a>MY REW.
+                                    If you don't understand, please just do <a href="#21testing">2+1</a>.
                                 </td>
                             </tr>
                             <tr>
                                 <th>Bonus:</th>
-                                <td>X layout is also decent for color-safe breeding (resulting offspring can be
+                                <td class="nb">X layout is also decent for color-safe breeding (resulting offspring can be
                                     differentiated from a clone) for players with no visitor watering. Again unnecessary
-                                    for players who get visitor water.</td>
+                                    for players who get visitor water.<br>
+                                You can also strategically block spawnable tiles like in pre-watering above to prevent water-counters from resetting.</td>
                             </tr>
                         </table>
                     </div>
