@@ -94,7 +94,7 @@ $(document).ready(function(){
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
-        panel.style.maxHeight = Math.max(panel.scrollHeight, panel.offsetHeight, panel.clientHeight) + "px";
+        panel.style.maxHeight = "2000px";
       } 
     });
   }
