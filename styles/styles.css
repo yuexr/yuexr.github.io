@@ -314,12 +314,13 @@ td, th {
 }
 th {
   text-align: right;
-  padding: 0 7px 0 0;
+  padding: 1px 7px 0 0;
   width: 120px;
   background: #ffaaba;
   color:white;
   font-weight: normal;
   border-bottom: 1px solid #ffffff;
+  vertical-align: top;
 }
 td {
   padding: 0 0 0 7px;
