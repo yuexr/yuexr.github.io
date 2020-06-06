@@ -290,6 +290,24 @@ img {
   background-color: #eeaa3a;
 }
 
+.button-gr {
+  background-color: #b7b7b7;
+  border: none;
+  color: white;
+  padding:6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline:none;
+  transition-duration: 0.4s;
+}
+.button-gr:hover {
+  background-color: #ffa5b6;
+}
+
+
+
 td, th {
   height: 1rem;
   
@@ -325,11 +343,14 @@ td.nb{
   text-align: left;
   outline: none;
   transition: 0.4s;
-
 }
 
 .active, .accordion:hover {
   background-color: #b2dbd9;
+}
+
+.accordian:focus{
+  
 }
 
 .accordion:after {
