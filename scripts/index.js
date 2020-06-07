@@ -63,6 +63,18 @@ function toggle(toggleId) {
   }
 }
 
+function toggleNestedView(toggleId) {
+  var x = document.getElementById(toggleId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    var accordion = x.closest('.panel');
+    accordion.style.maxHeight = Math.max(accordion.scrollHeight, accordion.offsetHeight, accordion.clientHeight) + "px";
+    console.log(accordion)
+  } else {
+    x.style.display = "none";
+  }
+}
+
 function openModal(modalId) {
   var modal = document.getElementById(modalId);
   if (modal.style.display !== "block") {
