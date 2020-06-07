@@ -350,9 +350,6 @@ td.nb{
   background-color: #b2dbd9;
 }
 
-.accordian:focus{
-  
-}
 
 .accordion:after {
   content: '\002B';
@@ -370,7 +367,7 @@ td.nb{
   padding: 0 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 
 .leif{
@@ -406,6 +403,29 @@ td.nb{
 
 .fc-button:hover {
   background-color: #8eccc9;
+}
+
+.brspeed-button {
+  background-color: #bbbbbb;
+  border: none;
+  color: white;
+  padding:6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 315px;
+  outline:none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.brspeed-button-active {
+  background-color: #8eccc9;
+}
+
+.brspeed-button:hover {
+  background-color: #ffa5b6;
 }
 
 /* The Modal (background) */

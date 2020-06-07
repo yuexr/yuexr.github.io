@@ -11,6 +11,19 @@ function toggleFCView(showAdvanced) {
   toggle("fcAdvanced");
 }
 
+function toggleBRSpeedView(showMedian) {
+  var brspeedMedianButton = document.getElementById("brspeed-median-button")
+  var isMedianShown = brspeedMedianButton.classList.contains("brspeed-button-active")
+  if (showMedian === isMedianShown) return
+
+  document.getElementById("brspeed-95-button").classList.toggle("brspeed-button-active");
+  brspeedMedianButton.classList.toggle("brspeed-button-active");
+  toggle("brspeed95");
+  toggle("brspeedMedian");
+}
+
+
+
 var kofiwidget = function () {
   var style = "";
   var html = "";
@@ -94,8 +107,9 @@ $(document).ready(function(){
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
-        panel.style.maxHeight = "2000px";
+        panel.style.maxHeight = Math.max(panel.scrollHeight, panel.offsetHeight, panel.clientHeight) + "px";
       } 
     });
   }
 })
+
