@@ -89,15 +89,14 @@ body {
 }
 
 a {
-  color:#13928c;
+  color: #13928c;
 }
 
 a:hover {
   background-color: #8eccc9;
-  color:white;
+  color: white;
   text-decoration: none;
 }
-
 
 #navbar {
   background-color: #fae2a5;
@@ -142,14 +141,13 @@ h2 {
 }
 
 h3 {
-  font-size:20px;
+  font-size: 20px;
   color: #779a7e;
   margin: 5px 0 3px 0;
-
 }
 
 h4 {
-  font-size:20px;
+  font-size: 20px;
   color: #ff8199;
   margin: 5px 0 3px 0;
 }
@@ -173,9 +171,6 @@ img {
   padding-bottom: 50px;
 }
 
-
-
-
 #footer {
   background-image: url("/img/footer.png");
   height: 103px;
@@ -185,7 +180,6 @@ img {
   justify-content: center;
   padding: 30px;
   box-sizing: border-box;
-  
 }
 #footer-container {
   background-color: #fae2a5;
@@ -199,7 +193,7 @@ img {
 
 .bullet-list {
   padding-left: 30px;
-  padding-bottom: 10px;;
+  padding-bottom: 10px;
 }
 
 .center {
@@ -215,7 +209,7 @@ img {
   margin-bottom: 16px;
 }
 
-.footer-links > *:not(:last-child){
+.footer-links > *:not(:last-child) {
   margin-right: 16px;
 }
 
@@ -265,7 +259,7 @@ img {
   margin: 5px 0 15px 24px;
 }
 
-.layouts-container{
+.layouts-container {
   background-color: #fff;
   border: 1px solid #b2dbd9;
   border-left: 8px solid #b2dbd9;
@@ -278,12 +272,12 @@ img {
   background-color: #75c360;
   border: none;
   color: white;
-  padding:6px 10px;
+  padding: 6px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  outline:none;
+  outline: none;
   transition-duration: 0.4s;
 }
 .button:hover {
@@ -294,30 +288,28 @@ img {
   background-color: #b7b7b7;
   border: none;
   color: white;
-  padding:6px 10px;
+  padding: 6px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  outline:none;
+  outline: none;
   transition-duration: 0.4s;
 }
 .button-gr:hover {
   background-color: #ffa5b6;
 }
 
-
-
-td, th {
+td,
+th {
   height: 1rem;
-  
 }
 th {
   text-align: right;
   padding: 1px 7px 0 0;
   width: 120px;
   background: #ffaaba;
-  color:white;
+  color: white;
   font-weight: normal;
   border-bottom: 1px solid #ffffff;
   vertical-align: top;
@@ -328,7 +320,7 @@ td {
   border-bottom: 1px solid #dbe0e0;
 }
 
-td.nb{
+td.nb {
   border-bottom: none;
 }
 
@@ -346,13 +338,13 @@ td.nb{
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #b2dbd9;
 }
 
-
 .accordion:after {
-  content: '\002B';
+  content: "\002B";
   color: #777;
   font-weight: bold;
   float: right;
@@ -370,15 +362,15 @@ td.nb{
   transition: max-height 0.3s ease-out;
 }
 
-.leif{
-  display:in-line;
-  position:absolute;
-  height:31px;
+.leif {
+  display: in-line;
+  position: absolute;
+  height: 31px;
   margin-top: -6px;
 }
 
-.leif-indent{
-  display:in-line;
+.leif-indent {
+  display: in-line;
   margin: 0 0 0 36px;
 }
 
@@ -386,13 +378,13 @@ td.nb{
   background-color: #ffa5b6;
   border: none;
   color: white;
-  padding:6px 10px;
+  padding: 6px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   width: 462px;
-  outline:none;
+  outline: none;
   transition-duration: 0.4s;
   cursor: pointer;
 }
@@ -409,23 +401,24 @@ td.nb{
   background-color: #bbbbbb;
   border: none;
   color: white;
-  padding:6px 10px;
+  padding: 6px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 315px;
-  outline:none;
+  width: 431px;
+  outline: none;
   transition-duration: 0.4s;
   cursor: pointer;
+  display: in-line;
 }
 
 .brspeed-button-active {
-  background-color: #8eccc9;
+  background-color: #ffa5b6;
 }
 
 .brspeed-button:hover {
-  background-color: #ffa5b6;
+  background-color: #8eccc9;
 }
 
 /* The Modal (background) */
@@ -439,8 +432,8 @@ td.nb{
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   text-align: center;
 }
 
@@ -453,17 +446,12 @@ td.nb{
   display: inline-block;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.img-preview {
+  max-width: 300px;
+  cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.img-modal {
+  max-width: 100vh;
+  max-height: 80vh;
 }
