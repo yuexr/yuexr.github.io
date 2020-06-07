@@ -20,7 +20,7 @@
     </meta>
     <meta name="twitter:site" content="@yuecrossing" />
     <meta name="twitter:creator" content="@xiyuue" />
-    <meta name="twitter:title" content="Yue's ACNH Guides">
+    <meta name="twitter:title" content="Yue's ACNH Guides: Blue Rose Methods">
     <meta name="twitter:image" content="https://yuexr.github.io/img/card.png">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -54,19 +54,655 @@
 
             <a name="top"></a>
             <h1>Blue Rose Methods</h1>
-            <p>Blue roses are the most difficult flowers to obtain in the game. Hopefully one of these methods help
-                you!<BR>
-                <a href="https://bit.ly/acnhbluerose" target="_blank">Full instructions & alternate methods on this
-                    doc.</a></p>
 
-            <h2>Folklore Orange Flowchart</h2>
-            <img src="../img/bluerose/folklore_co32h_1.png" alt="folklore_flowchart"><br>
-            <img src="../img/bluerose/folklore_co32h_2.png" alt="folklore_genotype"><br>
+            <p style="color:grey;font-size: 12px;">Last update: 06/07/2020 4am EST.<br>
+                Contact me if you see any mistakes or if you have suggestions.</p>
 
-            <h2>Paleh v2 Flowchart</h2>
-            Updated: 06-04-2020, moved alternate method as main method. <a href="../img/bluerose/palehv2a.png"
-                target="_blank">(old version)</a><br>
-            <img src="../img/bluerose/paleh2_1.png" alt="paleh_fc"><br>
+            <p>Blue roses are the most difficult flowers to obtain in the game.<br>
+                Our methods have been extensively tested and simulated so you can pick the most optimized method for
+                your needs!</p>
+
+            <h3>Contents</h3>
+            <div class="toc">
+                <b>Information:</b>
+                <ul class="bullet-list"><b>
+                        <li><a href="#which-path">Which path is right for me?</a></li>
+                        <li><a href="#glossary">Glossary (definitions)</a></li>
+                        <li><a href="#how-fast">How fast is each path?</a></li>
+                    </b></ul>
+
+                <b>Methods:</b>
+                <ul class="bullet-list">
+                    <li><a href="#aster4step-method">Asteriation 4-Step Method</a></li>
+                    <li><a href="#astergenepool-method">Asteriation Genepool Method</a></li>
+                    <li><a href="#backngenepool-method">BackwardsN Genepool Method</a></li>
+                    <li><a href="#paleh-method">Paleh Method (v2)</a></li>
+                    <li><a href="#folklore-method">Folklore Method</a></li>
+                </ul>
+
+                <a href="#credits"><b>Credits</b></a>
+            </div>
+            <br>
+            <hr>
+
+
+            <a name="which-path"></a>
+            <h2>Which path is right for me?</h2>
+
+            <ul class="bullet-list">
+                <li><b>"I'm a beginner, I want something easy and straight-foward!"</b>: Asteriation 4-Step method.
+                </li>
+                <li><b>"I know what I'm doing, I want the absolute fastest method!"</b>: Asteriation Genepool method.
+                </li>
+                <li><b>"I'm a combination of both!"</b>: See chart below!</li>
+            </ul>
+
+            <img src="../img/bluerose/recc.PNG" class="center"><br>
+
+            <a name="glossary"></a>
+            <h3>Glossary</h3>
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Definitions</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Clone-tolerant:</th>
+                            <td class="nb">A method is clone-tolerant if all the necessary intermediary offsprings are
+                                different from the parents. If a method is not clone-tolerant, you must use
+                                clone-resistant layouts.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nb"></td>
+                            <td>
+                                <b>Examples:</b> <button class="button"
+                                    onclick="toggleNestedView('clone-tolerant')">show/hide</button><img
+                                    src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+                                <div id="clone-tolerant" style="display:none;">
+                                    <img src="../img/bluerose/clonetolerant.png"><br>
+                                    <ul class="bullet-list">
+                                        <li>Example A is clone-tolerant because the needed offspring (orange α) is a
+                                            different color from its parents (red and yellow). Although the parents can
+                                            also make a yellow rose, it is not a part of the recipe and can be
+                                            discarded.</li>
+                                        <li>Example B is not clone-tolerant because the needed offspring (white α)
+                                            is the same color as one of its parents (white and yellow). If the player
+                                            incorrectly places the parents in a layout that allows for clones, we would
+                                            not be able to differentiate if a white offspring is a clone of the seed or
+                                            if it is white α.</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Methodical:</th>
+                            <td>A methodical path has formulated % chances at every single step. Genepool methods, on
+                                the other hand, involve throwing a bunch of flowers with unknown genes and hoping that
+                                some of them are the right combination (can be some luck involved!)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Pairs:</th>
+                            <td>This typically refers to the number of pairs you can fit in your available garden
+                                space.<br>
+                                Note that for simulations, we use certain number of pairs at every single step. This
+                                means that methods with more steps are simulated with more intermediate pairs.<br>
+                                For a basic isolated pairs layout, 32 pairs = 64 flowers, plus when you consider the
+                                necessary space inbetween, that means you'd need an 11x15 area! Plan accordingly!
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Testing:</th>
+                            <td>Paleh and Folklore methods need <a href="./garden_layouts.html#testing"
+                                    target="_blank">purple rose 𝑥 testing</a>.<br>
+                                In both methods, we will need to tell whether an unknown purple rose 𝑥 [0?20] is a
+                                purple rose α [0020] or purple rose β [0120]. You need to be super careful during this
+                                extra step to properly differentiate between 2 flowers that look exactly alike!
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Visitors:</th>
+                            <td>Having visitors from other islands water your flowers significantly increase your base
+                                production rate (from 5% up to 80%!). <a href="./garden.html#watering"
+                                    target="_blank">[visitor watering guide]</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
+
+            <a name="how-fast"></a>
+            <h2>How fast is each path?</h2>
+
+            <h3>Expected time with 5 visitors <span style="font-size: 10pt;">(95 percentile)</span></h3>
+            <img src="../img/bluerose/95percentile_basic.PNG"><br>
+            <p>Metric: number of days to 1 blue rose from planting seeds.<br>
+                For expected time with <b>0 visitors</b> and more numbers, check below!</p>
+
+
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Advanced Days-To-Blue Speed
+                    Information</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+
+                    <button class="brspeed-button brspeed-button-active" id="brspeed-95-button"
+                        onclick="toggleBRSpeedView(false)">95 percentile</button>
+                    <button class="brspeed-button" id="brspeed-median-button"
+                        onclick="toggleBRSpeedView(true)">Median</button>
+
+                    <div id="brspeed95" style='display:block; text-align: center;'>
+                        <h3>95 percentile</h3>
+                        <p style="padding-bottom: 5px;">Most players will get their first blue rose before these # of
+                            days. (95 out of 100)</p>
+                        <img src="../img/bluerose/95percentile.PNG">
+                    </div>
+
+                    <div id="brspeedMedian" style='display:none; text-align: center;'>
+                        <h3>Median</h3>
+                        <p style="padding-bottom: 5px;">Half of all players will get their first blue rose before these
+                            # of days.</p>
+                        <img src="../img/bluerose/median.PNG"><br>
+                    </div>
+
+                    <div style="font-size: 12px;text-align: center;">*Note: for 8 pairs, although BackN's average
+                        (median) time is faster than Paleh, it takes significantly longer if you are unlucky (95
+                        percentile). <BR><BR>
+                    </div>
+
+                    Simulation parameters: <button class="button"
+                        onclick="toggleNestedView('simulation')">show/hide</button><img
+                        src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+                    <div id="simulation" style="display:none;">
+                        <ul class="bullet-list" style="font-size: 12px; padding-bottom: 0;">
+                            <li>max days: 1000, iterations: 10000.</li>
+                            <li>fixed parameters: daily watering at all stages, isolated pairs layout, no implicit
+                                cloning*, watering blocked flowers when unused**</li>
+                            <li>*cloning only supported through explicit cloning steps</li>
+                            <li>**blocking off a flower to forcefully raise its bad luck counter to increase likelihood
+                                of breeding when needed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div><br>
+
+            <hr>
+
+            <a name="aster4step-method"></a>
+            <h2>Asteriation's 4-Step Method</h2>
+            <img src="../img/bluerose/aster4step.png" width="650px" style="cursor:pointer;"
+                onclick="openModal('aster4step')">
+
+            <div id="aster4step" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/aster4step.png" class="img-modal"><br>
+                    <a href="../img/bluerose/aster4step.png" target="_blank"><button
+                            class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div><br>
+
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Introduction:</th>
+                            <td>Simple and straightforward method for beginners.</td>
+                        </tr>
+                        <tr>
+                            <th>Difficulty:</th>
+                            <td><span style="background-color: #c2e2b5">Easy</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Strengths:</th>
+                            <td>Clone-tolerant, you don't have to worry about clones (although clone-resistant layouts
+                                are always recommended). Also methodical, each step is organized and has calculated %
+                                rates.<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Weaknesses:</th>
+                            <td>Slowest method, but not bad if you have visitors watering. However, difference is very
+                                significant if you do not have Nintendo Switch Online or otherwise cannot get visitors
+                                to help water your flowers. We strongly advise using another method if you are in this
+                                situation.</td>
+                        </tr>
+                        <th>Layouts:</th>
+                        <td>For step 1 and step 4 (when you are breeding two white rose [0010] and breeding two red rose
+                            [1110]), use a dense layout for same-parent breeding such as <a
+                                href="./garden_layouts.html#turtle" target="_blank">turtle</a> or <a
+                                href="./garden_layouts.html#tetrist" target="_blank">tetris-t</a>. For the
+                            other steps where the parents are different colors, you can use any <a
+                                href="./garden_layouts.html#breeding_diff" target="_blank">different-parent
+                                breeding layouts</a>.</td>
+                        <tr>
+                            <th>Credits:</th>
+                            <td>Method: asteriation#6884.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Other pictures:</th>
+                            <td class="nb">Ellie33#5074's visual guide:</td>
+                        </tr>
+                        <tr>
+                            <td class="nb"></td>
+                            <td><img src="../img/bluerose/aster4step_ellie.PNG" class="img-preview"
+                                    onclick="openModal('aster4step-ellie')"></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div><br>
+
+            <div id="aster4step-ellie" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/aster4step_ellie.PNG" class="img-modal"><br>
+                    <a href="../img/bluerose/aster4step_ellie.PNG" target="_blank"><button
+                            class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+
+            <a name="astergenepool-method"></a>
+            <h2>Asteriation Genepool Method</h2>
+            <img src="../img/bluerose/astergenepool.png" style="cursor:pointer;" onclick="openModal('astergenepool')">
+
+            <div id="astergenepool" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/astergenepool.png" class="img-modal"><br>
+                    <a href="../img/bluerose/astergenepool.png" target="_blank"><button
+                            class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div><br>
+
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Introduction:</th>
+                            <td>The fastest method! Involves a genepool and knowledge of cloning though.</td>
+                        </tr>
+                        <tr>
+                            <th>Difficulty:</th>
+                            <td><span style="background-color: #ffd7d7">Hard</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Strengths:</th>
+                            <td>Gotta go fast.<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Weaknesses:</th>
+                            <td>Not clone-tolerant. You must learn how to avoid clones, and you must use clone-resistant
+                                layouts for the breeding steps. You will need to know how to clone for the cloning
+                                step.<br>
+                                You will be utilizing a genepool, which has an unknown % chance of making a blue
+                                (although the average is ~5.1%).</td>
+                        </tr>
+                        <tr>
+                            <th>Layouts:</th>
+                            <td class="nb">We recommend the standard <a href="./garden_layouts.html#isolated_pairs"
+                                    target="_blank">isolated pairs</a> layout, or its other variations  during the breeding steps.<br>
+                                <b>For the cloning and subsequent self-breeding step:</b> You must be able to identify the
+                                parent of the clone while cloning AND you must ensure the flower then breed with their
+                                own clone (IP). The layout below will allow you to do both steps. Blockers (e.g. hard pathing, fencing, etc.) are necessary.<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td><b>Suggested layout:</b> <button class="button"
+                                onclick="toggleNestedView('astergenepool-layout')">show/hide</button><img
+                                src="../img/layouts/leifpeek.png" width=30px style="margin-bottom:-10px">
+                                <div id="astergenepool-layout" style="display:none;">
+                                <img src="../img/bluerose/astergenepool_layout.png" style="padding-top:5px;"><br>
+                                This layout is also suitable for the offspring re-use bonus step below (can identify breeding parents).
+                            (If you like cliff layouts, you can also find a recommended cliff-assisted layout in the document below).
+                                </div></td>
+                        </tr>
+
+                        <tr>
+                            <th>Additional Instructions:</th>
+                            <td>Optional steps if you have space:<br>
+                                <ul class="bullet-list" style="padding-bottom: 0;">
+                                    <li>Pair elimination: eliminating low % clone pairs systematically. You must be
+                                        using a layout that allows you to identify the exact set of parents an offspring
+                                        comes from. Read more in the original document (linked below).</li>
+                                    <li>Offspring reuse. Specific offspring of the pool can be fed back into the pool
+                                        (clone the offspring + breed). Read more in the original document (linked
+                                        below).
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Credits:</th>
+                            <td class="nb">Method: asteriation#6884, based on backwardsn#7201's genepool method. <a
+                                    href="https://docs.google.com/document/d/1mvXDHTO-Z8V3juPIBU-PF13CpAe7UeHqf_WfTn1dcJA/edit#"
+                                    target="_blank">[original document]</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
+
+
+            <a name="backngenepool-method"></a>
+            <h2>BackwardsN Genepool Method</h2>
+            <img src="../img/bluerose/backngenepool.png" style="cursor:pointer;" onclick="openModal('backngenepool')">
+
+            <div id="backngenepool" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/backngenepool.png" class="img-modal"><br>
+                    <a href="../img/bluerose/backngenepool.png" target="_blank"><button
+                            class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div><br>
+
+
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Introduction:</th>
+                            <td>Also known as "Shotgun, BackN's 4-step, and Cesspool" methods. This is the original
+                                "genepool" method, and it name speaks for itself. This path is good for if you have a
+                                LOOOOT of space. A lot a lot.</td>
+                        </tr>
+                        <tr>
+                            <th>Difficulty:</th>
+                            <td><span style="background-color: #ffe599;">Medium</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Strengths:</th>
+                            <td>Great balance of speed and simplicity. It is easier than Aster's Genepool, and only a
+                                little slower.<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Weaknesses:</th>
+                            <td>Not recommended for players who have limited garden space. You are relying on luck!<br>
+                                You will be utilizing a genepool, which has an unknown % chance of making a blue
+                                (although the average is ~2.2%).</td>
+                        </tr>
+                        <tr>
+                            <th>Layouts:</th>
+                            <td>For steps 1 and 2: we recommend the standard <a
+                                    href="./garden_layouts.html#isolated_pairs" target="_blank">isolated pairs</a>
+                                layout (or other variations).<br>
+                                For step 3 (1110 red x 1110 red) and 4 (genepool): any dense layouts such as <a
+                                    href="./garden_layouts.html#turtle" target="_blank">turtle</a> or <a
+                                    href="./garden_layouts.html#tetrist" target="_blank">tetris-t</a> (use this despite
+                                genepool not being identical parents).<br>
+                                During the genepool step, you can keep expanding the "field" of red, orange, and black
+                                roses with additional offsprings.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Credits:</th>
+                            <td>Method: backwardsn#7201 <a href="https://tinyurl.com/ybpul6xx" target="_blank">[original
+                                    document]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Other pictures:</th>
+                            <td class="nb"> Visual version: (by <a href="https://twitter.com/kamirose/"
+                                    target="_blank">@kamirose</a>).</td>
+                        </tr>
+                        <tr>
+                            <td class="nb"></td>
+                            <td><img src="../img/bluerose/backngenepool_kamirose.png" class="img-preview"
+                                    onclick="openModal('backngenepool-kamirose')"></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div><br>
+
+            <div id="backngenepool-kamirose" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/backngenepool_kamirose.png" class="img-modal"><br>
+                    <a href="../img/bluerose/backngenepool_kamirose.png" target="_blank"><button
+                            class="button">Download</button></a> <button class="button-gr"
+                        onclick="closeModal()">Close</button>
+                </div>
+            </div>
+
+            <a name="paleh-method"></a>
+            <h2>Paleh Method (v2)</h2>
+            <img src="../img/bluerose/paleh2_1.png" style="cursor:pointer;" onclick="openModal('paleh')">
+
+            <div id="paleh" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/paleh2_1.png" class="img-modal"><br>
+                    <a href="../img/bluerose/paleh2_1.png" target="_blank"><button class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div><br>
+
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Introduction:</th>
+                            <td>Great method for if you have less available garden space to work with! Although it has a
+                                slightly slower than BackN's method on average (using 8 pairs), it has a significantly
+                                lower 95 percentile.</td>
+                        </tr>
+                        <tr>
+                            <th>Difficulty:</th>
+                            <td><span style="background-color: #ffd7d7">Hard</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Strengths:</th>
+                            <td>Methodical, each step is organized and has calculated % rates.<br>
+                                Although there are many steps, the % yield at every step is fairly high (lowest is 25%)
+                                compared to 1.56% in some other methods. (You don't have to rely as much on luck).<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Weaknesses:</th>
+                            <td>Not clone-tolerant. You must learn how to avoid clones, and you must use clone-resistant
+                                layouts.<br>
+                                You must also need to do <a href="./garden_layouts.html#testing" target="_blank">purple
+                                    rose 𝑥 testing</a>.</td>
+                        </tr>
+                        <tr>
+                            <th>Layouts:</th>
+                            <td>You MUST use clone-resistant layouts for this method.<br>
+                                We recommend the standard <a href="./garden_layouts.html#isolated_pairs"
+                                    target="_blank">isolated pairs</a> layout, or its other variations (see link for
+                                details).</td>
+                        </tr>
+                        <tr>
+                            <th>Additional Instructions:</th>
+                            <td>Extra notes if you have available space:<br>
+                                <ul class="bullet-list" style="padding-bottom: 0;">
+                                    <li>You can also use yellow 0210 from purple testing (breed them together) to make
+                                        more white β.</li>
+                                    <li>You can breed two red 1110 from orange α and white β for a 1.56% chance at blue.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Credits:</th>
+                            <td>Method: Paleh#2526, refined by: jpony#3101. <a href="https://bit.ly/348DAmJ"
+                                    target="_blank">[original document]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Other pictures:</th>
+                            <td class="nb">
+                                v2.0: incorrectly had main method as "alternate".</td>
+                        </tr>
+                        <tr>
+                            <td class="nb"></td>
+                            <td class="nb">
+                                <img src="../img/bluerose/palehv2a.png" class="img-preview"
+                                    onclick="openModal('palehV2a')"><br>
+                                Leaving this up for those who were already on the old (slower) path. Will be removing
+                                this soon, please use the updated version!</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
+
+            <div id="palehV2a" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/palehv2a.png" class="img-modal"><br>
+                    <a href="../img/bluerose/palehv2a.png" target="_blank"><button class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+
+
+            <a name="folklore-method"></a>
+            <h2>Folklore Method</h2>
+            <img src="../img/bluerose/folklore.png" style="cursor:pointer;" onclick="openModal('folklore')"><br>
+
+            <div id="folklore" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/folklore.png" class="img-modal"><br>
+                    <a href="../img/bluerose/folklore.png" target="_blank"><button class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+
+            <button class="accordion">
+                <img src="../img/layouts/slo.png" class="leif"> <span class="leif-indent">Leif's Explanation</span>
+            </button>
+            <div class="panel">
+                <div class="layouts-container">
+                    <table>
+                        <tr>
+                            <th>Introduction:</th>
+                            <td>Standard original method. Average in every way possible. (originates from New Leaf!)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Difficulty:</th>
+                            <td><span style="background-color: #ffe599;">Medium</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Strengths:</th>
+                            <td>Methodical, each step is organized and has calculated % rates.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Weaknesses:</th>
+                            <td>Not clone-tolerant. You must learn how to avoid clones, and you must use clone-resistant
+                                layouts.<br>
+                                You must also need to do <a href="./garden_layouts.html#testing" target="_blank">purple
+                                    rose 𝑥 testing</a>.</td>
+                        </tr>
+                        <tr>
+                            <th>Layouts:</th>
+                            <td>We recommend the standard <a href="./garden_layouts.html#isolated_pairs"
+                                    target="_blank">isolated pairs</a> layout, or its other variations (see link for
+                                details).</td>
+                        </tr>
+                        <tr>
+                            <th>Credits:</th>
+                            <td>Method: originates from ACNL guide.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Other pictures:</th>
+                            <td class="nb"><a href="https://twitter.com/co32h" target="blank">@co32h</a> versions:</td>
+                        </tr>
+                        <tr>
+                            <td class="nb"></td>
+                            <td><img src="../img/bluerose/folklore_co32h_1.png" class="img-preview"
+                                    onclick="openModal('folklore-co32h-1')"> <img
+                                    src="../img/bluerose/folklore_co32h_2.png" class="img-preview"
+                                    onclick="openModal('folklore-co32h-2')"></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div><br>
+
+            <div id="folklore-co32h-1" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/folklore_co32h_1.png" class="img-modal"><br>
+                    <a href="../img/bluerose/folklore_co32h_1.png" target="_blank"><button
+                            class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+
+            <div id="folklore-co32h-2" class="modal">
+                <div class="modal-content">
+                    <img src="../img/bluerose/folklore_co32h_2.png" class="img-modal"><br>
+                    <a href="../img/bluerose/folklore_co32h_2.png" target="_blank"><button
+                            class="button">Download</button></a>
+                    <button class="button-gr" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+
+
+            <hr>
+
+            <br>
+            <a name="credits"></a>
+            <h3>Credits:</h3>
+
+            <ul class="bullet-list">
+                <li>Guide: <a href="https://twitter.com/yuecrossing" target="_blank">@yuecrossing</a></li>
+                <li>
+                    Dataminers: <a href="https://twitter.com/aiterusawato" target="_blank">@aiterusawato</a>,
+                    Paleh#2526, <a href="https://twitter.com/_Ninji" target="_blank">@_Ninji</a>
+                </li>
+                <li>Methods research & analysis: asteriation#6884, backwardsn#7201, Paleh#2526, jpony#3101
+                </li>
+                <li>Speed simulations: asteriation#6884</li>
+                <li>Additional visuals:
+                    <a href="https://twitter.com/yuecrossing" target="_blank">@yuecrossing</a>,
+                    <a href="https://twitter.com/co32h" target="_blank">@co32h</a>,
+                    <a href="https://twitter.com/kamirose" target="_blank">@kamirose</a>,
+                    Ellie33#5074
+                </li>
+                <li>Special thanks:
+                    <a href="https://twitter.com/ACGardenCouncil" target="_blank">Garden Council</a>
+                </li>
+            </ul>
+
+            <h3>Tools:</h3>
+            <ul class="bullet-list">
+                <li><a href="https://recipesim.isomorphicbox.com/" target="_blank">Asteriation's Flower Breeding Path
+                        Simulator</a> (asteriation#6884)</li>
+                <li><a href="https://gardenscience.ac/" target="_blank">Aeon's Flower Simulator</a> (<a
+                        href="https://twitter.com/AeonSake" target="_blank">@AeonSake</a>)</li>
+            </ul>
+
+            <br>yue's to do list
+            <ul class="bullet-list">
+                <li>make simplified visual version of each flowchart</li>
+                
+            </ul>
+
         </div>
 
         <div id="footer-root"></div>
