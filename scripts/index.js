@@ -69,7 +69,6 @@ function toggleNestedView(toggleId) {
     x.style.display = "block";
     var accordion = x.closest('.panel');
     accordion.style.maxHeight = Math.max(accordion.scrollHeight, accordion.offsetHeight, accordion.clientHeight) + "px";
-    console.log(accordion)
   } else {
     x.style.display = "none";
   }
