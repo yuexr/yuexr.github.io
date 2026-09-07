@@ -7,7 +7,7 @@
   e.preventDefault();opener=a;
   const inSpoiler=!!a.closest('.spoiler'), seen=new Set();
   items=[...document.querySelectorAll('a[data-viewer]')].filter(x=>{
-   if(!!x.closest('.spoiler')!==inSpoiler||x.closest('[hidden]'))return false;
+   if(!!x.closest('.spoiler')!==inSpoiler||x.closest('[hidden]')||x.closest('details:not([open])'))return false;
    if(seen.has(x.href))return false;seen.add(x.href);return true;
   });
   position=items.findIndex(x=>x.href===a.href);show();dialog.showModal();
