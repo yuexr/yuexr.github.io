@@ -291,6 +291,9 @@
         tr.is-owned { background:rgba(103,232,249,.06) }
         .checklist-info { margin:12px 0; font-size:14px; color:#cbd5e1 }
         #owned-count { color:#67e8f9 }
+    .ownership-filter { display:flex; gap:6px; margin:10px 0 4px; flex-wrap:wrap }
+        .ownership-filter button { font:inherit; min-height:44px; padding:8px 18px; border:1px solid #475569; border-radius:8px; background:#1e293b; color:#e2e8f0; cursor:pointer }
+        .ownership-filter button[aria-pressed="true"] { background:#155e75; border-color:#67e8f9; color:#fff }
     </style>
 </head>
 
@@ -311,7 +314,11 @@
         <p>Each percentage below is the chance of that exact skin on one spin at that island.</p>
     </div>
     <div class="toolbar"><label for="search" class="result-count">Find a collection, skin or rarity</label><input
-            id="search" type="search" placeholder="Try Boat, Galaxy or Legendary…" autocomplete="off"><span id="results"
+            id="search" type="search" placeholder="Try Boat, Galaxy or Legendary…" autocomplete="off"><div class="ownership-filter" role="group" aria-label="Filter skins by ownership">
+            <button type="button" data-ownership="all" aria-pressed="true">All</button>
+            <button type="button" data-ownership="owned" aria-pressed="false">Owned</button>
+            <button type="button" data-ownership="unowned" aria-pressed="false">Unowned</button>
+        </div><span id="results"
             class="result-count" role="status" aria-live="polite">Showing all 127 skins · scroll tables sideways on
             smaller screens</span></div>
     <p class="checklist-info"><strong id="owned-count" role="status" aria-live="polite">0 / 127 owned</strong><br>
@@ -1831,7 +1838,7 @@
             </div>
         </section>
     </main>
-    <p id="empty" hidden>No matching skins. Try another name or collection.</p>
+    <p id="empty" hidden>No matching skins. Try another search or switch the ownership filter.</p>
     <details class="notes">
         <summary>How the odds work & asset sources</summary>
         <p><strong>0% means no normal drop at that island.</strong> Defaults do not drop. Assault Rifle Orange, Assault
@@ -1859,7 +1866,27 @@
     </dialog>
     <script>
         const search = document.querySelector('#search'), rows = [...document.querySelectorAll('tbody tr')], sections = [...document.querySelectorAll('.collection')];
-        search.addEventListener('input', () => { const terms = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean); let count = 0; rows.forEach(row => { row.hidden = !terms.every(term => row.dataset.search.includes(term)); if (!row.hidden) count++ }); sections.forEach(section => section.hidden = ![...section.querySelectorAll('tbody tr')].some(row => !row.hidden)); document.querySelector('#results').textContent = `Showing ${count} of 127 skins`; document.querySelector('#empty').hidden = count !== 0 });
+        let ownershipFilter = 'all';
+        const filterButtons = [...document.querySelectorAll('[data-ownership]')];
+        function filterSkins() {
+            const terms = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+            let count = 0;
+            rows.forEach(row => {
+                const owned = row.querySelector('.owned-skin').checked;
+                const matchesOwnership = ownershipFilter === 'all' || (ownershipFilter === 'owned' ? owned : !owned);
+                row.hidden = !matchesOwnership || !terms.every(term => row.dataset.search.includes(term));
+                if (!row.hidden) count++;
+            });
+            sections.forEach(section => section.hidden = ![...section.querySelectorAll('tbody tr')].some(row => !row.hidden));
+            document.querySelector('#results').textContent = `Showing ${count} of ${rows.length} skins`;
+            document.querySelector('#empty').hidden = count !== 0;
+        }
+        search.addEventListener('input', filterSkins);
+        filterButtons.forEach(button => button.addEventListener('click', () => {
+            ownershipFilter = button.dataset.ownership;
+            filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+            filterSkins();
+        }));
         const viewer = document.querySelector('#viewer'), large = document.querySelector('#large');
         document.querySelectorAll('.image-button').forEach(button => button.addEventListener('click', () => { const img = button.querySelector('img'); large.src = img.src; large.alt = img.alt; document.querySelector('#image-title').textContent = img.alt; viewer.showModal() }));
         document.querySelector('#close').addEventListener('click', () => viewer.close());
@@ -1875,6 +1902,7 @@
         const update = () => {
             counter.textContent = `${boxes.filter(box => box.checked).length} / ${boxes.length} owned`;
             boxes.forEach(box => box.closest('tr').classList.toggle('is-owned', box.checked));
+            filterSkins();
         };
         const storageError = () => {
             note.textContent = 'Your browser could not save or load progress. Checks will only last while this page is open.';
