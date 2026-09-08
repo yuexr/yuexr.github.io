@@ -285,6 +285,12 @@
         .credits {
             margin-bottom: 20px
         }
+
+        .owned-label { display:flex; align-items:center; gap:8px; width:fit-content; min-height:44px; cursor:pointer }
+        input.owned-skin { width:20px; height:20px; margin:0; padding:0; flex:none; accent-color:#67e8f9; cursor:pointer }
+        tr.is-owned { background:rgba(103,232,249,.06) }
+        .checklist-info { margin:12px 0; font-size:14px; color:#cbd5e1 }
+        #owned-count { color:#67e8f9 }
     </style>
 </head>
 
@@ -308,6 +314,9 @@
             id="search" type="search" placeholder="Try Boat, Galaxy or Legendary…" autocomplete="off"><span id="results"
             class="result-count" role="status" aria-live="polite">Showing all 127 skins · scroll tables sideways on
             smaller screens</span></div>
+    <p class="checklist-info"><strong id="owned-count" role="status" aria-live="polite">0 / 127 owned</strong><br>
+        <span id="save-note">Check the skins you own. Saved in this browser only; clearing site data removes your progress. No account needed.</span></p>
+    <noscript>Enable JavaScript to save your checklist.</noscript>
     <main>
         <section class="collection">
             <h2>Assault Rifle <span class="count">14 skins</span></h2>
@@ -329,7 +338,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Default"><img loading="lazy"
                                         src="img/skin-001.png" alt="Assault Rifle · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/default" aria-label="Owned: Assault Rifle · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -340,7 +349,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · White"><img loading="lazy"
                                         src="img/skin-002.png" alt="Assault Rifle · White"></button></td>
-                            <th scope="row">White<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/white" aria-label="Owned: Assault Rifle · White"><span>White</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -351,7 +360,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Orange"><img loading="lazy"
                                         src="img/skin-003.png" alt="Assault Rifle · Orange"></button></td>
-                            <th scope="row">Orange<span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/orange" aria-label="Owned: Assault Rifle · Orange"><span>Orange</span></label><span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -362,7 +371,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Blue"><img loading="lazy" src="img/skin-004.png"
                                         alt="Assault Rifle · Blue"></button></td>
-                            <th scope="row">Blue<span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/blue" aria-label="Owned: Assault Rifle · Blue"><span>Blue</span></label><span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -373,7 +382,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Tiger"><img loading="lazy"
                                         src="img/skin-005.png" alt="Assault Rifle · Tiger"></button></td>
-                            <th scope="row">Tiger<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/tiger" aria-label="Owned: Assault Rifle · Tiger"><span>Tiger</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -384,7 +393,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Hazard"><img loading="lazy"
                                         src="img/skin-006.png" alt="Assault Rifle · Hazard"></button></td>
-                            <th scope="row">Hazard<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/hazard" aria-label="Owned: Assault Rifle · Hazard"><span>Hazard</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -395,7 +404,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Wood"><img loading="lazy" src="img/skin-007.png"
                                         alt="Assault Rifle · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/wood" aria-label="Owned: Assault Rifle · Wood"><span>Wood</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -406,7 +415,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Emerald"><img loading="lazy"
                                         src="img/skin-008.png" alt="Assault Rifle · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/emerald" aria-label="Owned: Assault Rifle · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -417,7 +426,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Ruby"><img loading="lazy" src="img/skin-009.png"
                                         alt="Assault Rifle · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/ruby" aria-label="Owned: Assault Rifle · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -428,7 +437,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Pink"><img loading="lazy" src="img/skin-010.png"
                                         alt="Assault Rifle · Pink"></button></td>
-                            <th scope="row">Pink<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/pink" aria-label="Owned: Assault Rifle · Pink"><span>Pink</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -439,7 +448,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Cow"><img loading="lazy" src="img/skin-011.png"
                                         alt="Assault Rifle · Cow"></button></td>
-                            <th scope="row">Cow<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/cow" aria-label="Owned: Assault Rifle · Cow"><span>Cow</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -450,7 +459,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Rainbow"><img loading="lazy"
                                         src="img/skin-012.png" alt="Assault Rifle · Rainbow"></button></td>
-                            <th scope="row">Rainbow<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/rainbow" aria-label="Owned: Assault Rifle · Rainbow"><span>Rainbow</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -461,7 +470,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Diamond"><img loading="lazy"
                                         src="img/skin-013.png" alt="Assault Rifle · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/diamond" aria-label="Owned: Assault Rifle · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -472,7 +481,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Assault Rifle · Gold"><img loading="lazy" src="img/skin-014.png"
                                         alt="Assault Rifle · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="assault rifle/gold" aria-label="Owned: Assault Rifle · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -502,7 +511,7 @@
                         <tr data-search="boat boat  default default">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Default"><img
                                         loading="lazy" src="img/skin-015.png" alt="Boat · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/default" aria-label="Owned: Boat · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -512,7 +521,7 @@
                         <tr data-search="boat boat  winter common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Winter"><img
                                         loading="lazy" src="img/skin-016.png" alt="Boat · Winter"></button></td>
-                            <th scope="row">Winter<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/winter" aria-label="Owned: Boat · Winter"><span>Winter</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.9167%</td>
                             <td class="num ">3.5000%</td>
@@ -522,7 +531,7 @@
                         <tr data-search="boat boat  red common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Red"><img
                                         loading="lazy" src="img/skin-017.png" alt="Boat · Red"></button></td>
-                            <th scope="row">Red<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/red" aria-label="Owned: Boat · Red"><span>Red</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.9167%</td>
                             <td class="num ">3.5000%</td>
@@ -532,7 +541,7 @@
                         <tr data-search="boat boat  orange common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Orange"><img
                                         loading="lazy" src="img/skin-018.png" alt="Boat · Orange"></button></td>
-                            <th scope="row">Orange<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/orange" aria-label="Owned: Boat · Orange"><span>Orange</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.9167%</td>
                             <td class="num ">3.5000%</td>
@@ -542,7 +551,7 @@
                         <tr data-search="boat boat  blue common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Blue"><img
                                         loading="lazy" src="img/skin-019.png" alt="Boat · Blue"></button></td>
-                            <th scope="row">Blue<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/blue" aria-label="Owned: Boat · Blue"><span>Blue</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.9167%</td>
                             <td class="num ">3.5000%</td>
@@ -552,7 +561,7 @@
                         <tr data-search="boat boat  camouflage rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Camouflage"><img
                                         loading="lazy" src="img/skin-020.png" alt="Boat · Camouflage"></button></td>
-                            <th scope="row">Camouflage<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/camouflage" aria-label="Owned: Boat · Camouflage"><span>Camouflage</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -562,7 +571,7 @@
                         <tr data-search="boat boat  emerald rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Emerald"><img
                                         loading="lazy" src="img/skin-021.png" alt="Boat · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/emerald" aria-label="Owned: Boat · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -572,7 +581,7 @@
                         <tr data-search="boat boat  ruby rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Ruby"><img
                                         loading="lazy" src="img/skin-022.png" alt="Boat · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span><small
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/ruby" aria-label="Owned: Boat · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span><small
                                     class="skin-note">note: more reflective in-game than red</small></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -583,7 +592,7 @@
                         <tr data-search="boat boat  fire not obtainable">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Fire"><img
                                         loading="lazy" src="img/skin-023.png" alt="Boat · Fire"></button></td>
-                            <th scope="row">Fire<span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/fire" aria-label="Owned: Boat · Fire"><span>Fire</span></label><span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -593,7 +602,7 @@
                         <tr data-search="boat boat  polka rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Polka"><img
                                         loading="lazy" src="img/skin-024.png" alt="Boat · Polka"></button></td>
-                            <th scope="row">Polka<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/polka" aria-label="Owned: Boat · Polka"><span>Polka</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -603,7 +612,7 @@
                         <tr data-search="boat boat  blue fade rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Blue Fade"><img
                                         loading="lazy" src="img/skin-025.png" alt="Boat · Blue Fade"></button></td>
-                            <th scope="row">Blue Fade<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/blue fade" aria-label="Owned: Boat · Blue Fade"><span>Blue Fade</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -613,7 +622,7 @@
                         <tr data-search="boat boat  rainbow legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Rainbow"><img
                                         loading="lazy" src="img/skin-026.png" alt="Boat · Rainbow"></button></td>
-                            <th scope="row">Rainbow<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/rainbow" aria-label="Owned: Boat · Rainbow"><span>Rainbow</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -623,7 +632,7 @@
                         <tr data-search="boat boat  gold legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Gold"><img
                                         loading="lazy" src="img/skin-027.png" alt="Boat · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/gold" aria-label="Owned: Boat · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -633,7 +642,7 @@
                         <tr data-search="boat boat  diamond legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Boat · Diamond"><img
                                         loading="lazy" src="img/skin-028.png" alt="Boat · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="boat/diamond" aria-label="Owned: Boat · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -664,7 +673,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Default"><img loading="lazy"
                                         src="img/skin-029.png" alt="Brass Knuckles · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/default" aria-label="Owned: Brass Knuckles · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -675,7 +684,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Camouflage"><img loading="lazy"
                                         src="img/skin-030.png" alt="Brass Knuckles · Camouflage"></button></td>
-                            <th scope="row">Camouflage<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/camouflage" aria-label="Owned: Brass Knuckles · Camouflage"><span>Camouflage</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">2.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num zero">0.0000%</td>
@@ -686,7 +695,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Wood"><img loading="lazy"
                                         src="img/skin-031.png" alt="Brass Knuckles · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/wood" aria-label="Owned: Brass Knuckles · Wood"><span>Wood</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">2.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num zero">0.0000%</td>
@@ -697,7 +706,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Emerald"><img loading="lazy"
                                         src="img/skin-032.png" alt="Brass Knuckles · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/emerald" aria-label="Owned: Brass Knuckles · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">2.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num zero">0.0000%</td>
@@ -708,7 +717,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Polka"><img loading="lazy"
                                         src="img/skin-033.png" alt="Brass Knuckles · Polka"></button></td>
-                            <th scope="row">Polka<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/polka" aria-label="Owned: Brass Knuckles · Polka"><span>Polka</span></label><span class="rarity common">Common</span></th>
                             <td class="num ">17.5000%</td>
                             <td class="num ">5.8333%</td>
                             <td class="num zero">0.0000%</td>
@@ -719,7 +728,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Hazard"><img loading="lazy"
                                         src="img/skin-034.png" alt="Brass Knuckles · Hazard"></button></td>
-                            <th scope="row">Hazard<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/hazard" aria-label="Owned: Brass Knuckles · Hazard"><span>Hazard</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">2.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num zero">0.0000%</td>
@@ -730,7 +739,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Gold"><img loading="lazy"
                                         src="img/skin-035.png" alt="Brass Knuckles · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/gold" aria-label="Owned: Brass Knuckles · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num ">1.6667%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num zero">0.0000%</td>
@@ -741,7 +750,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Chess"><img loading="lazy"
                                         src="img/skin-036.png" alt="Brass Knuckles · Chess"></button></td>
-                            <th scope="row">Chess<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/chess" aria-label="Owned: Brass Knuckles · Chess"><span>Chess</span></label><span class="rarity common">Common</span></th>
                             <td class="num ">17.5000%</td>
                             <td class="num ">5.8333%</td>
                             <td class="num zero">0.0000%</td>
@@ -752,7 +761,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Ruby"><img loading="lazy"
                                         src="img/skin-037.png" alt="Brass Knuckles · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/ruby" aria-label="Owned: Brass Knuckles · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">2.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num zero">0.0000%</td>
@@ -763,7 +772,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Rainbow"><img loading="lazy"
                                         src="img/skin-038.png" alt="Brass Knuckles · Rainbow"></button></td>
-                            <th scope="row">Rainbow<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/rainbow" aria-label="Owned: Brass Knuckles · Rainbow"><span>Rainbow</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num ">1.6667%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num zero">0.0000%</td>
@@ -774,7 +783,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Brass Knuckles · Diamond"><img loading="lazy"
                                         src="img/skin-039.png" alt="Brass Knuckles · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="brass knuckles/diamond" aria-label="Owned: Brass Knuckles · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num ">1.6667%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num zero">0.0000%</td>
@@ -805,7 +814,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Default"><img loading="lazy"
                                         src="img/skin-040.png" alt="Fishing Rod · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/default" aria-label="Owned: Fishing Rod · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -816,7 +825,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Orange"><img loading="lazy" src="img/skin-041.png"
                                         alt="Fishing Rod · Orange"></button></td>
-                            <th scope="row">Orange<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/orange" aria-label="Owned: Fishing Rod · Orange"><span>Orange</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -827,7 +836,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Winter"><img loading="lazy" src="img/skin-042.png"
                                         alt="Fishing Rod · Winter"></button></td>
-                            <th scope="row">Winter<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/winter" aria-label="Owned: Fishing Rod · Winter"><span>Winter</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -837,7 +846,7 @@
                         <tr data-search="rod fishing rod  cow common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Fishing Rod · Cow"><img
                                         loading="lazy" src="img/skin-043.png" alt="Fishing Rod · Cow"></button></td>
-                            <th scope="row">Cow<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/cow" aria-label="Owned: Fishing Rod · Cow"><span>Cow</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -848,7 +857,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Hazard"><img loading="lazy" src="img/skin-044.png"
                                         alt="Fishing Rod · Hazard"></button></td>
-                            <th scope="row">Hazard<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/hazard" aria-label="Owned: Fishing Rod · Hazard"><span>Hazard</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -859,7 +868,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Asiimov"><img loading="lazy"
                                         src="img/skin-045.png" alt="Fishing Rod · Asiimov"></button></td>
-                            <th scope="row">Asiimov<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/asiimov" aria-label="Owned: Fishing Rod · Asiimov"><span>Asiimov</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -870,7 +879,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Wood"><img loading="lazy" src="img/skin-046.png"
                                         alt="Fishing Rod · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/wood" aria-label="Owned: Fishing Rod · Wood"><span>Wood</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -881,7 +890,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Camouflage"><img loading="lazy"
                                         src="img/skin-047.png" alt="Fishing Rod · Camouflage"></button></td>
-                            <th scope="row">Camouflage<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/camouflage" aria-label="Owned: Fishing Rod · Camouflage"><span>Camouflage</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -892,7 +901,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Emerald"><img loading="lazy"
                                         src="img/skin-048.png" alt="Fishing Rod · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/emerald" aria-label="Owned: Fishing Rod · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -903,7 +912,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Ruby"><img loading="lazy" src="img/skin-049.png"
                                         alt="Fishing Rod · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/ruby" aria-label="Owned: Fishing Rod · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -914,7 +923,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Missing"><img loading="lazy"
                                         src="img/skin-050.png" alt="Fishing Rod · Missing"></button></td>
-                            <th scope="row">Missing<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/missing" aria-label="Owned: Fishing Rod · Missing"><span>Missing</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -925,7 +934,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Galaxy"><img loading="lazy" src="img/skin-051.png"
                                         alt="Fishing Rod · Galaxy"></button></td>
-                            <th scope="row">Galaxy<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/galaxy" aria-label="Owned: Fishing Rod · Galaxy"><span>Galaxy</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -936,7 +945,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Gold"><img loading="lazy" src="img/skin-052.png"
                                         alt="Fishing Rod · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/gold" aria-label="Owned: Fishing Rod · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -947,7 +956,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Fishing Rod · Diamond"><img loading="lazy"
                                         src="img/skin-053.png" alt="Fishing Rod · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="fishing rod/diamond" aria-label="Owned: Fishing Rod · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -977,7 +986,7 @@
                         <tr data-search="knife knife  default default">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Default"><img
                                         loading="lazy" src="img/skin-054.png" alt="Knife · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/default" aria-label="Owned: Knife · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -988,7 +997,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Knife · Camouflage"><img loading="lazy" src="img/skin-055.png"
                                         alt="Knife · Camouflage"></button></td>
-                            <th scope="row">Camouflage<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/camouflage" aria-label="Owned: Knife · Camouflage"><span>Camouflage</span></label><span class="rarity common">Common</span></th>
                             <td class="num ">7.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num zero">0.0000%</td>
@@ -998,7 +1007,7 @@
                         <tr data-search="knife knife  chess common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Chess"><img
                                         loading="lazy" src="img/skin-056.png" alt="Knife · Chess"></button></td>
-                            <th scope="row">Chess<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/chess" aria-label="Owned: Knife · Chess"><span>Chess</span></label><span class="rarity common">Common</span></th>
                             <td class="num ">7.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num zero">0.0000%</td>
@@ -1008,7 +1017,7 @@
                         <tr data-search="knife knife  tiger common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Tiger"><img
                                         loading="lazy" src="img/skin-057.png" alt="Knife · Tiger"></button></td>
-                            <th scope="row">Tiger<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/tiger" aria-label="Owned: Knife · Tiger"><span>Tiger</span></label><span class="rarity common">Common</span></th>
                             <td class="num ">7.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num zero">0.0000%</td>
@@ -1018,7 +1027,7 @@
                         <tr data-search="knife knife  blaze rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Blaze"><img
                                         loading="lazy" src="img/skin-058.png" alt="Knife · Blaze"></button></td>
-                            <th scope="row">Blaze<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/blaze" aria-label="Owned: Knife · Blaze"><span>Blaze</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">1.4286%</td>
                             <td class="num ">0.4762%</td>
                             <td class="num zero">0.0000%</td>
@@ -1028,7 +1037,7 @@
                         <tr data-search="knife knife  emerald rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Emerald"><img
                                         loading="lazy" src="img/skin-059.png" alt="Knife · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/emerald" aria-label="Owned: Knife · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">1.4286%</td>
                             <td class="num ">0.4762%</td>
                             <td class="num zero">0.0000%</td>
@@ -1038,7 +1047,7 @@
                         <tr data-search="knife knife  wood rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Wood"><img
                                         loading="lazy" src="img/skin-060.png" alt="Knife · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/wood" aria-label="Owned: Knife · Wood"><span>Wood</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">1.4286%</td>
                             <td class="num ">0.4762%</td>
                             <td class="num zero">0.0000%</td>
@@ -1048,7 +1057,7 @@
                         <tr data-search="knife knife  polka rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Polka"><img
                                         loading="lazy" src="img/skin-061.png" alt="Knife · Polka"></button></td>
-                            <th scope="row">Polka<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/polka" aria-label="Owned: Knife · Polka"><span>Polka</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">1.4286%</td>
                             <td class="num ">0.4762%</td>
                             <td class="num zero">0.0000%</td>
@@ -1058,7 +1067,7 @@
                         <tr data-search="knife knife  hazard common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Hazard"><img
                                         loading="lazy" src="img/skin-062.png" alt="Knife · Hazard"></button></td>
-                            <th scope="row">Hazard<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/hazard" aria-label="Owned: Knife · Hazard"><span>Hazard</span></label><span class="rarity common">Common</span></th>
                             <td class="num ">7.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num zero">0.0000%</td>
@@ -1068,7 +1077,7 @@
                         <tr data-search="knife knife  rainbow rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Rainbow"><img
                                         loading="lazy" src="img/skin-063.png" alt="Knife · Rainbow"></button></td>
-                            <th scope="row">Rainbow<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/rainbow" aria-label="Owned: Knife · Rainbow"><span>Rainbow</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">1.4286%</td>
                             <td class="num ">0.4762%</td>
                             <td class="num zero">0.0000%</td>
@@ -1078,7 +1087,7 @@
                         <tr data-search="knife knife  galaxy rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Galaxy"><img
                                         loading="lazy" src="img/skin-064.png" alt="Knife · Galaxy"></button></td>
-                            <th scope="row">Galaxy<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/galaxy" aria-label="Owned: Knife · Galaxy"><span>Galaxy</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">1.4286%</td>
                             <td class="num ">0.4762%</td>
                             <td class="num zero">0.0000%</td>
@@ -1088,7 +1097,7 @@
                         <tr data-search="knife knife  missing common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Missing"><img
                                         loading="lazy" src="img/skin-065.png" alt="Knife · Missing"></button></td>
-                            <th scope="row">Missing<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/missing" aria-label="Owned: Knife · Missing"><span>Missing</span></label><span class="rarity common">Common</span></th>
                             <td class="num ">7.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num zero">0.0000%</td>
@@ -1098,7 +1107,7 @@
                         <tr data-search="knife knife  ruby rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Ruby"><img
                                         loading="lazy" src="img/skin-066.png" alt="Knife · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/ruby" aria-label="Owned: Knife · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num ">1.4286%</td>
                             <td class="num ">0.4762%</td>
                             <td class="num zero">0.0000%</td>
@@ -1108,7 +1117,7 @@
                         <tr data-search="knife knife  diamond legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Diamond"><img
                                         loading="lazy" src="img/skin-067.png" alt="Knife · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/diamond" aria-label="Owned: Knife · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num ">2.5000%</td>
                             <td class="num ">0.8333%</td>
                             <td class="num zero">0.0000%</td>
@@ -1118,7 +1127,7 @@
                         <tr data-search="knife knife  gold legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Knife · Gold"><img
                                         loading="lazy" src="img/skin-068.png" alt="Knife · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="knife/gold" aria-label="Owned: Knife · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num ">2.5000%</td>
                             <td class="num ">0.8333%</td>
                             <td class="num zero">0.0000%</td>
@@ -1148,7 +1157,7 @@
                         <tr data-search="pistol pistol  default default">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Default"><img
                                         loading="lazy" src="img/skin-069.png" alt="Pistol · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/default" aria-label="Owned: Pistol · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1158,7 +1167,7 @@
                         <tr data-search="pistol pistol  wood common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Wood"><img
                                         loading="lazy" src="img/skin-070.png" alt="Pistol · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/wood" aria-label="Owned: Pistol · Wood"><span>Wood</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -1168,7 +1177,7 @@
                         <tr data-search="pistol pistol  pink common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Pink"><img
                                         loading="lazy" src="img/skin-071.png" alt="Pistol · Pink"></button></td>
-                            <th scope="row">Pink<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/pink" aria-label="Owned: Pistol · Pink"><span>Pink</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -1178,7 +1187,7 @@
                         <tr data-search="pistol pistol  white common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · White"><img
                                         loading="lazy" src="img/skin-072.png" alt="Pistol · White"></button></td>
-                            <th scope="row">White<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/white" aria-label="Owned: Pistol · White"><span>White</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -1188,7 +1197,7 @@
                         <tr data-search="pistol pistol  blaze common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Blaze"><img
                                         loading="lazy" src="img/skin-073.png" alt="Pistol · Blaze"></button></td>
-                            <th scope="row">Blaze<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/blaze" aria-label="Owned: Pistol · Blaze"><span>Blaze</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -1198,7 +1207,7 @@
                         <tr data-search="pistol pistol  bluze common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Bluze"><img
                                         loading="lazy" src="img/skin-074.png" alt="Pistol · Bluze"></button></td>
-                            <th scope="row">Bluze<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/bluze" aria-label="Owned: Pistol · Bluze"><span>Bluze</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
                             <td class="num ">2.8000%</td>
@@ -1208,7 +1217,7 @@
                         <tr data-search="pistol pistol  missing not obtainable">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Missing"><img
                                         loading="lazy" src="img/skin-075.png" alt="Pistol · Missing"></button></td>
-                            <th scope="row">Missing<span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/missing" aria-label="Owned: Pistol · Missing"><span>Missing</span></label><span class="rarity not-obtainable">NOT OBTAINABLE</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1218,7 +1227,7 @@
                         <tr data-search="pistol pistol  emerald rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Emerald"><img
                                         loading="lazy" src="img/skin-076.png" alt="Pistol · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/emerald" aria-label="Owned: Pistol · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -1229,7 +1238,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Pistol · Black and White"><img loading="lazy"
                                         src="img/skin-077.png" alt="Pistol · Black and White"></button></td>
-                            <th scope="row">Black and White<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/black and white" aria-label="Owned: Pistol · Black and White"><span>Black and White</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -1240,7 +1249,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Pistol · Inverted Diamond"><img loading="lazy"
                                         src="img/skin-078.png" alt="Pistol · Inverted Diamond"></button></td>
-                            <th scope="row">Inverted Diamond<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/inverted diamond" aria-label="Owned: Pistol · Inverted Diamond"><span>Inverted Diamond</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -1250,7 +1259,7 @@
                         <tr data-search="pistol pistol  galaxy rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Galaxy"><img
                                         loading="lazy" src="img/skin-079.png" alt="Pistol · Galaxy"></button></td>
-                            <th scope="row">Galaxy<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/galaxy" aria-label="Owned: Pistol · Galaxy"><span>Galaxy</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -1260,7 +1269,7 @@
                         <tr data-search="pistol pistol  ruby rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Ruby"><img
                                         loading="lazy" src="img/skin-080.png" alt="Pistol · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/ruby" aria-label="Owned: Pistol · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
                             <td class="num ">0.8000%</td>
@@ -1270,7 +1279,7 @@
                         <tr data-search="pistol pistol  diamond legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Diamond"><img
                                         loading="lazy" src="img/skin-081.png" alt="Pistol · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/diamond" aria-label="Owned: Pistol · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.8333%</td>
                             <td class="num ">1.0000%</td>
@@ -1280,7 +1289,7 @@
                         <tr data-search="pistol pistol  gold legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Pistol · Gold"><img
                                         loading="lazy" src="img/skin-082.png" alt="Pistol · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="pistol/gold" aria-label="Owned: Pistol · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.8333%</td>
                             <td class="num ">1.0000%</td>
@@ -1310,7 +1319,7 @@
                         <tr data-search="shotgun shotgun  default default">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Default"><img
                                         loading="lazy" src="img/skin-083.png" alt="Shotgun · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/default" aria-label="Owned: Shotgun · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1320,7 +1329,7 @@
                         <tr data-search="shotgun shotgun  orange common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Orange"><img
                                         loading="lazy" src="img/skin-084.png" alt="Shotgun · Orange"></button></td>
-                            <th scope="row">Orange<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/orange" aria-label="Owned: Shotgun · Orange"><span>Orange</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">3.8889%</td>
                             <td class="num ">4.6667%</td>
@@ -1330,7 +1339,7 @@
                         <tr data-search="shotgun shotgun  redwood common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Redwood"><img
                                         loading="lazy" src="img/skin-085.png" alt="Shotgun · Redwood"></button></td>
-                            <th scope="row">Redwood<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/redwood" aria-label="Owned: Shotgun · Redwood"><span>Redwood</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">3.8889%</td>
                             <td class="num ">4.6667%</td>
@@ -1341,7 +1350,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Shotgun · Greyscale"><img loading="lazy" src="img/skin-086.png"
                                         alt="Shotgun · Greyscale"></button></td>
-                            <th scope="row">Greyscale<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/greyscale" aria-label="Owned: Shotgun · Greyscale"><span>Greyscale</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">3.8889%</td>
                             <td class="num ">4.6667%</td>
@@ -1351,7 +1360,7 @@
                         <tr data-search="shotgun shotgun  hazard rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Hazard"><img
                                         loading="lazy" src="img/skin-087.png" alt="Shotgun · Hazard"></button></td>
-                            <th scope="row">Hazard<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/hazard" aria-label="Owned: Shotgun · Hazard"><span>Hazard</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1361,7 +1370,7 @@
                         <tr data-search="shotgun shotgun  wood rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Wood"><img
                                         loading="lazy" src="img/skin-088.png" alt="Shotgun · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/wood" aria-label="Owned: Shotgun · Wood"><span>Wood</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1371,7 +1380,7 @@
                         <tr data-search="shotgun shotgun  bronze rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Bronze"><img
                                         loading="lazy" src="img/skin-089.png" alt="Shotgun · Bronze"></button></td>
-                            <th scope="row">Bronze<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/bronze" aria-label="Owned: Shotgun · Bronze"><span>Bronze</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1381,7 +1390,7 @@
                         <tr data-search="shotgun shotgun  emerald rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Emerald"><img
                                         loading="lazy" src="img/skin-090.png" alt="Shotgun · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/emerald" aria-label="Owned: Shotgun · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1391,7 +1400,7 @@
                         <tr data-search="shotgun shotgun  ruby rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Ruby"><img
                                         loading="lazy" src="img/skin-091.png" alt="Shotgun · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/ruby" aria-label="Owned: Shotgun · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1402,7 +1411,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Shotgun · GoldStriped"><img loading="lazy"
                                         src="img/skin-092.png" alt="Shotgun · GoldStriped"></button></td>
-                            <th scope="row">GoldStriped<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/goldstriped" aria-label="Owned: Shotgun · GoldStriped"><span>GoldStriped</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1412,7 +1421,7 @@
                         <tr data-search="shotgun shotgun  rainbow legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Rainbow"><img
                                         loading="lazy" src="img/skin-093.png" alt="Shotgun · Rainbow"></button></td>
-                            <th scope="row">Rainbow<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/rainbow" aria-label="Owned: Shotgun · Rainbow"><span>Rainbow</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1422,7 +1431,7 @@
                         <tr data-search="shotgun shotgun  diamond legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Diamond"><img
                                         loading="lazy" src="img/skin-094.png" alt="Shotgun · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/diamond" aria-label="Owned: Shotgun · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1432,7 +1441,7 @@
                         <tr data-search="shotgun shotgun  gold legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge Shotgun · Gold"><img
                                         loading="lazy" src="img/skin-095.png" alt="Shotgun · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="shotgun/gold" aria-label="Owned: Shotgun · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.5556%</td>
                             <td class="num ">0.6667%</td>
@@ -1462,7 +1471,7 @@
                         <tr data-search="smg smg submachine gun machine gun default default">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Default"><img
                                         loading="lazy" src="img/skin-096.png" alt="SMG · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/default" aria-label="Owned: SMG · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1472,7 +1481,7 @@
                         <tr data-search="smg smg submachine gun machine gun white common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · White"><img
                                         loading="lazy" src="img/skin-097.png" alt="SMG · White"></button></td>
-                            <th scope="row">White<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/white" aria-label="Owned: SMG · White"><span>White</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
@@ -1482,7 +1491,7 @@
                         <tr data-search="smg smg submachine gun machine gun blue common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Blue"><img
                                         loading="lazy" src="img/skin-098.png" alt="SMG · Blue"></button></td>
-                            <th scope="row">Blue<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/blue" aria-label="Owned: SMG · Blue"><span>Blue</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
@@ -1492,7 +1501,7 @@
                         <tr data-search="smg smg submachine gun machine gun pink common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Pink"><img
                                         loading="lazy" src="img/skin-099.png" alt="SMG · Pink"></button></td>
-                            <th scope="row">Pink<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/pink" aria-label="Owned: SMG · Pink"><span>Pink</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
@@ -1502,7 +1511,7 @@
                         <tr data-search="smg smg submachine gun machine gun red common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Red"><img
                                         loading="lazy" src="img/skin-100.png" alt="SMG · Red"></button></td>
-                            <th scope="row">Red<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/red" aria-label="Owned: SMG · Red"><span>Red</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
@@ -1512,7 +1521,7 @@
                         <tr data-search="smg smg submachine gun machine gun brown common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Brown"><img
                                         loading="lazy" src="img/skin-101.png" alt="SMG · Brown"></button></td>
-                            <th scope="row">Brown<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/brown" aria-label="Owned: SMG · Brown"><span>Brown</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
@@ -1522,7 +1531,7 @@
                         <tr data-search="smg smg submachine gun machine gun hazard common">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Hazard"><img
                                         loading="lazy" src="img/skin-102.png" alt="SMG · Hazard"></button></td>
-                            <th scope="row">Hazard<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/hazard" aria-label="Owned: SMG · Hazard"><span>Hazard</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">2.3333%</td>
@@ -1532,7 +1541,7 @@
                         <tr data-search="smg smg submachine gun machine gun wood rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Wood"><img
                                         loading="lazy" src="img/skin-103.png" alt="SMG · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/wood" aria-label="Owned: SMG · Wood"><span>Wood</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1542,7 +1551,7 @@
                         <tr data-search="smg smg submachine gun machine gun emerald rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Emerald"><img
                                         loading="lazy" src="img/skin-104.png" alt="SMG · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/emerald" aria-label="Owned: SMG · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1552,7 +1561,7 @@
                         <tr data-search="smg smg submachine gun machine gun ruby rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Ruby"><img
                                         loading="lazy" src="img/skin-105.png" alt="SMG · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span><small
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/ruby" aria-label="Owned: SMG · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span><small
                                     class="skin-note">note: more reflective in-game than red</small></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1563,7 +1572,7 @@
                         <tr data-search="smg smg submachine gun machine gun purple rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Purple"><img
                                         loading="lazy" src="img/skin-106.png" alt="SMG · Purple"></button></td>
-                            <th scope="row">Purple<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/purple" aria-label="Owned: SMG · Purple"><span>Purple</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1573,7 +1582,7 @@
                         <tr data-search="smg smg submachine gun machine gun tiger rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Tiger"><img
                                         loading="lazy" src="img/skin-107.png" alt="SMG · Tiger"></button></td>
-                            <th scope="row">Tiger<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/tiger" aria-label="Owned: SMG · Tiger"><span>Tiger</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1583,7 +1592,7 @@
                         <tr data-search="smg smg submachine gun machine gun rainbow legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Rainbow"><img
                                         loading="lazy" src="img/skin-108.png" alt="SMG · Rainbow"></button></td>
-                            <th scope="row">Rainbow<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/rainbow" aria-label="Owned: SMG · Rainbow"><span>Rainbow</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1593,7 +1602,7 @@
                         <tr data-search="smg smg submachine gun machine gun diamond legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Diamond"><img
                                         loading="lazy" src="img/skin-109.png" alt="SMG · Diamond"></button></td>
-                            <th scope="row">Diamond<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/diamond" aria-label="Owned: SMG · Diamond"><span>Diamond</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1603,7 +1612,7 @@
                         <tr data-search="smg smg submachine gun machine gun gold legendary">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Gold"><img
                                         loading="lazy" src="img/skin-110.png" alt="SMG · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/gold" aria-label="Owned: SMG · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1613,7 +1622,7 @@
                         <tr data-search="smg smg submachine gun machine gun cow rare">
                             <td class="preview"><button class="image-button" aria-label="Enlarge SMG · Cow"><img
                                         loading="lazy" src="img/skin-111.png" alt="SMG · Cow"></button></td>
-                            <th scope="row">Cow<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="smg/cow" aria-label="Owned: SMG · Cow"><span>Cow</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num ">0.6667%</td>
@@ -1644,7 +1653,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Default"><img loading="lazy"
                                         src="img/skin-112.png" alt="Sniper Rifle · Default"></button></td>
-                            <th scope="row">Default<span class="rarity default">Default</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/default" aria-label="Owned: Sniper Rifle · Default"><span>Default</span></label><span class="rarity default">Default</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1655,7 +1664,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Wood"><img loading="lazy" src="img/skin-113.png"
                                         alt="Sniper Rifle · Wood"></button></td>
-                            <th scope="row">Wood<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/wood" aria-label="Owned: Sniper Rifle · Wood"><span>Wood</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1666,7 +1675,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Brown"><img loading="lazy" src="img/skin-114.png"
                                         alt="Sniper Rifle · Brown"></button></td>
-                            <th scope="row">Brown<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/brown" aria-label="Owned: Sniper Rifle · Brown"><span>Brown</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1677,7 +1686,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Light Gray"><img loading="lazy"
                                         src="img/skin-115.png" alt="Sniper Rifle · Light Gray"></button></td>
-                            <th scope="row">Light Gray<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/light gray" aria-label="Owned: Sniper Rifle · Light Gray"><span>Light Gray</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1688,7 +1697,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Winter"><img loading="lazy"
                                         src="img/skin-116.png" alt="Sniper Rifle · Winter"></button></td>
-                            <th scope="row">Winter<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/winter" aria-label="Owned: Sniper Rifle · Winter"><span>Winter</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1699,7 +1708,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Camouflage"><img loading="lazy"
                                         src="img/skin-117.png" alt="Sniper Rifle · Camouflage"></button></td>
-                            <th scope="row">Camouflage<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/camouflage" aria-label="Owned: Sniper Rifle · Camouflage"><span>Camouflage</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1710,7 +1719,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Cow"><img loading="lazy" src="img/skin-118.png"
                                         alt="Sniper Rifle · Cow"></button></td>
-                            <th scope="row">Cow<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/cow" aria-label="Owned: Sniper Rifle · Cow"><span>Cow</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1721,7 +1730,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Asiimov"><img loading="lazy"
                                         src="img/skin-119.png" alt="Sniper Rifle · Asiimov"></button></td>
-                            <th scope="row">Asiimov<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/asiimov" aria-label="Owned: Sniper Rifle · Asiimov"><span>Asiimov</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1732,7 +1741,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Blaze"><img loading="lazy" src="img/skin-120.png"
                                         alt="Sniper Rifle · Blaze"></button></td>
-                            <th scope="row">Blaze<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/blaze" aria-label="Owned: Sniper Rifle · Blaze"><span>Blaze</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1743,7 +1752,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Sponge"><img loading="lazy"
                                         src="img/skin-121.png" alt="Sniper Rifle · Sponge"></button></td>
-                            <th scope="row">Sponge<span class="rarity common">Common</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/sponge" aria-label="Owned: Sniper Rifle · Sponge"><span>Sponge</span></label><span class="rarity common">Common</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1754,7 +1763,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Emerald"><img loading="lazy"
                                         src="img/skin-122.png" alt="Sniper Rifle · Emerald"></button></td>
-                            <th scope="row">Emerald<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/emerald" aria-label="Owned: Sniper Rifle · Emerald"><span>Emerald</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1765,7 +1774,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Ruby"><img loading="lazy" src="img/skin-123.png"
                                         alt="Sniper Rifle · Ruby"></button></td>
-                            <th scope="row">Ruby<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/ruby" aria-label="Owned: Sniper Rifle · Ruby"><span>Ruby</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1776,7 +1785,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Tiger"><img loading="lazy" src="img/skin-124.png"
                                         alt="Sniper Rifle · Tiger"></button></td>
-                            <th scope="row">Tiger<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/tiger" aria-label="Owned: Sniper Rifle · Tiger"><span>Tiger</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1787,7 +1796,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Galaxy"><img loading="lazy"
                                         src="img/skin-125.png" alt="Sniper Rifle · Galaxy"></button></td>
-                            <th scope="row">Galaxy<span class="rarity rare">Rare</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/galaxy" aria-label="Owned: Sniper Rifle · Galaxy"><span>Galaxy</span></label><span class="rarity rare">Rare</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1798,7 +1807,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Gold"><img loading="lazy" src="img/skin-126.png"
                                         alt="Sniper Rifle · Gold"></button></td>
-                            <th scope="row">Gold<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/gold" aria-label="Owned: Sniper Rifle · Gold"><span>Gold</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1809,7 +1818,7 @@
                             <td class="preview"><button class="image-button"
                                     aria-label="Enlarge Sniper Rifle · Rainbow"><img loading="lazy"
                                         src="img/skin-127.png" alt="Sniper Rifle · Rainbow"></button></td>
-                            <th scope="row">Rainbow<span class="rarity legendary">Legendary</span></th>
+                            <th scope="row"><label class="owned-label"><input class="owned-skin" type="checkbox" data-skin="sniper rifle/rainbow" aria-label="Owned: Sniper Rifle · Rainbow"><span>Rainbow</span></label><span class="rarity legendary">Legendary</span></th>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
                             <td class="num zero">0.0000%</td>
@@ -1854,6 +1863,40 @@
         document.querySelectorAll('.image-button').forEach(button => button.addEventListener('click', () => { const img = button.querySelector('img'); large.src = img.src; large.alt = img.alt; document.querySelector('#image-title').textContent = img.alt; viewer.showModal() }));
         document.querySelector('#close').addEventListener('click', () => viewer.close());
         viewer.addEventListener('click', event => { if (event.target === viewer) { const r = viewer.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) viewer.close() } });
+    </script>
+
+    <script>
+    (() => {
+        const prefix = 'howtofish:skins:owned:v1:';
+        const boxes = [...document.querySelectorAll('.owned-skin')];
+        const counter = document.querySelector('#owned-count');
+        const note = document.querySelector('#save-note');
+        const update = () => {
+            counter.textContent = `${boxes.filter(box => box.checked).length} / ${boxes.length} owned`;
+            boxes.forEach(box => box.closest('tr').classList.toggle('is-owned', box.checked));
+        };
+        const storageError = () => {
+            note.textContent = 'Your browser could not save or load progress. Checks will only last while this page is open.';
+        };
+        boxes.forEach(box => {
+            const key = prefix + box.dataset.skin;
+            try { box.checked = localStorage.getItem(key) === '1'; } catch { storageError(); }
+            box.addEventListener('change', () => {
+                try { localStorage.setItem(key, box.checked ? '1' : '0'); } catch { storageError(); }
+                update();
+            });
+        });
+        update();
+        window.addEventListener('storage', event => {
+            if (event.key !== null && !event.key.startsWith(prefix)) return;
+            boxes.forEach(box => {
+                if (event.key === null || event.key === prefix + box.dataset.skin) {
+                    box.checked = event.key !== null && event.newValue === '1';
+                }
+            });
+            update();
+        });
+    })();
     </script>
 </body>
 
