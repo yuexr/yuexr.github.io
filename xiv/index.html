@@ -8,18 +8,54 @@
   <style>
     body { font-family: "Comic Sans MS", "Comic Sans", cursive; }
     img { max-width: 100%; height: auto; }
+    .guide img { display: block; width: 360px; }
+    dialog { max-width: 92vw; max-height: 90vh; padding: 12px; }
+    dialog::backdrop { background: rgb(0 0 0 / 65%); }
+    dialog img { display: block; }
+    dialog button { font: inherit; float: right; }
+    dialog p { margin-top: 0; padding-right: 90px; }
   </style>
 </head>
 <body>
   <h1>yue's shitpost xiv guides</h1>
+  <p>by yue ue from sargatanas</p>
   <p>lol just archiving my bullshit here</p>
 
   <h2>[e12s] eden's promise: eternity (savage) guides</h2>
-  <p><a href="e12s_statues.png"><img src="e12s_statues.png" alt="e12s statues guide"></a></p>
-  <p><a href="e12s_intrel.png"><img src="e12s_intrel.png" alt="e12s intermediate relativity guide" loading="lazy"></a></p>
-  <p><a href="e12s_3apoc.png"><img src="e12s_3apoc.png" alt="e12s triple apocalypse guide" loading="lazy"></a></p>
+  <p><a class="guide" href="e12s_statues.png">e12s statues<img src="e12s_statues.png" alt="e12s statues"></a></p>
+  <p><a class="guide" href="e12s_intrel.png">e12s intermediate relativity<img src="e12s_intrel.png" alt="e12s intermediate relativity" loading="lazy"></a></p>
+  <p><a class="guide" href="e12s_3apoc.png">e12s triple apoc<img src="e12s_3apoc.png" alt="e12s triple apoc" loading="lazy"></a></p>
 
   <h2>[p4s] asphodelos: the fourth circle (savage) guides</h2>
-  <p><a href="hespspsps.png"><img src="hespspsps.png" alt="hespspsps act 2 cheat sheet" loading="lazy"></a></p>
+  <p><a class="guide" href="hespspsps.png">p4s act 2<img src="hespspsps.png" alt="p4s act 2" loading="lazy"></a></p>
+
+  <dialog aria-labelledby="viewer-label">
+    <button type="button" autofocus>close</button>
+    <p id="viewer-label"></p>
+    <img id="viewer-image" alt="">
+  </dialog>
+  <script>
+    const viewer = document.querySelector('dialog');
+    const viewerImage = document.querySelector('#viewer-image');
+    document.querySelectorAll('.guide').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const label = link.querySelector('img').alt;
+        viewerImage.src = link.href;
+        viewerImage.alt = label;
+        document.querySelector('#viewer-label').textContent = label;
+        viewer.showModal();
+        viewer.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    viewer.querySelector('button').addEventListener('click', () => viewer.close());
+    viewer.addEventListener('click', event => {
+      const bounds = viewer.getBoundingClientRect();
+      if (event.target === viewer && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) viewer.close();
+    });
+    viewer.addEventListener('close', () => { document.body.style.overflow = ''; });
+  </script>
 </body>
 </html>
