@@ -266,3 +266,6 @@ body.game-page {
   .game-page h2 { font-size: 22px; }
   .game-page .summary, .game-page .key, .game-page details.reveal-panel { padding: 14px; }
 }
+
+.page-skins input.owned-skin:disabled { opacity: .75; cursor: not-allowed }
+.page-skins .owned-label:has(input:disabled) { cursor: default }
