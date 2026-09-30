@@ -1,0 +1,86 @@
+
+.page-drip .wishbone-control {display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0}
+.page-drip select {font:inherit;color:var(--text);background:var(--control);border:1px solid var(--border);border-radius:8px;padding:10px;max-width:100%;min-height:44px}
+.page-drip select:focus-visible {outline:3px solid var(--accent);outline-offset:3px}
+.page-drip .thumbs {display:flex}.page-drip .thumbs img {width:85px;height:85px;object-fit:contain}
+
+.page-drip .wishbone-control {position:sticky;top:8px;z-index:2;background:var(--page);padding:8px 0;gap:8px}
+.page-drip .wishbone-control input {position:static;width:auto;flex:1 1 220px;min-width:0}
+.page-drip .wishbone-control label {display:flex;align-items:center;gap:8px;white-space:nowrap}
+
+.page-drip .wishbone-control {justify-content:flex-start;gap:10px}
+.page-drip .wishbone-control input {flex:0 1 360px}
+.page-drip .wishbone-control label {background:#164e63;border:1px solid #67e8f9;border-radius:10px;padding:4px 10px;color:#e2e8f0;font-weight:600}
+.page-drip .wishbone-control select {background:#155e75;border-color:#67e8f9;color:#fff;font-weight:600}
+
+
+.page-drip .wishbone-control label {background:#14532d;border-color:#4ade80;color:#f0fdf4}
+
+
+.page-drip .update-note {margin:18px 0 24px;color:var(--text)}
+.page-drip .update-note h2 {font-size:20px;margin:0 0 8px}
+.page-drip .update-note ul {margin:0;padding-left:24px}
+
+.page-drip .update-note {background:#14532d;border:1px solid #4ade80;border-radius:12px;padding:16px 18px;color:#f0fdf4}
+.page-drip .update-note h2 {color:#bbf7d0}
+
+
+.page-drip .category-title {background:#164e63;border:1px solid #67e8f9;border-radius:10px;padding:12px 16px;color:#cffafe;margin-top:28px}
+.page-drip details.bait-group {margin:16px 0;padding:14px 18px;border:1px solid #64748b;border-radius:10px;background:#1e293b}
+.page-drip details.bait-group>summary {font-size:19px;font-weight:600;color:#fbbf24}
+.page-drip details.bait-group[open]>summary {margin-bottom:12px}
+@media(max-width:540px){.page-drip details.bait-group{padding:12px}}
+
+.page-drip .category-title {background:transparent;border:0;border-radius:0;padding:0;color:#67e8f9}
+
+
+.page-drip details.boss-category {margin:24px 0;padding:0;border:0;border-radius:0;background:transparent}
+.page-drip details.boss-category>summary {padding:0;color:#67e8f9;font-size:24px;line-height:1.3}
+.page-drip details.boss-category[open]>summary {margin-bottom:12px}
+
+.page-drip details.spoiler {margin:24px 0;padding:0;border:0;border-radius:0;background:transparent}
+.page-drip details.spoiler>summary {padding:0;color:#67e8f9;font-size:24px;line-height:1.3}
+.page-drip details.spoiler[open]>summary {margin-bottom:12px}
+
+.page-drip .spoiler-section {margin:24px 0}
+.page-drip .spoiler-content {position:relative;min-height:120px}
+.page-drip .spoiler-cover {position:absolute;z-index:3;inset:0;width:100%;min-height:120px;border:1px solid #475569;border-radius:10px;background:#000;color:#fff;font:600 20px/1.4 system-ui,sans-serif;cursor:pointer}
+.page-drip .spoiler-cover:hover {background:#111}
+
+.page-drip .spoiler-section {margin-top:42px;padding-top:12px;border-top:1px solid #334155}
+
+
+.page-drip #toggle-baits {min-height:44px;padding:8px 12px;border:1px solid #4ade80;border-radius:8px;background:#14532d;color:#f0fdf4;font:600 14px system-ui,sans-serif;cursor:pointer}
+.page-drip #toggle-baits:hover {background:#166534}
+
+.page-drip #toggle-baits {height:56px;min-height:56px;box-sizing:border-box;white-space:nowrap}
+
+
+.page-drip #toggle-baits {background:#1e293b;border-color:#475569;color:#e2e8f0}
+.page-drip #toggle-baits:hover {background:#334155}
+
+
+.page-gallery .category-title {font-size:24px;line-height:1.3;color:#67e8f9;margin:32px 0 12px}
+.page-gallery .boss-category {margin:24px 0;padding:0;border:0;background:transparent}
+.page-gallery .spoiler-section {margin:42px 0 24px;padding:12px 0 0;border:0;border-top:1px solid #334155}
+.page-gallery .spoiler-content {position:relative;min-height:120px}
+.page-gallery .spoiler-cover {position:absolute;z-index:3;inset:0;width:100%;min-height:120px;border:1px solid #475569;border-radius:10px;background:#000;color:#fff;font:600 20px/1.4 system-ui,sans-serif;cursor:pointer}
+.page-gallery .spoiler-cover:hover {background:#111}
+
+.page-gallery .boss-category {margin-top:42px;padding-top:12px;border-top:1px solid #334155}
+
+
+.page-gallery .spoiler-section {background:transparent}
+.page-gallery article h2 {color:#fbbf24}
+
+
+.page-gallery section.spoiler.spoiler-section {margin:42px 0 24px!important;padding:12px 0 0!important;background:transparent!important;border:0!important;border-top:1px solid #334155!important;border-radius:0!important;box-shadow:none!important}
+
+
+.game-page .credits {padding:10px 16px;border-left:3px solid #67e8f9;border-radius:0 8px 8px 0;background:rgba(24,35,55,.55)}
+.game-page .credits p {margin:4px 0 10px}
+
+.game-page .credits > p:first-of-type {font-size:14px;color:#a8b8ce}
+
+.page-drip .update-note ul {font-size:14px;line-height:1.45}
+
