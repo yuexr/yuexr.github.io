@@ -1,16 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>acnh</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="yuexr · project index" />
+    <title>yuexr · project index</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#projects">Skip to projects</a>
+    <div class="page">
+      <header class="site-header">
+        <h1 class="wordmark">
+          <a href="./" aria-label="yuexr home">
+            <span class="wordmark-yue">yue</span>
+            <span class="wordmark-xr">xr</span>
+            <span class="wordmark-diamond" aria-hidden="true">✦</span>
+          </a>
+        </h1>
+        <div class="support">
+          <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+          <script>
+            if (typeof kofiwidget2 !== "undefined") {
+              kofiwidget2.init("Support me on Ko-fi", "#9ebfca", "W7W21Q1LX");
+              kofiwidget2.draw();
+            }
+          </script>
+          <a class="support-fallback" href="https://ko-fi.com/W7W21Q1LX">Support me on Ko-fi</a>
+        </div>
+      </header>
 
-</head>
-<body>
-  <a href="/acnh">acnh</a>
-  <h1>click above for acnh stuff</h1>
-  <p><a href="/howtofish/">How to Fish</a></p>
-  <p><a href="/xiv/">yue's shitpost xiv guides</a></p>
-  <img src="/img/stella.png" alt="soon">
-</body>
+      <main id="projects" tabindex="-1" aria-label="Projects">
+        <ol class="projects">
+          <li class="project">
+            <a class="project-link" href="acnh/">
+              <span class="project-number" aria-hidden="true">01</span>
+              <img class="project-image" src="img/yueacnh.png" width="560" height="315" alt="Yue’s ACNH guides, with Animal Crossing villagers" />
+              <div class="project-copy">
+                <p class="project-meta">2020 · animal crossing: new horizons</p>
+                <h2>Yue’s ACNH Guides</h2>
+                <p class="project-description">islander friendship<br />garden breeding &amp; layouts<br />visual guides</p>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project-link" href="https://yuexr.github.io/astro/">
+              <span class="project-number" aria-hidden="true">02</span>
+              <img class="project-image" src="img/yueastro.png" width="560" height="315" alt="Y.U.E. Astroneer mods and more, with a white astronaut" />
+              <div class="project-copy">
+                <p class="project-meta">2026 · astroneer</p>
+                <h2>Y.U.E. Your Unreal Explorer</h2>
+                <p class="project-description">gameplay &amp; qol mods<br />character cosmetics data<br />summon utilities</p>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project-link" href="xiv/">
+              <span class="project-number" aria-hidden="true">03</span>
+              <img class="project-image" src="img/yuexiv.png" width="560" height="315" alt="Yue in FFXIV, with an illustrated character and crying emojis" />
+              <div class="project-copy">
+                <p class="project-meta">2021-2022 · final fantasy xiv</p>
+                <h2>Yue in FFXIV</h2>
+                <p class="project-description">shitpost raid guides</p>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project-link" href="howtofish/">
+              <span class="project-number" aria-hidden="true">04</span>
+              <img class="project-image" src="img/yuehowtofish.png" width="560" height="315" alt="Yue learns How to Fish, with an angler holding a fish" />
+              <div class="project-copy">
+                <p class="project-meta">2026 · how to fish</p>
+                <h2>Yue learns How to Fish</h2>
+                <p class="project-description">fish data &amp; catch rate<br />item collection data<br />3D model gallery</p>
+              </div>
+            </a>
+          </li>
+        </ol>
+      </main>
+    </div>
+  </body>
 </html>
